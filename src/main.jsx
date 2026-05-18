@@ -425,6 +425,7 @@ function App() {
             onChange={(checked) => {
               setPadding(checked ? 0 : 56);
               setPaddingX(checked ? 0 : 56);
+              if (checked) setAspect('auto');
             }}
           />
           <Toggle label="Quote marks" checked={quoteMarks} onChange={setQuoteMarks} />
@@ -789,6 +790,7 @@ function BottomDock({
             onChange={(checked) => {
               setPadding(checked ? 0 : 56);
               setPaddingX(checked ? 0 : 56);
+              if (checked) setAspect('auto');
             }}
           />
           {mode === 'text' && <Toggle label="Quote" checked={quoteMarks} onChange={setQuoteMarks} />}
