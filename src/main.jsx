@@ -102,7 +102,7 @@ function App() {
   const [background, setBackground] = useState(BACKGROUNDS[0].value);
   const [shadow, setShadow] = useState(SHADOWS[0].value);
   const [theme, setTheme] = useState('light');
-  const [aspect, setAspect] = useState('square');
+  const [aspect, setAspect] = useState('auto');
   const [padding, setPadding] = useState(56);
   const [paddingX, setPaddingX] = useState(56);
   const [radius, setRadius] = useState(32);
