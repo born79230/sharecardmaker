@@ -307,6 +307,10 @@ button {
   color: #0f172a;
 }
 
+.surface-inner.no-horizontal-pad .shot-card {
+  width: 100%;
+}
+
 .shot-card::before {
   content: "";
   position: absolute;

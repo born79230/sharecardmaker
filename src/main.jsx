@@ -253,7 +253,7 @@ function App() {
                 }}
               >
                 <div
-                  className="surface-inner"
+                  className={`surface-inner ${paddingX === 0 ? 'no-horizontal-pad' : ''}`}
                   style={{ padding: `${padding}px ${paddingX}px` }}
                 >
                   <ShotCard
