@@ -598,14 +598,20 @@ button {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
   max-width: min(calc(100vw - 24px), 900px);
+  overflow-x: auto;
+  scrollbar-width: none;
   padding: 8px;
   border-radius: 18px;
   background: rgba(226, 232, 240, 0.92);
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
   backdrop-filter: blur(16px);
+}
+
+.bottom-dock::-webkit-scrollbar {
+  display: none;
 }
 
 .dock-item {
@@ -824,7 +830,7 @@ button {
 
 .slider-row {
   display: grid;
-  grid-template-columns: 72px 1fr 50px;
+  grid-template-columns: 76px 1fr 66px;
   align-items: center;
   gap: 10px;
   min-height: 44px;
@@ -833,13 +839,34 @@ button {
   font-weight: 800;
 }
 
-.slider-row input {
+.slider-row input[type="range"] {
+  min-width: 0;
   accent-color: #0f766e;
 }
 
-.slider-row output {
-  text-align: right;
+.slider-row input[type="number"] {
+  width: 42px;
+  height: 30px;
+  border: 0;
+  padding: 0;
   color: #0f172a;
+  background: transparent;
+  font: inherit;
+  text-align: right;
+}
+
+.slider-row input[type="number"]:focus {
+  outline: 2px solid rgba(13, 148, 136, 0.36);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.slider-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #0f172a;
+  white-space: nowrap;
 }
 
 .toggle-list {

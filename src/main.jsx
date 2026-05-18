@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
@@ -104,6 +104,7 @@ function App() {
   const [theme, setTheme] = useState('light');
   const [aspect, setAspect] = useState('square');
   const [padding, setPadding] = useState(56);
+  const [paddingX, setPaddingX] = useState(56);
   const [radius, setRadius] = useState(32);
   const [border, setBorder] = useState(true);
   const [borderWidth, setBorderWidth] = useState(1);
@@ -253,7 +254,7 @@ function App() {
               >
                 <div
                   className="surface-inner"
-                  style={{ padding: `${padding}px` }}
+                  style={{ padding: `${padding}px ${paddingX}px` }}
                 >
                   <ShotCard
                     mode={mode}
@@ -306,6 +307,8 @@ function App() {
         }}
         padding={padding}
         setPadding={setPadding}
+        paddingX={paddingX}
+        setPaddingX={setPaddingX}
         radius={radius}
         setRadius={setRadius}
         quoteMarks={quoteMarks}
@@ -382,7 +385,8 @@ function App() {
           </div>
         </ControlGroup>
 
-        <Slider label="Padding" min="0" max="140" value={padding} onChange={setPadding} />
+        <Slider label="Padding X" min="0" max="180" value={paddingX} onChange={setPaddingX} />
+        <Slider label="Padding Y" min="0" max="140" value={padding} onChange={setPadding} />
         <Slider label="Radius" min="0" max="52" value={radius} onChange={setRadius} />
         <Slider
           label="Border"
@@ -417,8 +421,11 @@ function App() {
           />
           <Toggle
             label="No pad"
-            checked={padding === 0}
-            onChange={(checked) => setPadding(checked ? 0 : 56)}
+            checked={padding === 0 && paddingX === 0}
+            onChange={(checked) => {
+              setPadding(checked ? 0 : 56);
+              setPaddingX(checked ? 0 : 56);
+            }}
           />
           <Toggle label="Quote marks" checked={quoteMarks} onChange={setQuoteMarks} />
           <Toggle label="Watermark" checked={watermark} onChange={setWatermark} />
@@ -646,6 +653,8 @@ function BottomDock({
   setBorderWidth,
   padding,
   setPadding,
+  paddingX,
+  setPaddingX,
   radius,
   setRadius,
   quoteMarks,
@@ -662,6 +671,7 @@ function BottomDock({
 
   const applyEdgeToEdge = () => {
     setPadding(0);
+    setPaddingX(0);
     setBorder(false);
     setBorderWidth(0);
     setRadius(0);
@@ -771,8 +781,16 @@ function BottomDock({
 
       <DockPopover id="controls" label="Controls" icon={<Palette size={24} />} activeDock={activeDock} setActiveDock={setActiveDock}>
         <div className="dock-control-stack">
-          <Slider label="Padding" min="0" max="140" value={padding} onChange={setPadding} />
-          <Toggle label="No pad" checked={padding === 0} onChange={(checked) => setPadding(checked ? 0 : 56)} />
+          <Slider label="Padding X" min="0" max="180" value={paddingX} onChange={setPaddingX} />
+          <Slider label="Padding Y" min="0" max="140" value={padding} onChange={setPadding} />
+          <Toggle
+            label="No pad"
+            checked={padding === 0 && paddingX === 0}
+            onChange={(checked) => {
+              setPadding(checked ? 0 : 56);
+              setPaddingX(checked ? 0 : 56);
+            }}
+          />
           {mode === 'text' && <Toggle label="Quote" checked={quoteMarks} onChange={setQuoteMarks} />}
           <Toggle label="Watermark" checked={watermark} onChange={setWatermark} />
           <label className="dock-field">
@@ -840,18 +858,42 @@ function PanelTitle({ icon: Icon, title }) {
   );
 }
 
-function Slider({ label, value, onChange, ...props }) {
+function Slider({ label, value, onChange, min = '0', max = '100', ...props }) {
+  const sliderId = useId();
+  const numberId = useId();
+  const minValue = Number(min);
+  const maxValue = Number(max);
+
+  const updateValue = (nextValue) => {
+    const normalizedValue = Number.isFinite(nextValue) ? nextValue : minValue;
+    onChange(Math.min(maxValue, Math.max(minValue, normalizedValue)));
+  };
+
   return (
-    <label className="slider-row">
-      <span>{label}</span>
+    <div className="slider-row">
+      <label htmlFor={sliderId}>{label}</label>
       <input
+        id={sliderId}
         type="range"
+        min={min}
+        max={max}
         value={value}
-        onChange={(event) => onChange(Number(event.target.value))}
+        onChange={(event) => updateValue(Number(event.target.value))}
         {...props}
       />
-      <output>{value}px</output>
-    </label>
+      <span className="slider-value">
+        <input
+          id={numberId}
+          type="number"
+          min={min}
+          max={max}
+          value={value}
+          aria-label={`${label} value`}
+          onChange={(event) => updateValue(Number(event.target.value))}
+        />
+        <span>px</span>
+      </span>
+    </div>
   );
 }
 
@@ -888,4 +930,7 @@ function initials(name) {
     .toUpperCase();
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+const rootElement = document.getElementById('root');
+const root = globalThis.__shareCardMakerRoot ?? createRoot(rootElement);
+globalThis.__shareCardMakerRoot = root;
+root.render(<App />);
