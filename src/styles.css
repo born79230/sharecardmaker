@@ -605,7 +605,7 @@ button {
   justify-content: flex-start;
   gap: 8px;
   max-width: min(calc(100vw - 24px), 900px);
-  overflow-x: auto;
+  overflow: visible;
   scrollbar-width: none;
   padding: 8px;
   border-radius: 18px;
@@ -990,5 +990,28 @@ button {
     place-items: start;
     min-height: 560px;
     padding: 16px;
+  }
+
+  .bottom-dock {
+    left: 12px;
+    right: 12px;
+    transform: none;
+    max-width: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 680px) {
+  .bottom-dock {
+    backdrop-filter: none;
+  }
+
+  .dock-popover {
+    position: fixed;
+    left: 50vw;
+    bottom: 196px;
+    transform: translateX(-50%);
   }
 }
