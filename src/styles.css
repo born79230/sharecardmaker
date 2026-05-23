@@ -644,6 +644,14 @@ button {
   width: 76px;
 }
 
+.dock-button > span,
+.dock-action > span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .dock-action.primary {
   color: #05252b;
   background: #93e5ff;
@@ -744,6 +752,10 @@ button {
   border: solid #4f5663;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.34);
+}
+
+.border-icon.off {
+  opacity: 0.42;
 }
 
 .wide-dock-button {

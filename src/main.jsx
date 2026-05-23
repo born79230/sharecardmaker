@@ -56,6 +56,14 @@ const ASPECTS = {
   auto: { label: 'Auto', width: 960, height: null }
 };
 
+const THEME_OPTIONS = [
+  { id: 'light', label: 'Light', icon: Sun },
+  { id: 'dark', label: 'Dark', icon: Moon },
+  { id: 'glass', label: 'Glass', icon: Sparkles }
+];
+
+const BORDER_WIDTH_PRESETS = [0, 1, 4, 8, 16];
+
 const INITIAL_TEXT = `# 把想法变成一张可以分享的图
 
 输入 **Markdown**、帖子文案或代码，然后调整背景、阴影、边框和比例。
@@ -309,7 +317,6 @@ function App() {
         setPadding={setPadding}
         paddingX={paddingX}
         setPaddingX={setPaddingX}
-        radius={radius}
         setRadius={setRadius}
         quoteMarks={quoteMarks}
         setQuoteMarks={setQuoteMarks}
@@ -638,6 +645,15 @@ function composeCardShadow(theme, shadow, borderWidth) {
   return [shadow !== 'none' ? shadow : '', ...highlights].filter(Boolean).join(', ') || 'none';
 }
 
+function nextInList(items, currentValue, getValue) {
+  const currentIndex = items.findIndex((item) => getValue(item) === currentValue);
+  return items[(currentIndex + 1) % items.length] || items[0];
+}
+
+function nextBorderWidth(currentWidth) {
+  return BORDER_WIDTH_PRESETS.find((width) => width > currentWidth) ?? BORDER_WIDTH_PRESETS[0];
+}
+
 function BottomDock({
   mode,
   background,
@@ -656,7 +672,6 @@ function BottomDock({
   setPadding,
   paddingX,
   setPaddingX,
-  radius,
   setRadius,
   quoteMarks,
   setQuoteMarks,
@@ -669,6 +684,12 @@ function BottomDock({
   busy
 }) {
   const [activeDock, setActiveDock] = useState(null);
+  const backgroundName = BACKGROUNDS.find((item) => item.value === background)?.name || 'Screen';
+  const shadowName = SHADOWS.find((item) => item.value === shadow)?.name || 'Shadow';
+  const themeOption = THEME_OPTIONS.find((item) => item.id === theme) || THEME_OPTIONS[0];
+  const ThemeIcon = themeOption.icon;
+  const currentBorderWidth = border ? borderWidth : 0;
+  const borderLabel = currentBorderWidth > 0 ? `${currentBorderWidth}px` : 'Off';
 
   const applyEdgeToEdge = () => {
     setPadding(0);
@@ -680,105 +701,75 @@ function BottomDock({
     setWatermark(false);
   };
 
+  const cycleBackground = () => {
+    const nextBackground = nextInList(BACKGROUNDS, background, (item) => item.value);
+    setActiveDock(null);
+    setBackground(nextBackground.value);
+  };
+
+  const cycleShadow = () => {
+    const nextShadow = nextInList(SHADOWS, shadow, (item) => item.value);
+    setActiveDock(null);
+    setShadow(nextShadow.value);
+  };
+
+  const cycleTheme = () => {
+    const nextTheme = nextInList(THEME_OPTIONS, theme, (item) => item.id);
+    setActiveDock(null);
+    setTheme(nextTheme.id);
+  };
+
+  const cycleBorder = () => {
+    const nextWidth = nextBorderWidth(currentBorderWidth);
+    setActiveDock(null);
+    setBorderWidth(nextWidth);
+    setBorder(nextWidth > 0);
+  };
+
+  const cycleAspect = () => {
+    const aspectEntries = Object.entries(ASPECTS);
+    const currentIndex = aspectEntries.findIndex(([key]) => key === aspect);
+    const nextAspect = aspectEntries[(currentIndex + 1) % aspectEntries.length]?.[0] || 'auto';
+    setActiveDock(null);
+    setAspect(nextAspect);
+  };
+
   return (
     <div className="bottom-dock" aria-label="Capture controls">
-      <DockPopover
-        id="screens"
-        label="Screens"
+      <CycleDockButton
+        label={backgroundName}
         icon={<div className="dock-swatch" style={{ backgroundImage: background }} />}
-        activeDock={activeDock}
-        setActiveDock={setActiveDock}
-      >
-        <div className="dock-grid">
-          {BACKGROUNDS.map((item) => (
-            <button
-              key={item.name}
-              className={`swatch ${item.value === background ? 'selected' : ''}`}
-              style={{ backgroundImage: item.value }}
-              onClick={() => setBackground(item.value)}
-              aria-label={item.name}
-            >
-              {item.value === background && <Check size={16} />}
-            </button>
-          ))}
-        </div>
-      </DockPopover>
+        onClick={cycleBackground}
+        title={`Background: ${backgroundName}`}
+      />
 
-      <DockPopover id="shadows" label="Shadows" icon={<Sparkles size={24} />} activeDock={activeDock} setActiveDock={setActiveDock}>
-        <div className="dock-chip-grid">
-          {SHADOWS.map((item) => (
-            <button
-              key={item.name}
-              className={`chip ${shadow === item.value ? 'selected' : ''}`}
-              onClick={() => setShadow(item.value)}
-            >
-              {item.name}
-            </button>
-          ))}
-        </div>
-      </DockPopover>
+      <CycleDockButton
+        label={shadowName}
+        icon={<Sparkles size={24} />}
+        onClick={cycleShadow}
+        title={`Shadow: ${shadowName}`}
+      />
 
-      <DockPopover
-        id="mode"
-        label="Mode"
-        icon={theme === 'dark' ? <Moon size={24} /> : <Sun size={24} />}
-        activeDock={activeDock}
-        setActiveDock={setActiveDock}
-      >
-        <div className="dock-chip-grid">
-          <button className={`chip icon-chip ${theme === 'light' ? 'selected' : ''}`} onClick={() => setTheme('light')}>
-            <Sun size={15} />
-            Light
-          </button>
-          <button className={`chip icon-chip ${theme === 'dark' ? 'selected' : ''}`} onClick={() => setTheme('dark')}>
-            <Moon size={15} />
-            Dark
-          </button>
-          <button className={`chip icon-chip ${theme === 'glass' ? 'selected' : ''}`} onClick={() => setTheme('glass')}>
-            <Sparkles size={15} />
-            Glass
-          </button>
-        </div>
-      </DockPopover>
+      <CycleDockButton
+        label={themeOption.label}
+        icon={<ThemeIcon size={24} />}
+        onClick={cycleTheme}
+        title={`Mode: ${themeOption.label}`}
+      />
 
-      <DockPopover
-        id="border"
-        label="Border"
-        icon={<span className="border-icon" style={{ borderWidth: Math.max(1, borderWidth) }} />}
-        activeDock={activeDock}
-        setActiveDock={setActiveDock}
-      >
-        <div className="dock-control-stack">
-          <Slider
-            label="Border"
-            min="0"
-            max="16"
-            value={border ? borderWidth : 0}
-            onChange={(value) => {
-              setBorderWidth(value);
-              setBorder(value > 0);
-            }}
-          />
-          <Slider label="Radius" min="0" max="56" value={radius} onChange={setRadius} />
-          <Toggle label="Border" checked={border} onChange={setBorder} />
-        </div>
-      </DockPopover>
+      <CycleDockButton
+        label={borderLabel}
+        icon={<span className={`border-icon ${currentBorderWidth === 0 ? 'off' : ''}`} style={{ borderWidth: Math.max(1, currentBorderWidth) }} />}
+        onClick={cycleBorder}
+        title={`Border: ${borderLabel}`}
+      />
 
-      <DockPopover
-        id="aspect"
+      <CycleDockButton
         label={ASPECTS[aspect].label}
         icon={<FileImage size={24} />}
-        activeDock={activeDock}
-        setActiveDock={setActiveDock}
-      >
-        <div className="dock-chip-grid">
-          {Object.entries(ASPECTS).map(([key, item]) => (
-            <button key={key} className={`chip ${aspect === key ? 'selected' : ''}`} onClick={() => setAspect(key)}>
-              {item.label}
-            </button>
-          ))}
-        </div>
-      </DockPopover>
+        onClick={cycleAspect}
+        title={`Aspect: ${ASPECTS[aspect].label}`}
+      />
 
       <DockPopover id="controls" label="Controls" icon={<Palette size={24} />} activeDock={activeDock} setActiveDock={setActiveDock}>
         <div className="dock-control-stack">
@@ -825,6 +816,15 @@ function BottomDock({
         <span>Download</span>
       </button>
     </div>
+  );
+}
+
+function CycleDockButton({ icon, label, onClick, title }) {
+  return (
+    <button className="dock-button" type="button" onClick={onClick} title={title} aria-label={title}>
+      {icon}
+      <span>{label}</span>
+    </button>
   );
 }
 
