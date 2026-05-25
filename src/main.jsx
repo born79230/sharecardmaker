@@ -91,7 +91,7 @@ const INITIAL_TEXT = `# 把想法变成一张可以分享的图
 \`Copy PNG\` 可以直接复制到剪贴板。`;
 
 const INITIAL_POST = {
-  author: 'Deng Shaolong',
+  author: 'Siuloong',
   handle: '@sharecard',
   content:
     '真正好用的截图生成器不该只会“截图”。它应该让文字、留白、颜色、阴影和比例一起服务于传播场景。',
