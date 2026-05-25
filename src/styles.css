@@ -851,7 +851,7 @@ button {
   left: 50%;
   bottom: 84px;
   display: none;
-  width: max-content;
+  width: min(312px, calc(100vw - 34px));
   max-width: calc(100vw - 34px);
   max-height: min(70vh, 560px);
   overflow-y: auto;
@@ -878,7 +878,7 @@ button {
 
 .dock-chip-grid,
 .dock-control-stack {
-  width: 292px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1233,7 +1233,7 @@ button {
   }
 
   .preview-stage {
-    place-items: start;
+    place-items: start center;
     min-height: 560px;
     padding: 16px;
   }

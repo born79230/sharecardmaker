@@ -81,6 +81,7 @@ const THEME_OPTIONS = [
 const BORDER_WIDTH_PRESETS = [0, 1, 4, 8, 16];
 const DEFAULT_PADDING = 56;
 const DEFAULT_RADIUS = 32;
+const MIN_PREVIEW_SCALE = 0.2;
 
 const INITIAL_TEXT = `# 把想法变成一张可以分享的图
 
@@ -220,8 +221,10 @@ function App() {
 
     const observer = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
-      const nextScale = Math.min(1, (width - 36) / dims.width, (height - 36) / shellHeight);
-      setPreviewScale(Math.max(0.35, Number(nextScale.toFixed(3))));
+      const availableWidth = Math.max(0, width - 36);
+      const availableHeight = Math.max(0, height - 36);
+      const nextScale = Math.min(1, availableWidth / dims.width, availableHeight / shellHeight);
+      setPreviewScale(Math.max(MIN_PREVIEW_SCALE, Number(nextScale.toFixed(3))));
     });
 
     observer.observe(stageRef.current);
