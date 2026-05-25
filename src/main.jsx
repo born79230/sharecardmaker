@@ -1,4 +1,4 @@
-import React, { useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
@@ -9,13 +9,17 @@ import {
   Clipboard,
   Code2,
   Copy,
+  CalendarDays,
   Download,
   FileImage,
   Image as ImageIcon,
+  LocateFixed,
+  MapPin,
   MessageSquareText,
   Moon,
   Palette,
   Quote,
+  Shapes,
   Sparkles,
   Sun,
   Type,
@@ -41,6 +45,18 @@ const BACKGROUNDS = [
   { name: 'Candy', value: 'linear-gradient(135deg, #f9a8d4 0%, #fde68a 50%, #86efac 100%)' }
 ];
 
+const SCENES = [
+  { id: 'none', label: 'None' },
+  { id: 'aura', label: 'Aura' },
+  { id: 'shapes', label: 'Shapes' },
+  { id: 'rings', label: 'Rings' },
+  { id: 'desktop', label: 'Desktop' },
+  { id: 'paper', label: 'Paper' },
+  { id: 'dots', label: 'Dots' },
+  { id: 'ribbons', label: 'Ribbons' },
+  { id: 'glass', label: 'Glass' }
+];
+
 const SHADOWS = [
   { name: 'Soft', value: '0 28px 80px rgba(15, 23, 42, 0.24)' },
   { name: 'Sharp', value: '12px 12px 0 rgba(15, 23, 42, 0.72)' },
@@ -63,6 +79,8 @@ const THEME_OPTIONS = [
 ];
 
 const BORDER_WIDTH_PRESETS = [0, 1, 4, 8, 16];
+const DEFAULT_PADDING = 56;
+const DEFAULT_RADIUS = 32;
 
 const INITIAL_TEXT = `# 把想法变成一张可以分享的图
 
@@ -108,24 +126,94 @@ function App() {
   const [imageSrc, setImageSrc] = useState('');
   const [imageCaption, setImageCaption] = useState('把产品截图、照片或海报放进同一套分享模板里。');
   const [background, setBackground] = useState(BACKGROUNDS[0].value);
+  const [scene, setScene] = useState('none');
   const [shadow, setShadow] = useState(SHADOWS[0].value);
   const [theme, setTheme] = useState('light');
   const [aspect, setAspect] = useState('auto');
-  const [padding, setPadding] = useState(56);
-  const [paddingX, setPaddingX] = useState(56);
-  const [radius, setRadius] = useState(32);
+  const [padding, setPadding] = useState(DEFAULT_PADDING);
+  const [paddingX, setPaddingX] = useState(DEFAULT_PADDING);
+  const [radius, setRadius] = useState(DEFAULT_RADIUS);
   const [border, setBorder] = useState(true);
   const [borderWidth, setBorderWidth] = useState(1);
   const [quoteMarks, setQuoteMarks] = useState(false);
-  const [watermark, setWatermark] = useState(true);
+  const [watermarkTextEnabled, setWatermarkTextEnabled] = useState(true);
   const [watermarkText, setWatermarkText] = useState('Share Card');
+  const [watermarkLocationEnabled, setWatermarkLocationEnabled] = useState(false);
+  const [watermarkLocationText, setWatermarkLocationText] = useState('');
+  const [watermarkDateEnabled, setWatermarkDateEnabled] = useState(false);
+  const [watermarkDateText, setWatermarkDateText] = useState(getTodayDateValue);
   const [toast, setToast] = useState('');
   const [busy, setBusy] = useState(false);
+  const [gpsBusy, setGpsBusy] = useState(false);
   const [previewScale, setPreviewScale] = useState(1);
 
   const dims = ASPECTS[aspect];
   const shellHeight = dims.height || 760;
   const cleanHtml = useMemo(() => DOMPurify.sanitize(marked.parse(markdown)), [markdown]);
+  const watermarkItems = useMemo(
+    () => buildWatermarkItems({
+      watermarkTextEnabled,
+      watermarkText,
+      watermarkLocationEnabled,
+      watermarkLocationText,
+      watermarkDateEnabled,
+      watermarkDateText
+    }),
+    [
+      watermarkTextEnabled,
+      watermarkText,
+      watermarkLocationEnabled,
+      watermarkLocationText,
+      watermarkDateEnabled,
+      watermarkDateText
+    ]
+  );
+  const noPad = padding === 0 && paddingX === 0;
+
+  useEffect(() => {
+    if (noPad && radius !== 0) {
+      setRadius(0);
+    }
+  }, [noPad, radius]);
+
+  const applyNoPad = (checked) => {
+    setPadding(checked ? 0 : DEFAULT_PADDING);
+    setPaddingX(checked ? 0 : DEFAULT_PADDING);
+    setRadius(checked ? 0 : DEFAULT_RADIUS);
+    if (checked) {
+      setAspect('auto');
+    }
+  };
+
+  const applyGpsLocation = () => {
+    if (!navigator.geolocation) {
+      setToast('当前浏览器不支持 GPS 定位');
+      window.setTimeout(() => setToast(''), 2200);
+      return;
+    }
+
+    setGpsBusy(true);
+    setToast('正在获取 GPS 定位...');
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        setWatermarkLocationText(formatGpsCoordinates(coords.latitude, coords.longitude));
+        setWatermarkLocationEnabled(true);
+        setGpsBusy(false);
+        setToast('已引用 GPS 定位');
+        window.setTimeout(() => setToast(''), 2200);
+      },
+      () => {
+        setGpsBusy(false);
+        setToast('定位失败：请允许浏览器访问位置');
+        window.setTimeout(() => setToast(''), 2600);
+      },
+      {
+        enableHighAccuracy: true,
+        maximumAge: 60000,
+        timeout: 10000
+      }
+    );
+  };
 
   useLayoutEffect(() => {
     if (!stageRef.current) return undefined;
@@ -264,6 +352,7 @@ function App() {
                   className={`surface-inner ${paddingX === 0 ? 'no-horizontal-pad' : ''}`}
                   style={{ padding: `${padding}px ${paddingX}px` }}
                 >
+                  <SceneLayer scene={scene} />
                   <ShotCard
                     mode={mode}
                     cleanHtml={cleanHtml}
@@ -279,12 +368,7 @@ function App() {
                     borderWidth={borderWidth}
                     quoteMarks={quoteMarks}
                   />
-                  {watermark && watermarkText.trim() && (
-                    <div className="watermark">
-                      <Sparkles size={14} />
-                      <span>{watermarkText.trim()}</span>
-                    </div>
-                  )}
+                  <Watermark items={watermarkItems} />
                 </div>
               </div>
             </div>
@@ -296,6 +380,8 @@ function App() {
         mode={mode}
         background={background}
         setBackground={setBackground}
+        scene={scene}
+        setScene={setScene}
         shadow={shadow}
         setShadow={setShadow}
         aspect={aspect}
@@ -318,12 +404,9 @@ function App() {
         paddingX={paddingX}
         setPaddingX={setPaddingX}
         setRadius={setRadius}
+        applyNoPad={applyNoPad}
         quoteMarks={quoteMarks}
         setQuoteMarks={setQuoteMarks}
-        watermark={watermark}
-        setWatermark={setWatermark}
-        watermarkText={watermarkText}
-        setWatermarkText={setWatermarkText}
         onCopy={() => exportPng('copy')}
         onDownload={() => exportPng('download')}
         busy={busy}
@@ -347,15 +430,29 @@ function App() {
           </div>
         </ControlGroup>
 
-        <ControlGroup label="Aspect">
+        <ControlGroup label="Scene">
           <div className="chip-row">
-            {Object.entries(ASPECTS).map(([key, item]) => (
+            {SCENES.map((item) => (
               <button
-                key={key}
-                className={`chip ${aspect === key ? 'selected' : ''}`}
-                onClick={() => setAspect(key)}
+                key={item.id}
+                className={`chip ${scene === item.id ? 'selected' : ''}`}
+                onClick={() => setScene(item.id)}
               >
                 {item.label}
+              </button>
+            ))}
+          </div>
+        </ControlGroup>
+
+        <ControlGroup label="Shadow">
+          <div className="chip-row">
+            {SHADOWS.map((item) => (
+              <button
+                key={item.name}
+                className={`chip ${shadow === item.value ? 'selected' : ''}`}
+                onClick={() => setShadow(item.value)}
+              >
+                {item.name}
               </button>
             ))}
           </div>
@@ -378,46 +475,17 @@ function App() {
           </div>
         </ControlGroup>
 
-        <ControlGroup label="Shadow">
-          <div className="chip-row">
-            {SHADOWS.map((item) => (
-              <button
-                key={item.name}
-                className={`chip ${shadow === item.value ? 'selected' : ''}`}
-                onClick={() => setShadow(item.value)}
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-        </ControlGroup>
-
-        <Slider label="Padding X" min="0" max="180" value={paddingX} onChange={setPaddingX} />
-        <Slider label="Padding Y" min="0" max="140" value={padding} onChange={setPadding} />
-        <Slider label="Radius" min="0" max="52" value={radius} onChange={setRadius} />
-        <Slider
-          label="Border"
-          min="0"
-          max="16"
-          value={border ? borderWidth : 0}
-          onChange={(value) => {
-            setBorderWidth(value);
-            setBorder(value > 0);
-          }}
-        />
-
-        <Label text="Watermark text">
-          <input
-            value={watermarkText}
-            placeholder="Share Card"
-            onChange={(event) => {
-              setWatermarkText(event.target.value);
-              if (event.target.value.trim()) setWatermark(true);
+        <ControlGroup label="Border">
+          <Slider
+            label="Width"
+            min="0"
+            max="16"
+            value={border ? borderWidth : 0}
+            onChange={(value) => {
+              setBorderWidth(value);
+              setBorder(value > 0);
             }}
           />
-        </Label>
-
-        <div className="toggle-list">
           <Toggle
             label="Border"
             checked={border}
@@ -426,18 +494,54 @@ function App() {
               setBorderWidth(checked ? Math.max(borderWidth, 1) : 0);
             }}
           />
-          <Toggle
-            label="No pad"
-            checked={padding === 0 && paddingX === 0}
-            onChange={(checked) => {
-              setPadding(checked ? 0 : 56);
-              setPaddingX(checked ? 0 : 56);
-              if (checked) setAspect('auto');
-            }}
+        </ControlGroup>
+
+        <ControlGroup label="Aspect">
+          <div className="chip-row">
+            {Object.entries(ASPECTS).map(([key, item]) => (
+              <button
+                key={key}
+                className={`chip ${aspect === key ? 'selected' : ''}`}
+                onClick={() => setAspect(key)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </ControlGroup>
+
+        <ControlGroup label="Controls">
+          <Slider label="Padding X" min="0" max="180" value={paddingX} onChange={setPaddingX} />
+          <Slider label="Padding Y" min="0" max="140" value={padding} onChange={setPadding} />
+          <Slider label="Radius" min="0" max="52" value={radius} onChange={setRadius} disabled={noPad} />
+          <div className="toggle-list compact">
+            <Toggle
+              label="No pad"
+              checked={noPad}
+              onChange={applyNoPad}
+            />
+            <Toggle label="Quote marks" checked={quoteMarks} onChange={setQuoteMarks} />
+          </div>
+        </ControlGroup>
+
+        <ControlGroup label="Watermark">
+          <WatermarkControls
+            watermarkTextEnabled={watermarkTextEnabled}
+            setWatermarkTextEnabled={setWatermarkTextEnabled}
+            watermarkText={watermarkText}
+            setWatermarkText={setWatermarkText}
+            watermarkLocationEnabled={watermarkLocationEnabled}
+            setWatermarkLocationEnabled={setWatermarkLocationEnabled}
+            watermarkLocationText={watermarkLocationText}
+            setWatermarkLocationText={setWatermarkLocationText}
+            watermarkDateEnabled={watermarkDateEnabled}
+            setWatermarkDateEnabled={setWatermarkDateEnabled}
+            watermarkDateText={watermarkDateText}
+            setWatermarkDateText={setWatermarkDateText}
+            onUseGpsLocation={applyGpsLocation}
+            gpsBusy={gpsBusy}
           />
-          <Toggle label="Quote marks" checked={quoteMarks} onChange={setQuoteMarks} />
-          <Toggle label="Watermark" checked={watermark} onChange={setWatermark} />
-        </div>
+        </ControlGroup>
       </aside>
 
       {toast && <div className="toast">{toast}</div>}
@@ -645,6 +749,143 @@ function composeCardShadow(theme, shadow, borderWidth) {
   return [shadow !== 'none' ? shadow : '', ...highlights].filter(Boolean).join(', ') || 'none';
 }
 
+function SceneLayer({ scene }) {
+  if (scene === 'none') return null;
+  return <div className={`scene-layer scene-${scene}`} aria-hidden="true" />;
+}
+
+function Watermark({ items }) {
+  if (!items.length) return null;
+
+  return (
+    <div className="watermark">
+      {items.map(({ id, icon: Icon, label }) => (
+        <span className="watermark-item" key={id}>
+          <Icon size={14} />
+          <span>{label}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function WatermarkControls({
+  watermarkTextEnabled,
+  setWatermarkTextEnabled,
+  watermarkText,
+  setWatermarkText,
+  watermarkLocationEnabled,
+  setWatermarkLocationEnabled,
+  watermarkLocationText,
+  setWatermarkLocationText,
+  watermarkDateEnabled,
+  setWatermarkDateEnabled,
+  watermarkDateText,
+  setWatermarkDateText,
+  onUseGpsLocation,
+  gpsBusy
+}) {
+  return (
+    <div className="watermark-control-stack">
+      <WatermarkOption label="Custom text" checked={watermarkTextEnabled} onChange={setWatermarkTextEnabled}>
+        <input
+          value={watermarkText}
+          placeholder="Share Card"
+          aria-label="Custom text watermark"
+          onChange={(event) => {
+            setWatermarkText(event.target.value);
+            if (event.target.value.trim()) setWatermarkTextEnabled(true);
+          }}
+        />
+      </WatermarkOption>
+
+      <WatermarkOption label="Location" checked={watermarkLocationEnabled} onChange={setWatermarkLocationEnabled}>
+        <div className="watermark-location-row">
+          <input
+            value={watermarkLocationText}
+            placeholder="Shanghai or GPS"
+            aria-label="Location watermark"
+            onChange={(event) => {
+              setWatermarkLocationText(event.target.value);
+              if (event.target.value.trim()) setWatermarkLocationEnabled(true);
+            }}
+          />
+          <button
+            className="icon-button"
+            type="button"
+            title="Use GPS location"
+            aria-label="Use GPS location"
+            onClick={onUseGpsLocation}
+            disabled={gpsBusy}
+          >
+            <LocateFixed size={17} />
+          </button>
+        </div>
+      </WatermarkOption>
+
+      <WatermarkOption label="Date" checked={watermarkDateEnabled} onChange={setWatermarkDateEnabled}>
+        <input
+          type="date"
+          value={watermarkDateText}
+          aria-label="Date watermark"
+          onChange={(event) => {
+            setWatermarkDateText(event.target.value);
+            if (event.target.value) setWatermarkDateEnabled(true);
+          }}
+        />
+      </WatermarkOption>
+    </div>
+  );
+}
+
+function WatermarkOption({ label, checked, onChange, children }) {
+  return (
+    <div className="watermark-option">
+      <Toggle label={label} checked={checked} onChange={onChange} />
+      <div className="watermark-option-control">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function buildWatermarkItems({
+  watermarkTextEnabled,
+  watermarkText,
+  watermarkLocationEnabled,
+  watermarkLocationText,
+  watermarkDateEnabled,
+  watermarkDateText
+}) {
+  return [
+    watermarkTextEnabled && watermarkText.trim()
+      ? { id: 'text', icon: Sparkles, label: watermarkText.trim() }
+      : null,
+    watermarkLocationEnabled && watermarkLocationText.trim()
+      ? { id: 'location', icon: MapPin, label: watermarkLocationText.trim() }
+      : null,
+    watermarkDateEnabled && watermarkDateText
+      ? { id: 'date', icon: CalendarDays, label: formatWatermarkDate(watermarkDateText) }
+      : null
+  ].filter(Boolean);
+}
+
+function getTodayDateValue() {
+  const date = new Date();
+  const timezoneOffset = date.getTimezoneOffset() * 60000;
+  return new Date(date.getTime() - timezoneOffset).toISOString().slice(0, 10);
+}
+
+function formatWatermarkDate(value) {
+  const [year, month, day] = value.split('-');
+  if (!year || !month || !day) return value;
+  return `${year}.${month}.${day}`;
+}
+
+function formatGpsCoordinates(latitude, longitude) {
+  return `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
+}
+
 function nextInList(items, currentValue, getValue) {
   const currentIndex = items.findIndex((item) => getValue(item) === currentValue);
   return items[(currentIndex + 1) % items.length] || items[0];
@@ -658,6 +899,8 @@ function BottomDock({
   mode,
   background,
   setBackground,
+  scene,
+  setScene,
   shadow,
   setShadow,
   aspect,
@@ -673,23 +916,22 @@ function BottomDock({
   paddingX,
   setPaddingX,
   setRadius,
+  applyNoPad,
   quoteMarks,
   setQuoteMarks,
-  watermark,
-  setWatermark,
-  watermarkText,
-  setWatermarkText,
   onCopy,
   onDownload,
   busy
 }) {
   const [activeDock, setActiveDock] = useState(null);
   const backgroundName = BACKGROUNDS.find((item) => item.value === background)?.name || 'Screen';
+  const sceneName = SCENES.find((item) => item.id === scene)?.label || 'Scene';
   const shadowName = SHADOWS.find((item) => item.value === shadow)?.name || 'Shadow';
   const themeOption = THEME_OPTIONS.find((item) => item.id === theme) || THEME_OPTIONS[0];
   const ThemeIcon = themeOption.icon;
   const currentBorderWidth = border ? borderWidth : 0;
   const borderLabel = currentBorderWidth > 0 ? `${currentBorderWidth}px` : 'Off';
+  const noPad = padding === 0 && paddingX === 0;
 
   const applyEdgeToEdge = () => {
     setPadding(0);
@@ -698,13 +940,18 @@ function BottomDock({
     setBorderWidth(0);
     setRadius(0);
     setShadow('none');
-    setWatermark(false);
   };
 
   const cycleBackground = () => {
     const nextBackground = nextInList(BACKGROUNDS, background, (item) => item.value);
     setActiveDock(null);
     setBackground(nextBackground.value);
+  };
+
+  const cycleScene = () => {
+    const nextScene = nextInList(SCENES, scene, (item) => item.id);
+    setActiveDock(null);
+    setScene(nextScene.id);
   };
 
   const cycleShadow = () => {
@@ -744,6 +991,13 @@ function BottomDock({
       />
 
       <CycleDockButton
+        label={sceneName}
+        icon={<Shapes size={24} />}
+        onClick={cycleScene}
+        title={`Scene: ${sceneName}`}
+      />
+
+      <CycleDockButton
         label={shadowName}
         icon={<Sparkles size={24} />}
         onClick={cycleShadow}
@@ -777,26 +1031,10 @@ function BottomDock({
           <Slider label="Padding Y" min="0" max="140" value={padding} onChange={setPadding} />
           <Toggle
             label="No pad"
-            checked={padding === 0 && paddingX === 0}
-            onChange={(checked) => {
-              setPadding(checked ? 0 : 56);
-              setPaddingX(checked ? 0 : 56);
-              if (checked) setAspect('auto');
-            }}
+            checked={noPad}
+            onChange={applyNoPad}
           />
           {mode === 'text' && <Toggle label="Quote" checked={quoteMarks} onChange={setQuoteMarks} />}
-          <Toggle label="Watermark" checked={watermark} onChange={setWatermark} />
-          <label className="dock-field">
-            <span>Watermark text</span>
-            <input
-              value={watermarkText}
-              placeholder="Share Card"
-              onChange={(event) => {
-                setWatermarkText(event.target.value);
-                if (event.target.value.trim()) setWatermark(true);
-              }}
-            />
-          </label>
           <button className="wide-dock-button" onClick={applyEdgeToEdge}>Edge to edge</button>
         </div>
       </DockPopover>
