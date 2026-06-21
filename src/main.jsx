@@ -1,8 +1,7 @@
-import React, { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
-import { toBlob, toPng } from 'html-to-image';
 import {
   BadgeCheck,
   Check,
@@ -25,6 +24,32 @@ import {
   Type,
   Upload
 } from 'lucide-react';
+import { usePreviewScale } from './hooks/usePreviewScale.js';
+import {
+  formatGpsCoordinates,
+  getTodayDateValue,
+  initials,
+  nextInList,
+  nextNumberPreset
+} from './lib/formatters.js';
+import { buildWatermarkItems } from './lib/watermark.js';
+import { exportCaptureImage, getCurrentCoordinates, readImageFile } from './platform/browser.js';
+import {
+  ASPECTS,
+  AUTO_SHELL_HEIGHT,
+  BACKGROUNDS,
+  BORDER_WIDTH_PRESETS,
+  DEFAULT_PADDING,
+  DEFAULT_RADIUS,
+  INITIAL_CODE,
+  INITIAL_CODE_TITLE,
+  INITIAL_IMAGE_CAPTION,
+  INITIAL_POST,
+  INITIAL_TEXT,
+  SCENES,
+  SHADOWS,
+  THEME_OPTIONS
+} from './presets.js';
 import './styles.css';
 
 const MODES = [
@@ -34,82 +59,17 @@ const MODES = [
   { id: 'image', label: 'Image', icon: ImageIcon }
 ];
 
-const BACKGROUNDS = [
-  { name: 'Sunset', value: 'linear-gradient(135deg, #ffd166 0%, #ef476f 48%, #26547c 100%)' },
-  { name: 'Lagoon', value: 'linear-gradient(135deg, #06d6a0 0%, #118ab2 55%, #073b4c 100%)' },
-  { name: 'Paper', value: 'linear-gradient(135deg, #fff7e6 0%, #f1f5f9 58%, #dbeafe 100%)' },
-  { name: 'Ink', value: 'linear-gradient(135deg, #111827 0%, #1f2937 46%, #0f766e 100%)' },
-  { name: 'Bloom', value: 'radial-gradient(circle at 10% 20%, #fdf2f8 0%, transparent 32%), linear-gradient(135deg, #fb7185 0%, #fef3c7 48%, #38bdf8 100%)' },
-  { name: 'Signal', value: 'linear-gradient(135deg, #0ea5e9 0%, #22c55e 50%, #f97316 100%)' },
-  { name: 'Slate', value: 'linear-gradient(135deg, #f8fafc 0%, #cbd5e1 42%, #334155 100%)' },
-  { name: 'Candy', value: 'linear-gradient(135deg, #f9a8d4 0%, #fde68a 50%, #86efac 100%)' }
-];
-
-const SCENES = [
-  { id: 'none', label: 'None' },
-  { id: 'aura', label: 'Aura' },
-  { id: 'shapes', label: 'Shapes' },
-  { id: 'rings', label: 'Rings' },
-  { id: 'desktop', label: 'Desktop' },
-  { id: 'paper', label: 'Paper' },
-  { id: 'dots', label: 'Dots' },
-  { id: 'ribbons', label: 'Ribbons' },
-  { id: 'glass', label: 'Glass' }
-];
-
-const SHADOWS = [
-  { name: 'Soft', value: '0 28px 80px rgba(15, 23, 42, 0.24)' },
-  { name: 'Sharp', value: '12px 12px 0 rgba(15, 23, 42, 0.72)' },
-  { name: 'Float', value: '0 18px 45px rgba(2, 132, 199, 0.28), 0 6px 18px rgba(15, 23, 42, 0.18)' },
-  { name: 'None', value: 'none' }
-];
-
-const ASPECTS = {
-  square: { label: '1:1', width: 860, height: 860 },
-  portrait: { label: '4:5', width: 860, height: 1075 },
-  story: { label: '9:16', width: 720, height: 1280 },
-  wide: { label: '16:9', width: 1100, height: 619 },
-  auto: { label: 'Auto', width: 960, height: null }
+const THEME_ICONS = {
+  light: Sun,
+  dark: Moon,
+  glass: Sparkles
 };
 
-const THEME_OPTIONS = [
-  { id: 'light', label: 'Light', icon: Sun },
-  { id: 'dark', label: 'Dark', icon: Moon },
-  { id: 'glass', label: 'Glass', icon: Sparkles }
-];
-
-const BORDER_WIDTH_PRESETS = [0, 1, 4, 8, 16];
-const DEFAULT_PADDING = 56;
-const DEFAULT_RADIUS = 32;
-const MIN_PREVIEW_SCALE = 0.2;
-
-const INITIAL_TEXT = `# 把想法变成一张可以分享的图
-
-输入 **Markdown**、帖子文案或代码，然后调整背景、阴影、边框和比例。
-
-> 适合发到微博、小红书、X、LinkedIn 或作品集。
-
-\`Copy PNG\` 可以直接复制到剪贴板。`;
-
-const INITIAL_POST = {
-  author: 'Siuloong',
-  handle: '@sharecard',
-  content:
-    '真正好用的截图生成器不该只会“截图”。它应该让文字、留白、颜色、阴影和比例一起服务于传播场景。',
-  meta: '今天 16:30',
-  verified: true
+const WATERMARK_ICONS = {
+  text: Sparkles,
+  location: MapPin,
+  date: CalendarDays
 };
-
-const INITIAL_CODE = `export async function copyShot(node) {
-  const blob = await toBlob(node, {
-    pixelRatio: 2,
-    cacheBust: true
-  });
-
-  await navigator.clipboard.write([
-    new ClipboardItem({ 'image/png': blob })
-  ]);
-}`;
 
 marked.use({
   breaks: true,
@@ -123,9 +83,9 @@ function App() {
   const [markdown, setMarkdown] = useState(INITIAL_TEXT);
   const [post, setPost] = useState(INITIAL_POST);
   const [code, setCode] = useState(INITIAL_CODE);
-  const [codeTitle, setCodeTitle] = useState('copy-shot.js');
+  const [codeTitle, setCodeTitle] = useState(INITIAL_CODE_TITLE);
   const [imageSrc, setImageSrc] = useState('');
-  const [imageCaption, setImageCaption] = useState('把产品截图、照片或海报放进同一套分享模板里。');
+  const [imageCaption, setImageCaption] = useState(INITIAL_IMAGE_CAPTION);
   const [background, setBackground] = useState(BACKGROUNDS[0].value);
   const [scene, setScene] = useState('none');
   const [shadow, setShadow] = useState(SHADOWS[0].value);
@@ -146,10 +106,10 @@ function App() {
   const [toast, setToast] = useState('');
   const [busy, setBusy] = useState(false);
   const [gpsBusy, setGpsBusy] = useState(false);
-  const [previewScale, setPreviewScale] = useState(1);
 
   const dims = ASPECTS[aspect];
-  const shellHeight = dims.height || 760;
+  const shellHeight = dims.height || AUTO_SHELL_HEIGHT;
+  const previewScale = usePreviewScale(stageRef, { width: dims.width, shellHeight });
   const cleanHtml = useMemo(() => DOMPurify.sanitize(marked.parse(markdown)), [markdown]);
   const watermarkItems = useMemo(
     () => buildWatermarkItems({
@@ -187,49 +147,24 @@ function App() {
   };
 
   const applyGpsLocation = () => {
-    if (!navigator.geolocation) {
-      setToast('当前浏览器不支持 GPS 定位');
-      window.setTimeout(() => setToast(''), 2200);
-      return;
-    }
-
     setGpsBusy(true);
     setToast('正在获取 GPS 定位...');
-    navigator.geolocation.getCurrentPosition(
-      ({ coords }) => {
+    getCurrentCoordinates()
+      .then((coords) => {
         setWatermarkLocationText(formatGpsCoordinates(coords.latitude, coords.longitude));
         setWatermarkLocationEnabled(true);
-        setGpsBusy(false);
         setToast('已引用 GPS 定位');
         window.setTimeout(() => setToast(''), 2200);
-      },
-      () => {
-        setGpsBusy(false);
-        setToast('定位失败：请允许浏览器访问位置');
+      })
+      .catch((error) => {
+        const message = error.message === 'geolocation-unavailable'
+          ? '当前浏览器不支持 GPS 定位'
+          : '定位失败：请允许浏览器访问位置';
+        setToast(message);
         window.setTimeout(() => setToast(''), 2600);
-      },
-      {
-        enableHighAccuracy: true,
-        maximumAge: 60000,
-        timeout: 10000
-      }
-    );
+      })
+      .finally(() => setGpsBusy(false));
   };
-
-  useLayoutEffect(() => {
-    if (!stageRef.current) return undefined;
-
-    const observer = new ResizeObserver(([entry]) => {
-      const { width, height } = entry.contentRect;
-      const availableWidth = Math.max(0, width - 36);
-      const availableHeight = Math.max(0, height - 36);
-      const nextScale = Math.min(1, availableWidth / dims.width, availableHeight / shellHeight);
-      setPreviewScale(Math.max(MIN_PREVIEW_SCALE, Number(nextScale.toFixed(3))));
-    });
-
-    observer.observe(stageRef.current);
-    return () => observer.disconnect();
-  }, [dims.width, shellHeight]);
 
   async function exportPng(action) {
     if (!captureRef.current || busy) return;
@@ -237,34 +172,8 @@ function App() {
     setToast(action === 'copy' ? '正在复制 PNG...' : '正在生成 PNG...');
 
     try {
-      if (action === 'copy' && navigator.clipboard && window.ClipboardItem) {
-        try {
-          const blob = await toBlob(captureRef.current, {
-            pixelRatio: 2,
-            cacheBust: true,
-            backgroundColor: 'transparent'
-          });
-
-          if (blob) {
-            await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-            setToast('PNG 已复制到剪贴板');
-            return;
-          }
-        } catch {
-          setToast('复制受限，正在改为下载 PNG...');
-        }
-      }
-
-      const dataUrl = await toPng(captureRef.current, {
-        pixelRatio: 2,
-        cacheBust: true,
-        backgroundColor: 'transparent'
-      });
-      const link = document.createElement('a');
-      link.download = `share-card-${Date.now()}.png`;
-      link.href = dataUrl;
-      link.click();
-      setToast(action === 'copy' ? '浏览器不支持图片复制，已改为下载' : 'PNG 已下载');
+      const result = await exportCaptureImage(captureRef.current, action);
+      setToast(getExportToast(result));
     } catch (error) {
       console.error(error);
       setToast('导出失败：请检查图片来源或浏览器权限');
@@ -274,12 +183,16 @@ function App() {
     }
   }
 
-  function handleImageUpload(event) {
+  async function handleImageUpload(event) {
     const file = event.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => setImageSrc(reader.result);
-    reader.readAsDataURL(file);
+    try {
+      setImageSrc(await readImageFile(file));
+    } catch (error) {
+      console.error(error);
+      setToast('图片读取失败');
+      window.setTimeout(() => setToast(''), 2200);
+    }
   }
 
   return (
@@ -762,12 +675,15 @@ function Watermark({ items }) {
 
   return (
     <div className="watermark">
-      {items.map(({ id, icon: Icon, label }) => (
-        <span className="watermark-item" key={id}>
-          <Icon size={14} />
-          <span>{label}</span>
-        </span>
-      ))}
+      {items.map(({ id, iconId, label }) => {
+        const Icon = WATERMARK_ICONS[iconId] || Sparkles;
+        return (
+          <span className="watermark-item" key={id}>
+            <Icon size={14} />
+            <span>{label}</span>
+          </span>
+        );
+      })}
     </div>
   );
 }
@@ -852,52 +768,6 @@ function WatermarkOption({ label, checked, onChange, children }) {
   );
 }
 
-function buildWatermarkItems({
-  watermarkTextEnabled,
-  watermarkText,
-  watermarkLocationEnabled,
-  watermarkLocationText,
-  watermarkDateEnabled,
-  watermarkDateText
-}) {
-  return [
-    watermarkTextEnabled && watermarkText.trim()
-      ? { id: 'text', icon: Sparkles, label: watermarkText.trim() }
-      : null,
-    watermarkLocationEnabled && watermarkLocationText.trim()
-      ? { id: 'location', icon: MapPin, label: watermarkLocationText.trim() }
-      : null,
-    watermarkDateEnabled && watermarkDateText
-      ? { id: 'date', icon: CalendarDays, label: formatWatermarkDate(watermarkDateText) }
-      : null
-  ].filter(Boolean);
-}
-
-function getTodayDateValue() {
-  const date = new Date();
-  const timezoneOffset = date.getTimezoneOffset() * 60000;
-  return new Date(date.getTime() - timezoneOffset).toISOString().slice(0, 10);
-}
-
-function formatWatermarkDate(value) {
-  const [year, month, day] = value.split('-');
-  if (!year || !month || !day) return value;
-  return `${year}.${month}.${day}`;
-}
-
-function formatGpsCoordinates(latitude, longitude) {
-  return `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
-}
-
-function nextInList(items, currentValue, getValue) {
-  const currentIndex = items.findIndex((item) => getValue(item) === currentValue);
-  return items[(currentIndex + 1) % items.length] || items[0];
-}
-
-function nextBorderWidth(currentWidth) {
-  return BORDER_WIDTH_PRESETS.find((width) => width > currentWidth) ?? BORDER_WIDTH_PRESETS[0];
-}
-
 function BottomDock({
   mode,
   background,
@@ -931,7 +801,7 @@ function BottomDock({
   const sceneName = SCENES.find((item) => item.id === scene)?.label || 'Scene';
   const shadowName = SHADOWS.find((item) => item.value === shadow)?.name || 'Shadow';
   const themeOption = THEME_OPTIONS.find((item) => item.id === theme) || THEME_OPTIONS[0];
-  const ThemeIcon = themeOption.icon;
+  const ThemeIcon = THEME_ICONS[themeOption.id] || Sun;
   const currentBorderWidth = border ? borderWidth : 0;
   const borderLabel = currentBorderWidth > 0 ? `${currentBorderWidth}px` : 'Off';
   const noPad = padding === 0 && paddingX === 0;
@@ -970,7 +840,7 @@ function BottomDock({
   };
 
   const cycleBorder = () => {
-    const nextWidth = nextBorderWidth(currentBorderWidth);
+    const nextWidth = nextNumberPreset(BORDER_WIDTH_PRESETS, currentBorderWidth);
     setActiveDock(null);
     setBorderWidth(nextWidth);
     setBorder(nextWidth > 0);
@@ -1163,14 +1033,10 @@ function Label({ text, children }) {
   );
 }
 
-function initials(name) {
-  return (name || 'SC')
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join('')
-    .toUpperCase();
+function getExportToast(result) {
+  if (result === 'copied') return 'PNG 已复制到剪贴板';
+  if (result === 'copy-fallback-downloaded') return '浏览器不支持图片复制，已改为下载';
+  return 'PNG 已下载';
 }
 
 const rootElement = document.getElementById('root');

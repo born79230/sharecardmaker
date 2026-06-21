@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Share Card Maker">
+  <defs>
+    <linearGradient id="bg" x1="18" y1="16" x2="110" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9ff3dc"/>
+      <stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <path d="M72 24l7.4 20.6L100 52l-20.6 7.4L72 80l-7.4-20.6L44 52l20.6-7.4L72 24z" fill="none" stroke="#072b31" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M39 73l4.4 12.4L56 90l-12.6 4.6L39 107l-4.4-12.4L22 90l12.6-4.6L39 73z" fill="none" stroke="#072b31" stroke-width="6" stroke-linejoin="round"/>
+</svg>
