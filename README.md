@@ -34,9 +34,25 @@ npm run build
 
 构建产物会输出到 `dist/`，该目录不会提交到 git。
 
+面向 Capacitor / Tauri 等 App 壳的相对路径构建：
+
+```bash
+npm run build:app
+```
+
+提交前完整检查：
+
+```bash
+npm run check
+```
+
+该命令会运行纯逻辑测试、GitHub Pages 构建和 App 壳构建。
+
 ## App 化准备
 
 未来 PWA、桌面壳或移动端壳的迁移路线见 [`docs/app-readiness-plan.md`](docs/app-readiness-plan.md)。
+
+当前项目状态会以带版本号的 Project 模型保存在浏览器本地。上传图片的数据 URL 不写入 localStorage，未来 App 端应改由 IndexedDB 或原生文件系统保存图片资源。
 
 ## 技术栈
 

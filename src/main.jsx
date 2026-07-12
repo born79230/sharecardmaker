@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
+import React, { useId, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
@@ -25,27 +25,20 @@ import {
   Upload
 } from 'lucide-react';
 import { usePreviewScale } from './hooks/usePreviewScale.js';
+import { useProjectState } from './hooks/useProjectState.js';
 import {
   formatGpsCoordinates,
-  getTodayDateValue,
   initials,
   nextInList,
   nextNumberPreset
 } from './lib/formatters.js';
 import { buildWatermarkItems } from './lib/watermark.js';
-import { exportCaptureImage, getCurrentCoordinates, readImageFile } from './platform/browser.js';
+import { browserPlatform } from './platform/browser.js';
 import {
   ASPECTS,
   AUTO_SHELL_HEIGHT,
   BACKGROUNDS,
   BORDER_WIDTH_PRESETS,
-  DEFAULT_PADDING,
-  DEFAULT_RADIUS,
-  INITIAL_CODE,
-  INITIAL_CODE_TITLE,
-  INITIAL_IMAGE_CAPTION,
-  INITIAL_POST,
-  INITIAL_TEXT,
   SCENES,
   SHADOWS,
   THEME_OPTIONS
@@ -76,33 +69,62 @@ marked.use({
   gfm: true
 });
 
-function App() {
+export function App({ platform = browserPlatform }) {
   const captureRef = useRef(null);
   const stageRef = useRef(null);
-  const [mode, setMode] = useState('text');
-  const [markdown, setMarkdown] = useState(INITIAL_TEXT);
-  const [post, setPost] = useState(INITIAL_POST);
-  const [code, setCode] = useState(INITIAL_CODE);
-  const [codeTitle, setCodeTitle] = useState(INITIAL_CODE_TITLE);
-  const [imageSrc, setImageSrc] = useState('');
-  const [imageCaption, setImageCaption] = useState(INITIAL_IMAGE_CAPTION);
-  const [background, setBackground] = useState(BACKGROUNDS[0].value);
-  const [scene, setScene] = useState('none');
-  const [shadow, setShadow] = useState(SHADOWS[0].value);
-  const [theme, setTheme] = useState('light');
-  const [aspect, setAspect] = useState('auto');
-  const [padding, setPadding] = useState(DEFAULT_PADDING);
-  const [paddingX, setPaddingX] = useState(DEFAULT_PADDING);
-  const [radius, setRadius] = useState(DEFAULT_RADIUS);
-  const [border, setBorder] = useState(true);
-  const [borderWidth, setBorderWidth] = useState(1);
-  const [quoteMarks, setQuoteMarks] = useState(false);
-  const [watermarkTextEnabled, setWatermarkTextEnabled] = useState(true);
-  const [watermarkText, setWatermarkText] = useState('Share Card');
-  const [watermarkLocationEnabled, setWatermarkLocationEnabled] = useState(false);
-  const [watermarkLocationText, setWatermarkLocationText] = useState('');
-  const [watermarkDateEnabled, setWatermarkDateEnabled] = useState(false);
-  const [watermarkDateText, setWatermarkDateText] = useState(getTodayDateValue);
+  const { project, actions, applyNoPad } = useProjectState(platform);
+  const {
+    mode,
+    markdown,
+    post,
+    code,
+    codeTitle,
+    imageSrc,
+    imageCaption,
+    background,
+    scene,
+    shadow,
+    theme,
+    aspect,
+    padding,
+    paddingX,
+    radius,
+    border,
+    borderWidth,
+    quoteMarks,
+    watermarkTextEnabled,
+    watermarkText,
+    watermarkLocationEnabled,
+    watermarkLocationText,
+    watermarkDateEnabled,
+    watermarkDateText
+  } = project;
+  const {
+    setMode,
+    setMarkdown,
+    setPost,
+    setCode,
+    setCodeTitle,
+    setImageSrc,
+    setImageCaption,
+    setBackground,
+    setScene,
+    setShadow,
+    setTheme,
+    setAspect,
+    setPadding,
+    setPaddingX,
+    setRadius,
+    setBorder,
+    setBorderWidth,
+    setQuoteMarks,
+    setWatermarkTextEnabled,
+    setWatermarkText,
+    setWatermarkLocationEnabled,
+    setWatermarkLocationText,
+    setWatermarkDateEnabled,
+    setWatermarkDateText
+  } = actions;
   const [toast, setToast] = useState('');
   const [busy, setBusy] = useState(false);
   const [gpsBusy, setGpsBusy] = useState(false);
@@ -131,25 +153,10 @@ function App() {
   );
   const noPad = padding === 0 && paddingX === 0;
 
-  useEffect(() => {
-    if (noPad && radius !== 0) {
-      setRadius(0);
-    }
-  }, [noPad, radius]);
-
-  const applyNoPad = (checked) => {
-    setPadding(checked ? 0 : DEFAULT_PADDING);
-    setPaddingX(checked ? 0 : DEFAULT_PADDING);
-    setRadius(checked ? 0 : DEFAULT_RADIUS);
-    if (checked) {
-      setAspect('auto');
-    }
-  };
-
   const applyGpsLocation = () => {
     setGpsBusy(true);
     setToast('正在获取 GPS 定位...');
-    getCurrentCoordinates()
+    platform.getCurrentCoordinates()
       .then((coords) => {
         setWatermarkLocationText(formatGpsCoordinates(coords.latitude, coords.longitude));
         setWatermarkLocationEnabled(true);
@@ -172,7 +179,7 @@ function App() {
     setToast(action === 'copy' ? '正在复制 PNG...' : '正在生成 PNG...');
 
     try {
-      const result = await exportCaptureImage(captureRef.current, action);
+      const result = await platform.exportCaptureImage(captureRef.current, action);
       setToast(getExportToast(result));
     } catch (error) {
       console.error(error);
@@ -187,7 +194,7 @@ function App() {
     const file = event.target.files?.[0];
     if (!file) return;
     try {
-      setImageSrc(await readImageFile(file));
+      setImageSrc(await platform.readImageFile(file));
     } catch (error) {
       console.error(error);
       setToast('图片读取失败');
@@ -1042,4 +1049,4 @@ function getExportToast(result) {
 const rootElement = document.getElementById('root');
 const root = globalThis.__shareCardMakerRoot ?? createRoot(rootElement);
 globalThis.__shareCardMakerRoot = root;
-root.render(<App />);
+root.render(<App platform={browserPlatform} />);

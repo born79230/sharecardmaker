@@ -1,4 +1,8 @@
 import { toBlob, toPng } from 'html-to-image';
+import { parseProject, serializeProject } from '../model/project.js';
+import { definePlatform } from './contract.js';
+
+const PROJECT_STORAGE_KEY = 'share-card-maker.project.v1';
 
 export async function exportCaptureImage(node, action) {
   if (action === 'copy' && navigator.clipboard && globalThis.ClipboardItem) {
@@ -54,6 +58,32 @@ export function getCurrentCoordinates() {
     );
   });
 }
+
+export function loadProject() {
+  try {
+    const serialized = globalThis.localStorage?.getItem(PROJECT_STORAGE_KEY);
+    return serialized ? parseProject(serialized) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveProject(project) {
+  try {
+    globalThis.localStorage?.setItem(PROJECT_STORAGE_KEY, serializeProject(project));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export const browserPlatform = definePlatform({
+  exportCaptureImage,
+  getCurrentCoordinates,
+  loadProject,
+  readImageFile,
+  saveProject
+});
 
 function downloadDataUrl(dataUrl, filename) {
   const link = document.createElement('a');
