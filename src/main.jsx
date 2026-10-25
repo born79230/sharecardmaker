@@ -72,7 +72,7 @@ marked.use({
 export function App({ platform = browserPlatform }) {
   const captureRef = useRef(null);
   const stageRef = useRef(null);
-  const { project, actions, applyNoPad } = useProjectState(platform);
+  const { project, actions, applyNoPad, patchProject } = useProjectState(platform);
   const {
     mode,
     markdown,
@@ -183,7 +183,7 @@ export function App({ platform = browserPlatform }) {
       setToast(getExportToast(result));
     } catch (error) {
       console.error(error);
-      setToast('导出失败：请检查图片来源或浏览器权限');
+      setToast(`导出失败：${error instanceof Error ? error.message : '请检查图片来源或浏览器权限'}`);
     } finally {
       setBusy(false);
       window.setTimeout(() => setToast(''), 2200);
@@ -225,6 +225,8 @@ export function App({ platform = browserPlatform }) {
           mode={mode}
           markdown={markdown}
           setMarkdown={setMarkdown}
+          typography={project.typography}
+          setTypography={(typography) => patchProject({ typography })}
           post={post}
           setPost={setPost}
           code={code}
@@ -279,6 +281,7 @@ export function App({ platform = browserPlatform }) {
                   <ShotCard
                     mode={mode}
                     cleanHtml={cleanHtml}
+                    typography={project.typography}
                     post={post}
                     code={code}
                     codeTitle={codeTitle}
@@ -499,6 +502,8 @@ function EditorBody(props) {
     mode,
     markdown,
     setMarkdown,
+    typography,
+    setTypography,
     post,
     setPost,
     code,
@@ -560,6 +565,13 @@ function EditorBody(props) {
 
   return (
     <div className="form-stack">
+      <Label text="正文排版">
+        <select value={typography} onChange={(event) => setTypography(event.target.value)}>
+          <option value="classic">经典</option>
+          <option value="editorial">杂志</option>
+          <option value="notes">笔记</option>
+        </select>
+      </Label>
       <Label text="Markdown text">
         <textarea className="markdown-input" value={markdown} onChange={(event) => setMarkdown(event.target.value)} />
       </Label>
@@ -568,6 +580,7 @@ function EditorBody(props) {
 }
 
 function ShotCard({
+  typography,
   mode,
   cleanHtml,
   post,
@@ -647,7 +660,7 @@ function ShotCard({
   return (
     <article className={className} style={style}>
       {quoteMarks && <Quote className="quote-mark" size={54} />}
-      <div className="markdown-body" dangerouslySetInnerHTML={{ __html: cleanHtml }} />
+      <div className={`markdown-body typography-${typography}`} dangerouslySetInnerHTML={{ __html: cleanHtml }} />
     </article>
   );
 }

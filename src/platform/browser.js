@@ -1,34 +1,34 @@
-import { toBlob, toPng } from 'html-to-image';
+import { toBlob } from 'html-to-image';
+import { computeExportPixelRatio, waitForCaptureAssets } from '../lib/export.js';
 import { parseProject, serializeProject } from '../model/project.js';
 import { definePlatform } from './contract.js';
 
 const PROJECT_STORAGE_KEY = 'share-card-maker.project.v1';
 
 export async function exportCaptureImage(node, action) {
-  if (action === 'copy' && navigator.clipboard && globalThis.ClipboardItem) {
-    try {
-      const blob = await toBlob(node, {
-        pixelRatio: 2,
-        cacheBust: true,
-        backgroundColor: 'transparent'
-      });
-
-      if (blob) {
-        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-        return 'copied';
-      }
-    } catch {
-      // Browsers often restrict image clipboard writes outside secure contexts.
-    }
-  }
-
-  const dataUrl = await toPng(node, {
-    pixelRatio: 2,
+  await waitForCaptureAssets(node);
+  const width = node.offsetWidth;
+  const height = node.offsetHeight;
+  const blob = await toBlob(node, {
+    width,
+    height,
+    pixelRatio: computeExportPixelRatio(width, height),
     cacheBust: true,
     backgroundColor: 'transparent'
   });
-  downloadDataUrl(dataUrl, `share-card-${Date.now()}.png`);
+  if (!blob) throw new Error('浏览器未能生成图片，请重试');
 
+  if (action === 'copy' && navigator.clipboard && globalThis.ClipboardItem) {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+      return 'copied';
+    } catch {
+      // Reuse the rendered image when clipboard permission is unavailable.
+    }
+  }
+  const url = URL.createObjectURL(blob);
+  downloadDataUrl(url, `share-card-${Date.now()}.png`);
+  globalThis.setTimeout(() => URL.revokeObjectURL(url), 1000);
   return action === 'copy' ? 'copy-fallback-downloaded' : 'downloaded';
 }
 

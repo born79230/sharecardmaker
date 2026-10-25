@@ -78,3 +78,9 @@ test('invalid stored JSON falls back to a valid project', () => {
   assert.equal(restored.schemaVersion, PROJECT_SCHEMA_VERSION);
   assert.equal(restored.mode, 'text');
 });
+
+test('typography survives persistence and old projects receive the classic style', () => {
+  assert.equal(normalizeProject({}).typography, 'classic');
+  assert.equal(normalizeProject({ typography: 'unknown' }).typography, 'classic');
+  assert.equal(parseProject(serializeProject({ ...createDefaultProject(), typography: 'editorial' })).typography, 'editorial');
+});

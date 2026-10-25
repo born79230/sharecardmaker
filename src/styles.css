@@ -1261,3 +1261,17 @@ button {
     transform: translateX(-50%);
   }
 }
+
+/* Content typography is independent of the card appearance. */
+.markdown-body { overflow-wrap: anywhere; }
+.markdown-body table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 1em 0; }
+.markdown-body th, .markdown-body td { border: 1px solid currentColor; padding: .5em .65em; text-align: left; }
+.markdown-body th { background: rgba(128, 128, 128, .12); }
+.markdown-body pre, .code-card pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body pre code { white-space: inherit; }
+.typography-editorial { font-family: Georgia, "Noto Serif SC", "Songti SC", serif; line-height: 1.85; }
+.typography-editorial h2 { padding-bottom: .3em; border-bottom: 2px solid currentColor; }
+.typography-editorial blockquote { border-left-width: 2px; font-style: italic; }
+.typography-notes { line-height: 1.8; }
+.typography-notes h2 { padding: .3em .5em; border-radius: 8px; background: rgba(128, 128, 128, .13); }
+.typography-notes blockquote { padding: .7em 1em; border-radius: 0 10px 10px 0; background: rgba(128, 128, 128, .1); }
