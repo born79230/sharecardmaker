@@ -1,0 +1,1105 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-bauhaus {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-bauhaus p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-bauhaus h1,
+.markdown-body.typography-wemd-bauhaus h2,
+.markdown-body.typography-wemd-bauhaus h3,
+.markdown-body.typography-wemd-bauhaus h4,
+.markdown-body.typography-wemd-bauhaus h5,
+.markdown-body.typography-wemd-bauhaus h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-bauhaus h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-bauhaus h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-bauhaus h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-bauhaus h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-bauhaus h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-bauhaus h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-bauhaus h1 .prefix,
+.markdown-body.typography-wemd-bauhaus h2 .prefix,
+.markdown-body.typography-wemd-bauhaus h3 .prefix,
+.markdown-body.typography-wemd-bauhaus h4 .prefix,
+.markdown-body.typography-wemd-bauhaus h5 .prefix,
+.markdown-body.typography-wemd-bauhaus h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-bauhaus h1 .suffix,
+.markdown-body.typography-wemd-bauhaus h2 .suffix,
+.markdown-body.typography-wemd-bauhaus h3 .suffix,
+.markdown-body.typography-wemd-bauhaus h4 .suffix,
+.markdown-body.typography-wemd-bauhaus h5 .suffix,
+.markdown-body.typography-wemd-bauhaus h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-bauhaus ul,
+.markdown-body.typography-wemd-bauhaus ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-bauhaus ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-bauhaus ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-bauhaus ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-bauhaus li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-bauhaus blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-bauhaus .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-bauhaus a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-bauhaus strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-bauhaus em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-bauhaus em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-bauhaus del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-bauhaus u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-bauhaus hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-bauhaus pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-bauhaus pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-bauhaus pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-bauhaus pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-bauhaus p code,
+.markdown-body.typography-wemd-bauhaus li code,
+.markdown-body.typography-wemd-bauhaus td code,
+.markdown-body.typography-wemd-bauhaus th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-bauhaus img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-bauhaus figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-bauhaus figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-bauhaus .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-bauhaus table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-bauhaus tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-bauhaus table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-bauhaus table tr th,
+.markdown-body.typography-wemd-bauhaus table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-bauhaus table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-bauhaus table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-bauhaus table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-bauhaus sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-bauhaus .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-bauhaus .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-bauhaus .inline-equation {
+}
+
+.markdown-body.typography-wemd-bauhaus .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-bauhaus .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-bauhaus figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-bauhaus figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-bauhaus figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-bauhaus figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-bauhaus figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-bauhaus .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-bauhaus .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-bauhaus .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-bauhaus .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-bauhaus .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-bauhaus .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-bauhaus .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 包豪斯风格 */
+.markdown-body.typography-wemd-bauhaus {
+    padding: 30px 22px;
+    max-width: 677px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+    color: #111;
+    background-color: transparent;
+    /* 透明背景，兼容微信深色模式 */
+    /* 顶部红蓝条装饰 */
+    border-top: 8px solid #D32F2F;
+    border-bottom: 8px solid #1976D2;
+    word-break: break-word;
+}
+
+.markdown-body.typography-wemd-bauhaus p {
+    margin: 24px 0;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+    font-size: 16px;
+}
+
+/* 一级标题 - 红色几何块 */
+.markdown-body.typography-wemd-bauhaus h1 {
+    margin: 60px 0 40px;
+    text-align: left;
+}
+
+.markdown-body.typography-wemd-bauhaus h1 .content {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    background: #D32F2F;
+    padding: 15px 25px;
+    display: inline-block;
+    /* 简单的直角矩形+硬阴影，兼容性最好且有力 */
+    box-shadow: 6px 6px 0 #111;
+    border: 2px solid #111;
+}
+
+.markdown-body.typography-wemd-bauhaus h1 .prefix,
+.markdown-body.typography-wemd-bauhaus h1 .suffix {
+    display: none;
+}
+
+/* 二级标题 - 蓝色圆形引导 */
+.markdown-body.typography-wemd-bauhaus h2 {
+    margin: 50px 0 25px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.markdown-body.typography-wemd-bauhaus h2 .content {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    position: relative;
+    padding-left: 20px;
+    border-left: 10px solid #1976D2;
+    /* 蓝色竖条 */
+}
+
+.markdown-body.typography-wemd-bauhaus h2 .prefix,
+.markdown-body.typography-wemd-bauhaus h2 .suffix {
+    display: none;
+}
+
+/* 三级标题 - 黄色下划线 */
+.markdown-body.typography-wemd-bauhaus h3 {
+    margin: 30px 0 15px;
+}
+
+.markdown-body.typography-wemd-bauhaus h3 .content {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    border-bottom: 5px solid #FBC02D;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.markdown-body.typography-wemd-bauhaus h3 .prefix,
+.markdown-body.typography-wemd-bauhaus h3 .suffix {
+    display: none;
+}
+
+/* 四级标题 */
+.markdown-body.typography-wemd-bauhaus h4 {
+    margin: 20px 0 10px;
+}
+
+.markdown-body.typography-wemd-bauhaus h4 .content {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1976D2;
+    background: #eee;
+    padding: 4px 8px;
+}
+
+.markdown-body.typography-wemd-bauhaus h4 .prefix,
+.markdown-body.typography-wemd-bauhaus h4 .suffix {
+    display: none;
+}
+
+/* 引用 - 几何框 */
+.markdown-body.typography-wemd-bauhaus .multiquote-1 {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 2px solid #111;
+    box-shadow: 5px 5px 0 #D32F2F;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-1 p {
+    color: #333;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-2 {
+    margin: 28px 0;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #111;
+    box-shadow: 4px 4px 0 #1976D2;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-2 p {
+    color: #333;
+    margin: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-3 {
+    margin: 26px 0;
+    padding: 18px;
+    background: #fff;
+    border: 2px solid #111;
+    box-shadow: 3px 3px 0 #FBC02D;
+}
+
+.markdown-body.typography-wemd-bauhaus .multiquote-3 p {
+    color: #333;
+    margin: 0;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-bauhaus ul {
+    list-style: square;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #D32F2F;
+}
+
+/* 有序列表 - 粗黑数字 */
+.markdown-body.typography-wemd-bauhaus ol {
+    list-style: decimal;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus ul ul {
+    list-style-type: circle;
+    color: #1976D2;
+    margin-top: 8px;
+}
+
+.markdown-body.typography-wemd-bauhaus ol ol {
+    list-style-type: lower-alpha;
+    color: #D32F2F;
+}
+
+.markdown-body.typography-wemd-bauhaus li section {
+    color: #333;
+    font-weight: normal;
+}
+
+/* 链接 - 蓝色背景高亮 */
+.markdown-body.typography-wemd-bauhaus a {
+    color: #111;
+    text-decoration: none;
+    background-color: rgba(25, 118, 210, 0.2);
+    border-bottom: 1px solid #1976D2;
+    padding: 0 2px;
+    font-weight: bold;
+}
+
+/* 加粗 - 红色 */
+.markdown-body.typography-wemd-bauhaus strong {
+    color: #D32F2F;
+    font-weight: 900;
+}
+
+/* 斜体 - 蓝色 */
+.markdown-body.typography-wemd-bauhaus em {
+    font-style: italic;
+    color: #1976D2;
+    font-weight: bold;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-bauhaus em strong {
+    color: #D32F2F;
+    font-weight: 900;
+}
+
+/* 高亮 - 黄色块 */
+.markdown-body.typography-wemd-bauhaus mark {
+    background: #FBC02D;
+    color: #000;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+/* 删除线 - 粗红线 */
+.markdown-body.typography-wemd-bauhaus del {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #D32F2F;
+    color: #666;
+}
+
+/* 分割线 - 粗黑线 */
+.markdown-body.typography-wemd-bauhaus hr {
+    margin: 40px 0;
+    border: none;
+    height: 4px;
+    background: #000;
+}
+
+/* 
+ * 行内代码 - 黄色高亮 (修复重点) 
+ * 亮黄背景 + 黑色文字 + 粗体
+ */
+.markdown-body.typography-wemd-bauhaus p code,
+.markdown-body.typography-wemd-bauhaus li code,
+.markdown-body.typography-wemd-bauhaus td code,
+.markdown-body.typography-wemd-bauhaus th code {
+    background: #FBC02D;
+    /* 包豪斯黄 */
+    color: #000;
+    /* 纯黑字 */
+    padding: 2px 6px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    /* 几何感 */
+}
+
+/* 图片 - 黑框硬阴影 */
+.markdown-body.typography-wemd-bauhaus img {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    border: 3px solid #111;
+    box-shadow: 6px 6px 0 #1976D2;
+    /* 蓝色硬阴影 */
+}
+
+.markdown-body.typography-wemd-bauhaus figcaption {
+    margin-top: 10px;
+    text-align: center;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    background: #FBC02D;
+    padding: 4px 8px;
+    display: inline-block;
+}
+
+/* 代码块 - 极简黑 */
+.markdown-body.typography-wemd-bauhaus pre code.hljs {
+    background: #111;
+    color: #f5f5f5; /* 默认亮色文字 */
+    padding: 20px;
+    border-radius: 0;
+    font-family: monospace;
+    border: 2px solid #111;
+}
+
+/* 语法高亮颜色覆盖 - 确保在黑色背景上可读 */
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-keyword,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-selector-tag,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-built_in,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-name,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-tag {
+    color: #FBC02D; /* 包豪斯黄 */
+}
+
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-string,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-title,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-section,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-attribute,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-literal,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-template-tag,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-template-variable,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-type {
+    color: #D32F2F; /* 包豪斯红 */
+}
+
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-comment,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-quote {
+    color: #888; /* 灰色注释 */
+}
+
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-number,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-regexp,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-variable,
+.markdown-body.typography-wemd-bauhaus pre code.hljs .hljs-params {
+    color: #1976D2; /* 包豪斯蓝 */
+}
+
+/* 如果没有语法高亮，设置默认黄色 */
+.markdown-body.typography-wemd-bauhaus pre code:not(.hljs) {
+    color: #FBC02D;
+    background: #111;
+    border: 2px solid #111;
+}
+
+/* 表格 - 粗线网格 */
+.markdown-body.typography-wemd-bauhaus table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    border: 2px solid #111;
+}
+
+.markdown-body.typography-wemd-bauhaus table tr th {
+    background: #1976D2;
+    color: #fff;
+    border: 1px solid #111;
+    padding: 10px;
+}
+
+.markdown-body.typography-wemd-bauhaus table tr td {
+    border: 1px solid #111;
+    padding: 10px;
+    color: #333;
+}
+
+/* 脚注 */
+.markdown-body.typography-wemd-bauhaus .footnote-word,
+.markdown-body.typography-wemd-bauhaus .footnote-ref {
+    color: #1976D2;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnotes-sep {
+    border-top: 2px solid #111;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-num {
+    font-weight: 900;
+    color: #fff;
+    background: #D32F2F;
+    padding: 2px 6px;
+    margin-right: 6px;
+}
+
+.markdown-body.typography-wemd-bauhaus .footnote-item p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* 提示块 - 包豪斯风格 */
+.markdown-body.typography-wemd-bauhaus .callout {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 2px solid #111;
+    box-shadow: 5px 5px 0 #FBC02D;
+    border-radius: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-title {
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #111;
+    font-size: 16px;
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-icon { margin-right: 8px;
+    margin-right: 6px;
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-note { 
+    border-left: 10px solid #1976D2; 
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-tip { 
+    border-left: 10px solid #FBC02D; 
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-important { 
+    border-left: 10px solid #1976D2; 
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-warning { 
+    border-left: 10px solid #FBC02D; 
+}
+
+.markdown-body.typography-wemd-bauhaus .callout-caution { 
+    border-left: 10px solid #D32F2F; 
+}
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-bauhaus .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+/* 代码块样式 - 需要添加 .markdown-body.typography-wemd-bauhaus 前缀以匹配包装后的 HTML */
+.markdown-body.typography-wemd-bauhaus .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-comment,
+.markdown-body.typography-wemd-bauhaus .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-keyword,
+.markdown-body.typography-wemd-bauhaus .hljs-selector-tag,
+.markdown-body.typography-wemd-bauhaus .hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-number,
+.markdown-body.typography-wemd-bauhaus .hljs-literal,
+.markdown-body.typography-wemd-bauhaus .hljs-variable,
+.markdown-body.typography-wemd-bauhaus .hljs-template-variable,
+.markdown-body.typography-wemd-bauhaus .hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-string,
+.markdown-body.typography-wemd-bauhaus .hljs-doctag {
+  color: #d14;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-title,
+.markdown-body.typography-wemd-bauhaus .hljs-section,
+.markdown-body.typography-wemd-bauhaus .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-subst {
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-type,
+.markdown-body.typography-wemd-bauhaus .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-tag,
+.markdown-body.typography-wemd-bauhaus .hljs-name,
+.markdown-body.typography-wemd-bauhaus .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-regexp,
+.markdown-body.typography-wemd-bauhaus .hljs-link {
+  color: #009926;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-symbol,
+.markdown-body.typography-wemd-bauhaus .hljs-bullet {
+  color: #990073;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-built_in,
+.markdown-body.typography-wemd-bauhaus .hljs-builtin-name {
+  color: #0086b3;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-deletion {
+  background: #fdd;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-addition {
+  background: #dfd;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-bauhaus .hljs-strong {
+  font-weight: bold;
+}
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-bauhaus .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-bauhaus .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-bauhaus { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-bauhaus pre, .markdown-body.typography-wemd-bauhaus pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-bauhaus table { max-width: 100%; table-layout: fixed; }

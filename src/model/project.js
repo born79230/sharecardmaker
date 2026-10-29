@@ -12,6 +12,7 @@ import {
   SHADOWS,
   THEME_OPTIONS
 } from '../presets.js';
+import { TYPOGRAPHY_OPTIONS } from '../themes/catalog.js';
 import { getTodayDateValue } from '../lib/formatters.js';
 
 export const PROJECT_SCHEMA_VERSION = 1;
@@ -63,7 +64,7 @@ export function normalizeProject(value, options) {
     schemaVersion: PROJECT_SCHEMA_VERSION,
     mode: pickFromSet(value.mode, MODES, defaults.mode),
     markdown: pickString(value.markdown, defaults.markdown),
-    typography: pickFromSet(value.typography, new Set(['classic', 'editorial', 'notes']), defaults.typography),
+    typography: pickFromSet(value.typography, new Set(TYPOGRAPHY_OPTIONS.map((item) => item.id)), defaults.typography),
     post: normalizePost(value.post, defaults.post),
     code: pickString(value.code, defaults.code),
     codeTitle: pickString(value.codeTitle, defaults.codeTitle),

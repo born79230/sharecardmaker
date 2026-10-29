@@ -1,0 +1,1033 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-eastern-notes {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-eastern-notes p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-eastern-notes h1,
+.markdown-body.typography-wemd-eastern-notes h2,
+.markdown-body.typography-wemd-eastern-notes h3,
+.markdown-body.typography-wemd-eastern-notes h4,
+.markdown-body.typography-wemd-eastern-notes h5,
+.markdown-body.typography-wemd-eastern-notes h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-eastern-notes h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-eastern-notes h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-eastern-notes h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-eastern-notes h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-eastern-notes h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-eastern-notes h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1 .prefix,
+.markdown-body.typography-wemd-eastern-notes h2 .prefix,
+.markdown-body.typography-wemd-eastern-notes h3 .prefix,
+.markdown-body.typography-wemd-eastern-notes h4 .prefix,
+.markdown-body.typography-wemd-eastern-notes h5 .prefix,
+.markdown-body.typography-wemd-eastern-notes h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1 .suffix,
+.markdown-body.typography-wemd-eastern-notes h2 .suffix,
+.markdown-body.typography-wemd-eastern-notes h3 .suffix,
+.markdown-body.typography-wemd-eastern-notes h4 .suffix,
+.markdown-body.typography-wemd-eastern-notes h5 .suffix,
+.markdown-body.typography-wemd-eastern-notes h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-eastern-notes ul,
+.markdown-body.typography-wemd-eastern-notes ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-eastern-notes ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-eastern-notes ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-eastern-notes ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-eastern-notes li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-eastern-notes blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-eastern-notes .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-eastern-notes a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-eastern-notes strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-eastern-notes em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-eastern-notes em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-eastern-notes del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-eastern-notes u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-eastern-notes hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-eastern-notes pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-eastern-notes p code,
+.markdown-body.typography-wemd-eastern-notes li code,
+.markdown-body.typography-wemd-eastern-notes td code,
+.markdown-body.typography-wemd-eastern-notes th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-eastern-notes img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-eastern-notes figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-eastern-notes figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-eastern-notes .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-eastern-notes table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-eastern-notes tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr th,
+.markdown-body.typography-wemd-eastern-notes table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-eastern-notes table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-eastern-notes table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-eastern-notes sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-eastern-notes .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-eastern-notes .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-eastern-notes .inline-equation {
+}
+
+.markdown-body.typography-wemd-eastern-notes .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-eastern-notes .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-eastern-notes .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-eastern-notes .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-eastern-notes .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-eastern-notes .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-eastern-notes figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-eastern-notes figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-eastern-notes figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-eastern-notes figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-eastern-notes .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-eastern-notes .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-eastern-notes .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-eastern-notes .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-eastern-notes .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-eastern-notes .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 东方笺谱：现代人文长文 */
+.markdown-body.typography-wemd-eastern-notes {
+  max-width: 677px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  color: #36322f;
+  background-color: transparent;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 17px;
+  line-height: 2.06;
+  letter-spacing: 0.045em;
+  word-break: break-word;
+}
+
+.markdown-body.typography-wemd-eastern-notes p {
+  margin: 0 0 29px;
+  color: #36322f;
+  font-size: 17px;
+  line-height: 2.06;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1,
+.markdown-body.typography-wemd-eastern-notes h2,
+.markdown-body.typography-wemd-eastern-notes h3,
+.markdown-body.typography-wemd-eastern-notes h4,
+.markdown-body.typography-wemd-eastern-notes h5,
+.markdown-body.typography-wemd-eastern-notes h6 {
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1 {
+  max-width: 7em;
+  margin: 38px 0 72px auto;
+  padding: 0 8px 0 0;
+  border: none;
+  text-align: right;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 24px 0 0 auto;
+  background: #a33a2b;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1 .content {
+  display: inline-block;
+  max-width: 100%;
+  color: #282522;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-eastern-notes h2 {
+  margin: 58px 0 30px;
+  padding: 0 8px 0 0;
+  border: none;
+  text-align: right;
+}
+
+.markdown-body.typography-wemd-eastern-notes h2::before {
+  content: "◆";
+  display: block;
+  margin-bottom: 8px;
+  color: #a33a2b;
+  font-size: 9px;
+  text-align: right;
+}
+
+.markdown-body.typography-wemd-eastern-notes h2 .content {
+  color: #a33a2b;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-eastern-notes h3 {
+  margin: 40px 0 21px 2em;
+}
+
+.markdown-body.typography-wemd-eastern-notes h3 .content {
+  display: inline;
+  padding: 0;
+  color: #a33a2b;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-eastern-notes h4,
+.markdown-body.typography-wemd-eastern-notes h5,
+.markdown-body.typography-wemd-eastern-notes h6 {
+  margin: 29px 0 14px;
+  padding: 0;
+  border: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes h4 .content,
+.markdown-body.typography-wemd-eastern-notes h5 .content,
+.markdown-body.typography-wemd-eastern-notes h6 .content {
+  color: #514841;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-eastern-notes h1 .prefix,
+.markdown-body.typography-wemd-eastern-notes h1 .suffix,
+.markdown-body.typography-wemd-eastern-notes h2 .prefix,
+.markdown-body.typography-wemd-eastern-notes h2 .suffix,
+.markdown-body.typography-wemd-eastern-notes h3 .prefix,
+.markdown-body.typography-wemd-eastern-notes h3 .suffix,
+.markdown-body.typography-wemd-eastern-notes h4 .prefix,
+.markdown-body.typography-wemd-eastern-notes h4 .suffix,
+.markdown-body.typography-wemd-eastern-notes h5 .prefix,
+.markdown-body.typography-wemd-eastern-notes h5 .suffix,
+.markdown-body.typography-wemd-eastern-notes h6 .prefix,
+.markdown-body.typography-wemd-eastern-notes h6 .suffix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-1,
+.markdown-body.typography-wemd-eastern-notes .multiquote-2,
+.markdown-body.typography-wemd-eastern-notes .multiquote-3 {
+  margin: 46px 8px;
+  padding: 8px 24px;
+  border: none;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-1::before {
+  content: "“";
+  display: block;
+  color: #a33a2b;
+  font-size: 42px;
+  line-height: 0.8;
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-1 p,
+.markdown-body.typography-wemd-eastern-notes .multiquote-2 p,
+.markdown-body.typography-wemd-eastern-notes .multiquote-3 p {
+  margin: 0;
+  color: #564c45;
+  font-size: 18px;
+  line-height: 2;
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-2,
+.markdown-body.typography-wemd-eastern-notes .multiquote-3,
+.markdown-body.typography-wemd-eastern-notes .multiquote-1 .multiquote-1 {
+  margin: 12px 0 0;
+  padding: 8px 0 0;
+  border: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes .multiquote-1 .multiquote-1::before {
+  display: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes ul,
+.markdown-body.typography-wemd-eastern-notes ol {
+  margin: 22px 0 28px;
+  padding-left: 25px;
+  color: #a33a2b;
+}
+
+.markdown-body.typography-wemd-eastern-notes li section {
+  margin: 7px 0;
+  color: #36322f;
+  line-height: 1.88;
+}
+
+.markdown-body.typography-wemd-eastern-notes ol > li > section {
+  padding: 3px 0 9px;
+  border: none;
+  border-bottom: 1px dotted #bfb4aa;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-eastern-notes a {
+  color: #8c3025;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #c99087;
+  text-underline-offset: 0.22em;
+}
+
+.markdown-body.typography-wemd-eastern-notes strong {
+  color: #272320;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #d9aaa2;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.markdown-body.typography-wemd-eastern-notes mark {
+  padding: 1px 4px;
+  color: #4f2822;
+  background: #efd9d4;
+}
+
+.markdown-body.typography-wemd-eastern-notes hr {
+  width: 8px;
+  height: 8px;
+  margin: 64px auto;
+  border: none;
+  background: #a33a2b;
+}
+
+.markdown-body.typography-wemd-eastern-notes figure {
+  margin: 48px 0 54px;
+  padding: 0;
+  border: none;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-eastern-notes figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes img,
+.markdown-body.typography-wemd-eastern-notes figure a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.markdown-body.typography-wemd-eastern-notes figcaption {
+  margin-top: 12px;
+  color: #746860;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+
+.markdown-body.typography-wemd-eastern-notes p code,
+.markdown-body.typography-wemd-eastern-notes li code,
+.markdown-body.typography-wemd-eastern-notes td code,
+.markdown-body.typography-wemd-eastern-notes th code {
+  padding: 2px 6px;
+  border: 1px solid #d4cbc3;
+  color: #8c3025;
+  background: #f1eeea;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre {
+  margin: 32px 0;
+  border: 1px solid #403a35;
+  border-top: 6px solid #a33a2b;
+  background: #2e2a27;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre code,
+.markdown-body.typography-wemd-eastern-notes pre code.hljs {
+  display: block;
+  min-width: max-content;
+  padding: 20px;
+  color: #f0ece7;
+  background: #2e2a27;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.72;
+  white-space: pre;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre.custom > .mac-sign {
+  display: block;
+  border-bottom: 1px solid #5d554e;
+  background: #2e2a27;
+}
+
+.markdown-body.typography-wemd-eastern-notes .table-container {
+  margin: 34px 0;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-eastern-notes table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #3d3732;
+  background: #faf9f7;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr th,
+.markdown-body.typography-wemd-eastern-notes table tr td {
+  min-width: 88px;
+  padding: 11px 10px;
+  border: none;
+  border-bottom: 1px solid #cfc6be;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr th {
+  border-top: 1px solid #5a4e46;
+  border-bottom: 2px solid #5a4e46;
+  color: #a33a2b;
+  background: transparent;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-eastern-notes table tr:nth-child(2n) {
+  background: #f0ede9;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout {
+  margin: 31px 0;
+  padding: 18px 4px;
+  border: none;
+  border-top: 1px dotted #8f8177;
+  border-bottom: 1px dotted #8f8177;
+  border-radius: 0;
+  color: #4a423c;
+  background: transparent;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout-warning,
+.markdown-body.typography-wemd-eastern-notes .callout-caution {
+  border-color: #a33a2b;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout-title {
+  margin-bottom: 8px;
+  color: #5a2d26;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-eastern-notes .callout p {
+  margin: 0;
+  color: #564c45;
+  font-size: 15px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-word,
+.markdown-body.typography-wemd-eastern-notes .footnote-ref {
+  color: #a33a2b;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnotes-sep {
+  margin-top: 52px;
+  padding-top: 18px;
+  border-top: 4px double #4c4640;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-item {
+  display: flex;
+  margin-top: 9px;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-num {
+  width: 30px;
+  flex-shrink: 0;
+  color: #a33a2b;
+}
+
+.markdown-body.typography-wemd-eastern-notes .footnote-item p {
+  margin: 0;
+  color: #746860;
+  font-size: 13px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-eastern-notes .block-equation {
+  display: block;
+  margin: 32px 0;
+  padding: 19px 10px;
+  border-top: 1px solid #cfc6be;
+  border-bottom: 1px solid #cfc6be;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-eastern-notes .block-equation > svg {
+  max-width: 300% !important;
+}
+
+.markdown-body.typography-wemd-eastern-notes .inline-equation > svg {
+  vertical-align: middle;
+}
+
+.markdown-body.typography-wemd-eastern-notes pre.mermaid {
+  padding: 20px 10px;
+  border: 1px solid #c2b7ae;
+  border-top: 5px solid #a33a2b;
+  background: #faf9f7;
+}
+
+.markdown-body.typography-wemd-eastern-notes .task-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -1.2em;
+  list-style: none;
+}
+
+.markdown-body.typography-wemd-eastern-notes .task-list-item input[type='checkbox'] {
+  margin-top: 8px;
+  margin-right: 8px;
+  accent-color: #a33a2b;
+  pointer-events: none;
+}
+
+/* GitHub Dark 代码高亮 */
+.markdown-body.typography-wemd-eastern-notes .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-doctag,
+.markdown-body.typography-wemd-eastern-notes .hljs-keyword,
+.markdown-body.typography-wemd-eastern-notes .hljs-meta .hljs-keyword,
+.markdown-body.typography-wemd-eastern-notes .hljs-template-tag,
+.markdown-body.typography-wemd-eastern-notes .hljs-template-variable,
+.markdown-body.typography-wemd-eastern-notes .hljs-type,
+.markdown-body.typography-wemd-eastern-notes .hljs-variable.language_ {
+  color: #ff7b72;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-title,
+.markdown-body.typography-wemd-eastern-notes .hljs-title.class_,
+.markdown-body.typography-wemd-eastern-notes .hljs-title.class_.inherited__,
+.markdown-body.typography-wemd-eastern-notes .hljs-title.function_ {
+  color: #d2a8ff;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-attr,
+.markdown-body.typography-wemd-eastern-notes .hljs-attribute,
+.markdown-body.typography-wemd-eastern-notes .hljs-literal,
+.markdown-body.typography-wemd-eastern-notes .hljs-meta,
+.markdown-body.typography-wemd-eastern-notes .hljs-number,
+.markdown-body.typography-wemd-eastern-notes .hljs-operator,
+.markdown-body.typography-wemd-eastern-notes .hljs-variable,
+.markdown-body.typography-wemd-eastern-notes .hljs-selector-attr,
+.markdown-body.typography-wemd-eastern-notes .hljs-selector-class,
+.markdown-body.typography-wemd-eastern-notes .hljs-selector-id {
+  color: #79c0ff;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-regexp,
+.markdown-body.typography-wemd-eastern-notes .hljs-string,
+.markdown-body.typography-wemd-eastern-notes .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-built_in,
+.markdown-body.typography-wemd-eastern-notes .hljs-symbol {
+  color: #ffa657;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-comment,
+.markdown-body.typography-wemd-eastern-notes .hljs-code,
+.markdown-body.typography-wemd-eastern-notes .hljs-formula {
+  color: #9198a1;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-name,
+.markdown-body.typography-wemd-eastern-notes .hljs-quote,
+.markdown-body.typography-wemd-eastern-notes .hljs-selector-tag,
+.markdown-body.typography-wemd-eastern-notes .hljs-selector-pseudo {
+  color: #7ee787;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-subst,
+.markdown-body.typography-wemd-eastern-notes .hljs-emphasis,
+.markdown-body.typography-wemd-eastern-notes .hljs-strong {
+  color: #c9d1d9;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-section {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-bullet {
+  color: #f2cc60;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-strong {
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.markdown-body.typography-wemd-eastern-notes .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.markdown-body.typography-wemd-eastern-notes { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-eastern-notes pre, .markdown-body.typography-wemd-eastern-notes pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-eastern-notes table { max-width: 100%; table-layout: fixed; }

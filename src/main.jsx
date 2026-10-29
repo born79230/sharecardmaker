@@ -1,7 +1,8 @@
 import React, { useId, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DOMPurify from 'dompurify';
-import { marked } from 'marked';
+import { renderMarkdown } from './lib/markdown.js';
+import { TYPOGRAPHY_OPTIONS } from './themes/catalog.js';
 import {
   BadgeCheck,
   Check,
@@ -45,6 +46,7 @@ import {
 } from './presets.js';
 import './styles.css';
 import './typography.css';
+import './themes/wemd.css';
 
 const MODES = [
   { id: 'text', label: 'Text', icon: Type },
@@ -65,10 +67,6 @@ const WATERMARK_ICONS = {
   date: CalendarDays
 };
 
-marked.use({
-  breaks: true,
-  gfm: true
-});
 
 export function App({ platform = browserPlatform }) {
   const captureRef = useRef(null);
@@ -133,7 +131,7 @@ export function App({ platform = browserPlatform }) {
   const dims = ASPECTS[aspect];
   const shellHeight = dims.height || AUTO_SHELL_HEIGHT;
   const previewScale = usePreviewScale(stageRef, { width: dims.width, shellHeight });
-  const cleanHtml = useMemo(() => DOMPurify.sanitize(marked.parse(markdown)), [markdown]);
+  const cleanHtml = useMemo(() => DOMPurify.sanitize(renderMarkdown(markdown, project.typography)), [markdown, project.typography]);
   const watermarkItems = useMemo(
     () => buildWatermarkItems({
       watermarkTextEnabled,
@@ -568,9 +566,12 @@ function EditorBody(props) {
     <div className="form-stack">
       <Label text="正文排版">
         <select value={typography} onChange={(event) => setTypography(event.target.value)}>
-          <option value="classic">清新 · 蓝色手记</option>
-          <option value="editorial">杂志 · 编辑部手记</option>
-          <option value="notes">笔记 · 知识库</option>
+          <optgroup label="ShareCardMaker 适配主题">
+            {TYPOGRAPHY_OPTIONS.filter((item) => !item.id.startsWith('wemd-')).map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
+          </optgroup>
+          <optgroup label="WeMD 全部内置主题">
+            {TYPOGRAPHY_OPTIONS.filter((item) => item.id.startsWith('wemd-')).map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
+          </optgroup>
         </select>
       </Label>
       <Label text="Markdown text">

@@ -129,6 +129,7 @@ button {
 }
 
 .field-label input,
+.field-label select,
 .field-label textarea {
   width: 100%;
   border: 1px solid rgba(148, 163, 184, 0.5);

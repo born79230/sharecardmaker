@@ -1,0 +1,1210 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-neo-brutalism {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-neo-brutalism p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-neo-brutalism h1,
+.markdown-body.typography-wemd-neo-brutalism h2,
+.markdown-body.typography-wemd-neo-brutalism h3,
+.markdown-body.typography-wemd-neo-brutalism h4,
+.markdown-body.typography-wemd-neo-brutalism h5,
+.markdown-body.typography-wemd-neo-brutalism h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-neo-brutalism h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-neo-brutalism h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-neo-brutalism h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-neo-brutalism h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-neo-brutalism h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-neo-brutalism h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h1 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h2 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h3 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h4 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h5 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h1 .suffix,
+.markdown-body.typography-wemd-neo-brutalism h2 .suffix,
+.markdown-body.typography-wemd-neo-brutalism h3 .suffix,
+.markdown-body.typography-wemd-neo-brutalism h4 .suffix,
+.markdown-body.typography-wemd-neo-brutalism h5 .suffix,
+.markdown-body.typography-wemd-neo-brutalism h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-neo-brutalism ul,
+.markdown-body.typography-wemd-neo-brutalism ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-neo-brutalism ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-neo-brutalism ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-neo-brutalism ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-neo-brutalism li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-neo-brutalism blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-neo-brutalism a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-neo-brutalism strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-neo-brutalism em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-neo-brutalism em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-neo-brutalism del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-neo-brutalism u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-neo-brutalism hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-neo-brutalism pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-neo-brutalism p code,
+.markdown-body.typography-wemd-neo-brutalism li code,
+.markdown-body.typography-wemd-neo-brutalism td code,
+.markdown-body.typography-wemd-neo-brutalism th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-neo-brutalism img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-neo-brutalism figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-neo-brutalism figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-neo-brutalism .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-neo-brutalism table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-neo-brutalism tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-neo-brutalism table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-neo-brutalism table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-neo-brutalism table tr th,
+.markdown-body.typography-wemd-neo-brutalism table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-neo-brutalism table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-neo-brutalism table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-neo-brutalism table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-neo-brutalism sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-neo-brutalism .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .inline-equation {
+}
+
+.markdown-body.typography-wemd-neo-brutalism .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-neo-brutalism figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-neo-brutalism figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-neo-brutalism figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-neo-brutalism figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-neo-brutalism .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-neo-brutalism .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-neo-brutalism .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-neo-brutalism .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-neo-brutalism .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 新粗野主义风格 */
+.markdown-body.typography-wemd-neo-brutalism {
+    padding: 5px 22px;
+    max-width: 677px;
+    margin: 0 auto;
+    font-family: -apple-system, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: #000;
+    /* 纯黑文字，极致对比 */
+    /* 透明背景，兼容微信深色模式 */
+    background-color: transparent;
+    word-break: break-word;
+}
+
+/* 段落 - 高对比度 */
+.markdown-body.typography-wemd-neo-brutalism p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    color: #111;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* 
+ * 一级标题 - 像一个醒目的标签盒子
+ * 设计：粗边框 + 荧光黄背景 + 硬阴影
+ */
+.markdown-body.typography-wemd-neo-brutalism h1 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h1 .content {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    background-color: #CCFF00;
+    /* 荧光黄高亮 */
+    border: 3px solid #000;
+    /* 粗黑边框 */
+    padding: 12px 20px;
+    /* 关键：黑色硬阴影 */
+    box-shadow: 6px 6px 0px #000;
+    line-height: 1.3;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h1 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h1 .suffix {
+    display: none;
+}
+
+/* 
+ * 二级标题 - 下划线高亮
+ * 设计：文字下方的厚实色块
+ */
+.markdown-body.typography-wemd-neo-brutalism h2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: left;
+    border-bottom: 3px solid #000;
+    /* 通栏粗黑线 */
+    padding-bottom: 10px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h2 .content {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    background-color: #6A00FF;
+    /* 电光紫背景 */
+    padding: 8px 16px;
+    border: 2px solid #000;
+    /* 左上偏移的阴影效果 */
+    box-shadow: 4px -4px 0px #000;
+    line-height: 1.2;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h2 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h2 .suffix {
+    display: none;
+}
+
+/* 
+ * 三级标题 - 几何引导
+ */
+.markdown-body.typography-wemd-neo-brutalism h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h3 .content {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    padding-left: 12px;
+    border-left: 8px solid #CCFF00;
+    /* 极粗的黄线 */
+    line-height: 1.2;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h3 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h3 .suffix {
+    display: none;
+}
+
+/* 
+ * 四级标题 - 反色黑盒
+ */
+.markdown-body.typography-wemd-neo-brutalism h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h4 .content {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #000;
+    /* 纯黑背景 */
+    padding: 6px 12px;
+    border-radius: 0;
+    /* 直角 */
+    line-height: 1.4;
+}
+
+.markdown-body.typography-wemd-neo-brutalism h4 .prefix,
+.markdown-body.typography-wemd-neo-brutalism h4 .suffix {
+    display: none;
+}
+
+/* 
+ * 列表 - 强烈的几何感
+ * 必须使用正方形
+ */
+.markdown-body.typography-wemd-neo-brutalism ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #6A00FF;
+    /* 紫色方块 */
+}
+
+.markdown-body.typography-wemd-neo-brutalism ul li {
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+
+.markdown-body.typography-wemd-neo-brutalism li section {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 有序列表 - 粗黑体数字 */
+.markdown-body.typography-wemd-neo-brutalism ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #000;
+    font-weight: 900;
+    /* 最粗字体 */
+}
+
+.markdown-body.typography-wemd-neo-brutalism ol li {
+    margin-bottom: 12px;
+    line-height: 1.75;
+    border-bottom: 1px solid #eee;
+    /* 增加分割线 */
+    padding-bottom: 8px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism ol li section {
+    color: #222;
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism ul ul {
+    list-style-type: circle;
+    color: #CCFF00;
+    margin-top: 10px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism ol ol {
+    list-style-type: upper-alpha;
+    color: #6A00FF;
+    font-weight: 900;
+}
+
+/* 
+ * 引用 - 视窗风格 (Window Style)
+ * 这是一个带粗边框和硬阴影的盒子
+ */
+.markdown-body.typography-wemd-neo-brutalism .multiquote-1,
+.markdown-body.typography-wemd-neo-brutalism .multiquote-2,
+.markdown-body.typography-wemd-neo-brutalism .multiquote-3 {
+    margin: 40px 0;
+    padding: 24px;
+    background-color: #f4f4f4;
+    /* 浅灰背景 */
+    border: 2px solid #000;
+    /* 粗黑边框 */
+    /* 经典的波普风硬阴影 */
+    box-shadow: 6px 6px 0px #6A00FF;
+    overflow: visible !important;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-1 p,
+.markdown-body.typography-wemd-neo-brutalism .multiquote-2 p,
+.markdown-body.typography-wemd-neo-brutalism .multiquote-3 p {
+    margin: 0;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-2 {
+    margin: 38px 0;
+    padding: 22px;
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0px #CCFF00;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .multiquote-3 {
+    margin: 36px 0;
+    padding: 20px;
+    background: #fafafa;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px #FF6B9D;
+}
+
+/* 链接 - 荧光笔涂抹效果 */
+.markdown-body.typography-wemd-neo-brutalism a {
+    color: #000;
+    /* 链接文字黑色 */
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+    background: linear-gradient(180deg, transparent 60%, #CCFF00 0);
+    /* 下半部分黄色高亮 */
+    font-weight: 700;
+    padding: 0 2px;
+    transition: all 0.2s;
+}
+
+/* 
+ * 加粗 - 故障风效果
+ * 紫色背景 + 白字
+ */
+.markdown-body.typography-wemd-neo-brutalism strong {
+    color: #fff;
+    background-color: #6A00FF;
+    font-weight: 700;
+    padding: 2px 6px;
+    margin: 0 2px;
+    border: 1px solid #000;
+    /* 加个细黑边 */
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-neo-brutalism em {
+    color: #6A00FF;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism em strong {
+    color: #fff;
+}
+
+/* 高亮 - 荧光黄块 */
+.markdown-body.typography-wemd-neo-brutalism mark {
+    background: #CCFF00;
+    color: #000;
+    padding: 2px 6px;
+    border: 2px solid #000;
+    font-weight: bold;
+}
+
+/* 删除线 - 粗线 */
+.markdown-body.typography-wemd-neo-brutalism del {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #FF6B9D;
+    color: #666;
+}
+
+/* 分隔线 - 粗黑条 */
+.markdown-body.typography-wemd-neo-brutalism hr {
+    margin: 60px auto;
+    border: 0;
+    height: 4px;
+    background: #000;
+    width: 100%;
+}
+
+/* 
+ * 图片 - 拍立得效果
+ * 粗框 + 硬阴影
+ */
+.markdown-body.typography-wemd-neo-brutalism img {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0px #000;
+    /* 纯黑硬阴影 */
+    padding: 0;
+    background: #fff;
+}
+
+/* 针对图片下方的注释文字 */
+.markdown-body.typography-wemd-neo-brutalism figcaption {
+    margin-top: 12px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    background: #CCFF00;
+    padding: 4px 10px;
+    border: 2px solid #000;
+    display: inline-block;
+    box-shadow: 3px 3px 0 #000;
+}
+
+/* 行内代码 - 复古终端风 */
+.markdown-body.typography-wemd-neo-brutalism p code,
+.markdown-body.typography-wemd-neo-brutalism li code,
+.markdown-body.typography-wemd-neo-brutalism td code,
+.markdown-body.typography-wemd-neo-brutalism th code {
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 2px 6px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-family: "Menlo", monospace;
+    font-weight: bold;
+    box-shadow: 2px 2px 0 #ccc;
+}
+
+/* 代码块 - 纯黑硬核模式 */
+/* 代码块 - 注意：不要设置 color，让语法高亮主题控制文字颜色 */
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs {
+    display: block;
+    padding: 16px;
+    background: #000;
+    /* 纯黑 */
+    color: #CCFF00;
+    /* 默认荧光绿文字 */
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 0;
+    /* 直角 */
+    font-family: "Menlo", "Courier New", monospace;
+    overflow-x: auto;
+    white-space: pre;
+  min-width: max-content;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px #ddd;
+}
+
+/* 优化深色背景下的语法高亮颜色 - 使用高对比度亮色 */
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-comment,
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-quote {
+    color: #888;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-keyword,
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-selector-tag {
+    color: #FF6B9D;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-string,
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-doctag {
+    color: #FFD93D;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-number,
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-literal {
+    color: #6BCF7F;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-title,
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-section {
+    color: #4D9DE0;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-built_in,
+.markdown-body.typography-wemd-neo-brutalism pre code.hljs .hljs-builtin-name {
+    color: #E85D75;
+    font-weight: bold;
+}
+
+/* 如果没有语法高亮，设置默认荧光绿 */
+.markdown-body.typography-wemd-neo-brutalism pre code:not(.hljs) {
+    color: #CCFF00;
+    background: #000;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px #ddd;
+}
+
+/* 表格 - Excel 粗框风格 */
+.markdown-body.typography-wemd-neo-brutalism table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 14px;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px #000;
+}
+
+.markdown-body.typography-wemd-neo-brutalism table tr th {
+    background: #6A00FF;
+    /* 紫色表头 */
+    color: #fff;
+    font-weight: 900;
+    border: 1px solid #000;
+    padding: 12px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.markdown-body.typography-wemd-neo-brutalism table tr td {
+    border: 1px solid #000;
+    padding: 12px;
+    color: #000;
+    background: #fff;
+}
+
+/* 隔行变色 - 黄色 */
+.markdown-body.typography-wemd-neo-brutalism table tr:nth-child(even) td {
+    background-color: #faffd1;
+}
+
+/* 脚注 */
+.markdown-body.typography-wemd-neo-brutalism .footnote-word,
+.markdown-body.typography-wemd-neo-brutalism .footnote-ref {
+    color: #6A00FF;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnotes-sep {
+    border-top: 2px solid #000;
+    padding-top: 20px;
+    margin-top: 60px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-num {
+    font-weight: 900;
+    color: #fff;
+    background: #000;
+    padding: 1px 4px;
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .footnote-item p {
+    color: #333;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* 公式 */
+.markdown-body.typography-wemd-neo-brutalism .block-equation > svg {
+    max-width: 100% !important;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .inline-equation > svg {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 提示块 - 新粗野主义风格 */
+.markdown-body.typography-wemd-neo-brutalism .callout {
+    margin: 40px 0;
+    padding: 20px;
+    background: #f4f4f4;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px #6A00FF;
+    border-radius: 0;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout-title {
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 16px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout-icon { margin-right: 8px;
+    margin-right: 6px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .callout-note { border-left: 8px solid #6A00FF; }
+.markdown-body.typography-wemd-neo-brutalism .callout-tip { border-left: 8px solid #CCFF00; }
+.markdown-body.typography-wemd-neo-brutalism .callout-important { border-left: 8px solid #6A00FF; }
+.markdown-body.typography-wemd-neo-brutalism .callout-warning { border-left: 8px solid #CCFF00; }
+.markdown-body.typography-wemd-neo-brutalism .callout-caution { border-left: 8px solid #FF6B9D; }
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+/* 代码块样式 - 需要添加 .markdown-body.typography-wemd-neo-brutalism 前缀以匹配包装后的 HTML */
+.markdown-body.typography-wemd-neo-brutalism .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-comment,
+.markdown-body.typography-wemd-neo-brutalism .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-keyword,
+.markdown-body.typography-wemd-neo-brutalism .hljs-selector-tag,
+.markdown-body.typography-wemd-neo-brutalism .hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-number,
+.markdown-body.typography-wemd-neo-brutalism .hljs-literal,
+.markdown-body.typography-wemd-neo-brutalism .hljs-variable,
+.markdown-body.typography-wemd-neo-brutalism .hljs-template-variable,
+.markdown-body.typography-wemd-neo-brutalism .hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-string,
+.markdown-body.typography-wemd-neo-brutalism .hljs-doctag {
+  color: #d14;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-title,
+.markdown-body.typography-wemd-neo-brutalism .hljs-section,
+.markdown-body.typography-wemd-neo-brutalism .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-subst {
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-type,
+.markdown-body.typography-wemd-neo-brutalism .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-tag,
+.markdown-body.typography-wemd-neo-brutalism .hljs-name,
+.markdown-body.typography-wemd-neo-brutalism .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-regexp,
+.markdown-body.typography-wemd-neo-brutalism .hljs-link {
+  color: #009926;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-symbol,
+.markdown-body.typography-wemd-neo-brutalism .hljs-bullet {
+  color: #990073;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-built_in,
+.markdown-body.typography-wemd-neo-brutalism .hljs-builtin-name {
+  color: #0086b3;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-deletion {
+  background: #fdd;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-addition {
+  background: #dfd;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .hljs-strong {
+  font-weight: bold;
+}
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-neo-brutalism .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-neo-brutalism { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-neo-brutalism pre, .markdown-body.typography-wemd-neo-brutalism pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-neo-brutalism table { max-width: 100%; table-layout: fixed; }

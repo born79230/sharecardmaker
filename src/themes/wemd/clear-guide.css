@@ -1,0 +1,1019 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-clear-guide {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-clear-guide p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-clear-guide h1,
+.markdown-body.typography-wemd-clear-guide h2,
+.markdown-body.typography-wemd-clear-guide h3,
+.markdown-body.typography-wemd-clear-guide h4,
+.markdown-body.typography-wemd-clear-guide h5,
+.markdown-body.typography-wemd-clear-guide h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-clear-guide h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-clear-guide h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-clear-guide h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-clear-guide h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-clear-guide h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-clear-guide h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-clear-guide h1 .prefix,
+.markdown-body.typography-wemd-clear-guide h2 .prefix,
+.markdown-body.typography-wemd-clear-guide h3 .prefix,
+.markdown-body.typography-wemd-clear-guide h4 .prefix,
+.markdown-body.typography-wemd-clear-guide h5 .prefix,
+.markdown-body.typography-wemd-clear-guide h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-clear-guide h1 .suffix,
+.markdown-body.typography-wemd-clear-guide h2 .suffix,
+.markdown-body.typography-wemd-clear-guide h3 .suffix,
+.markdown-body.typography-wemd-clear-guide h4 .suffix,
+.markdown-body.typography-wemd-clear-guide h5 .suffix,
+.markdown-body.typography-wemd-clear-guide h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-clear-guide ul,
+.markdown-body.typography-wemd-clear-guide ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-clear-guide ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-clear-guide ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-clear-guide ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-clear-guide li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-clear-guide blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-clear-guide .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-clear-guide a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-clear-guide strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-clear-guide em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-clear-guide em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-clear-guide del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-clear-guide u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-clear-guide hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-clear-guide pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-clear-guide pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-clear-guide pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-clear-guide pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-clear-guide p code,
+.markdown-body.typography-wemd-clear-guide li code,
+.markdown-body.typography-wemd-clear-guide td code,
+.markdown-body.typography-wemd-clear-guide th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-clear-guide img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-clear-guide figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-clear-guide figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-clear-guide .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-clear-guide table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-clear-guide tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr th,
+.markdown-body.typography-wemd-clear-guide table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-clear-guide table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-clear-guide table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-clear-guide sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-clear-guide .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-clear-guide .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-clear-guide .inline-equation {
+}
+
+.markdown-body.typography-wemd-clear-guide .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-clear-guide .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-clear-guide .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-clear-guide .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-clear-guide .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-clear-guide .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-clear-guide .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-clear-guide figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-clear-guide figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-clear-guide figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-clear-guide figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-clear-guide figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-clear-guide .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-clear-guide .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-clear-guide .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-clear-guide .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-clear-guide .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-clear-guide .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-clear-guide .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 清晰指南：教程与操作手册 */
+.markdown-body.typography-wemd-clear-guide {
+  max-width: 677px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  color: #263b3a;
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.82;
+  letter-spacing: 0.012em;
+  word-break: break-word;
+}
+
+.markdown-body.typography-wemd-clear-guide p {
+  margin: 0 0 21px;
+  color: #263b3a;
+  font-size: 16px;
+  line-height: 1.82;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.markdown-body.typography-wemd-clear-guide h1,
+.markdown-body.typography-wemd-clear-guide h2,
+.markdown-body.typography-wemd-clear-guide h3,
+.markdown-body.typography-wemd-clear-guide h4,
+.markdown-body.typography-wemd-clear-guide h5,
+.markdown-body.typography-wemd-clear-guide h6 {
+  padding: 0;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-clear-guide h1 {
+  margin: 24px 0 44px;
+  padding: 0 0 18px;
+  border: none;
+  border-bottom: 8px solid #f0c94d;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-clear-guide h1 .content {
+  color: #172b29;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-clear-guide h2 {
+  margin: 45px 0 23px;
+  padding: 0 0 9px;
+  border: none;
+  border-bottom: 4px solid #172b29;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-clear-guide h2 .content {
+  color: #172b29;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 19px;
+  font-weight: 750;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-clear-guide h3 {
+  margin: 32px 0 16px;
+  padding: 0;
+  border-bottom: 1px dashed #8eb1ad;
+}
+
+.markdown-body.typography-wemd-clear-guide h3 .content {
+  display: inline-block;
+  padding: 0 0 6px;
+  color: #075f58;
+  background: transparent;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 17px;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-clear-guide h4,
+.markdown-body.typography-wemd-clear-guide h5,
+.markdown-body.typography-wemd-clear-guide h6 {
+  margin: 27px 0 13px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #8eb1ad;
+}
+
+.markdown-body.typography-wemd-clear-guide h4 .content,
+.markdown-body.typography-wemd-clear-guide h5 .content,
+.markdown-body.typography-wemd-clear-guide h6 .content {
+  color: #176c65;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-clear-guide h1 .prefix,
+.markdown-body.typography-wemd-clear-guide h1 .suffix,
+.markdown-body.typography-wemd-clear-guide h2 .prefix,
+.markdown-body.typography-wemd-clear-guide h2 .suffix,
+.markdown-body.typography-wemd-clear-guide h3 .prefix,
+.markdown-body.typography-wemd-clear-guide h3 .suffix,
+.markdown-body.typography-wemd-clear-guide h4 .prefix,
+.markdown-body.typography-wemd-clear-guide h4 .suffix,
+.markdown-body.typography-wemd-clear-guide h5 .prefix,
+.markdown-body.typography-wemd-clear-guide h5 .suffix,
+.markdown-body.typography-wemd-clear-guide h6 .prefix,
+.markdown-body.typography-wemd-clear-guide h6 .suffix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-clear-guide blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-1,
+.markdown-body.typography-wemd-clear-guide .multiquote-2,
+.markdown-body.typography-wemd-clear-guide .multiquote-3 {
+  margin: 28px 0;
+  padding: 18px 20px;
+  border: 2px dashed #172b29;
+  background: #fff7cf;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-1 p,
+.markdown-body.typography-wemd-clear-guide .multiquote-2 p,
+.markdown-body.typography-wemd-clear-guide .multiquote-3 p {
+  margin: 0;
+  color: #31514f;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.markdown-body.typography-wemd-clear-guide .multiquote-2,
+.markdown-body.typography-wemd-clear-guide .multiquote-3,
+.markdown-body.typography-wemd-clear-guide .multiquote-1 .multiquote-1 {
+  margin: 12px 0 0;
+  padding: 10px 0 0;
+  border: none;
+  border-top: 1px dashed #8eb1ad;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-clear-guide ul,
+.markdown-body.typography-wemd-clear-guide ol {
+  margin: 20px 0 27px;
+  padding-left: 25px;
+  color: #087f75;
+}
+
+.markdown-body.typography-wemd-clear-guide li section {
+  margin: 6px 0;
+  color: #263b3a;
+  line-height: 1.76;
+}
+
+.markdown-body.typography-wemd-clear-guide ol > li {
+  margin: 14px 0;
+  color: #087f75;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.markdown-body.typography-wemd-clear-guide ol > li > section {
+  padding: 2px 0 12px;
+  border: none;
+  border-bottom: 1px solid #b9d0cd;
+  color: #263b3a;
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.markdown-body.typography-wemd-clear-guide a {
+  color: #06736a;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.markdown-body.typography-wemd-clear-guide strong {
+  color: #064c47;
+  font-weight: 750;
+}
+
+.markdown-body.typography-wemd-clear-guide mark {
+  padding: 1px 4px;
+  color: #4f3a11;
+  background: #f5dda1;
+}
+
+.markdown-body.typography-wemd-clear-guide hr {
+  height: 1px;
+  margin: 44px 0;
+  border: none;
+  background: #9bbdb9;
+}
+
+.markdown-body.typography-wemd-clear-guide figure {
+  margin: 34px 0 39px;
+  padding: 0;
+  border: 2px solid #172b29;
+  border-radius: 0;
+  background: transparent;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-clear-guide figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-clear-guide img,
+.markdown-body.typography-wemd-clear-guide figure a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.markdown-body.typography-wemd-clear-guide figcaption {
+  margin-top: 0;
+  padding: 9px 12px;
+  color: #ffffff;
+  background: #172b29;
+  font-size: 12px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-clear-guide p code,
+.markdown-body.typography-wemd-clear-guide li code,
+.markdown-body.typography-wemd-clear-guide td code,
+.markdown-body.typography-wemd-clear-guide th code {
+  padding: 2px 6px;
+  border: 1px solid #b9d0cd;
+  color: #075f58;
+  background: #eaf3f2;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+}
+
+.markdown-body.typography-wemd-clear-guide pre {
+  margin: 29px 0;
+  border: 1px solid #183f3c;
+  border-top: 6px solid #23a79b;
+  background: #173330;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-clear-guide pre code,
+.markdown-body.typography-wemd-clear-guide pre code.hljs {
+  display: block;
+  min-width: max-content;
+  padding: 19px 20px;
+  color: #e8f4f2;
+  background: #173330;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.markdown-body.typography-wemd-clear-guide pre.custom > .mac-sign {
+  display: block;
+  border-bottom: 1px solid #365c58;
+  background: #173330;
+}
+
+.markdown-body.typography-wemd-clear-guide .table-container {
+  margin: 31px 0;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-clear-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #172b29;
+  color: #263b3a;
+  background: #ffffff;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr th,
+.markdown-body.typography-wemd-clear-guide table tr td {
+  min-width: 88px;
+  padding: 10px;
+  border: 1px solid #b9d0cd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr th {
+  color: #172b29;
+  background: #f0c94d;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-clear-guide table tr:nth-child(2n) {
+  background: #eef6f5;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout {
+  margin: 29px 0;
+  padding: 17px 18px;
+  border: 2px solid #172b29;
+  border-radius: 0;
+  color: #263b3a;
+  background: #ffffff;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout-warning {
+  border-color: #8c6500;
+  background: #fff6df;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout-caution {
+  border-color: #a43c31;
+  background: #fff0ed;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout-title {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 2px 7px;
+  color: #ffffff;
+  background: #172b29;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.markdown-body.typography-wemd-clear-guide .callout p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-word,
+.markdown-body.typography-wemd-clear-guide .footnote-ref {
+  color: #087f75;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnotes-sep {
+  margin-top: 47px;
+  padding-top: 16px;
+  border-top: 5px solid #087f75;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-item {
+  display: flex;
+  margin-top: 9px;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-num {
+  width: 30px;
+  flex-shrink: 0;
+  color: #087f75;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-clear-guide .footnote-item p {
+  margin: 0;
+  color: #58716f;
+  font-size: 13px;
+}
+
+.markdown-body.typography-wemd-clear-guide .block-equation {
+  display: block;
+  margin: 30px 0;
+  padding: 18px 10px;
+  border: 1px solid #b9d0cd;
+  background: #f7faf9;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-clear-guide .block-equation > svg {
+  max-width: 300% !important;
+}
+
+.markdown-body.typography-wemd-clear-guide .inline-equation > svg {
+  vertical-align: middle;
+}
+
+.markdown-body.typography-wemd-clear-guide pre.mermaid {
+  padding: 20px 10px;
+  border: 1px solid #93b8b4;
+  border-top: 5px solid #087f75;
+  background: #ffffff;
+}
+
+.markdown-body.typography-wemd-clear-guide .task-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 9px 0 9px -1.2em;
+  padding: 9px 10px;
+  border: 1px solid #c5d8d6;
+  background: #f7faf9;
+  list-style: none;
+}
+
+.markdown-body.typography-wemd-clear-guide .task-list-item input[type='checkbox'] {
+  margin-top: 7px;
+  margin-right: 8px;
+  accent-color: #087f75;
+  pointer-events: none;
+}
+
+/* GitHub Dark 代码高亮 */
+.markdown-body.typography-wemd-clear-guide .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-doctag,
+.markdown-body.typography-wemd-clear-guide .hljs-keyword,
+.markdown-body.typography-wemd-clear-guide .hljs-meta .hljs-keyword,
+.markdown-body.typography-wemd-clear-guide .hljs-template-tag,
+.markdown-body.typography-wemd-clear-guide .hljs-template-variable,
+.markdown-body.typography-wemd-clear-guide .hljs-type,
+.markdown-body.typography-wemd-clear-guide .hljs-variable.language_ {
+  color: #ff7b72;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-title,
+.markdown-body.typography-wemd-clear-guide .hljs-title.class_,
+.markdown-body.typography-wemd-clear-guide .hljs-title.class_.inherited__,
+.markdown-body.typography-wemd-clear-guide .hljs-title.function_ {
+  color: #d2a8ff;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-attr,
+.markdown-body.typography-wemd-clear-guide .hljs-attribute,
+.markdown-body.typography-wemd-clear-guide .hljs-literal,
+.markdown-body.typography-wemd-clear-guide .hljs-meta,
+.markdown-body.typography-wemd-clear-guide .hljs-number,
+.markdown-body.typography-wemd-clear-guide .hljs-operator,
+.markdown-body.typography-wemd-clear-guide .hljs-variable,
+.markdown-body.typography-wemd-clear-guide .hljs-selector-attr,
+.markdown-body.typography-wemd-clear-guide .hljs-selector-class,
+.markdown-body.typography-wemd-clear-guide .hljs-selector-id {
+  color: #79c0ff;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-regexp,
+.markdown-body.typography-wemd-clear-guide .hljs-string,
+.markdown-body.typography-wemd-clear-guide .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-built_in,
+.markdown-body.typography-wemd-clear-guide .hljs-symbol {
+  color: #ffa657;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-comment,
+.markdown-body.typography-wemd-clear-guide .hljs-code,
+.markdown-body.typography-wemd-clear-guide .hljs-formula {
+  color: #9198a1;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-name,
+.markdown-body.typography-wemd-clear-guide .hljs-quote,
+.markdown-body.typography-wemd-clear-guide .hljs-selector-tag,
+.markdown-body.typography-wemd-clear-guide .hljs-selector-pseudo {
+  color: #7ee787;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-subst,
+.markdown-body.typography-wemd-clear-guide .hljs-emphasis,
+.markdown-body.typography-wemd-clear-guide .hljs-strong {
+  color: #c9d1d9;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-section {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-bullet {
+  color: #f2cc60;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-strong {
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.markdown-body.typography-wemd-clear-guide .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.markdown-body.typography-wemd-clear-guide { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-clear-guide pre, .markdown-body.typography-wemd-clear-guide pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-clear-guide table { max-width: 100%; table-layout: fixed; }

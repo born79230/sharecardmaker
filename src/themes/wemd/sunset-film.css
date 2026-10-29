@@ -1,0 +1,1171 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-sunset-film {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-sunset-film p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-sunset-film h1,
+.markdown-body.typography-wemd-sunset-film h2,
+.markdown-body.typography-wemd-sunset-film h3,
+.markdown-body.typography-wemd-sunset-film h4,
+.markdown-body.typography-wemd-sunset-film h5,
+.markdown-body.typography-wemd-sunset-film h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-sunset-film h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-sunset-film h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-sunset-film h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-sunset-film h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-sunset-film h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-sunset-film h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-sunset-film h1 .prefix,
+.markdown-body.typography-wemd-sunset-film h2 .prefix,
+.markdown-body.typography-wemd-sunset-film h3 .prefix,
+.markdown-body.typography-wemd-sunset-film h4 .prefix,
+.markdown-body.typography-wemd-sunset-film h5 .prefix,
+.markdown-body.typography-wemd-sunset-film h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-sunset-film h1 .suffix,
+.markdown-body.typography-wemd-sunset-film h2 .suffix,
+.markdown-body.typography-wemd-sunset-film h3 .suffix,
+.markdown-body.typography-wemd-sunset-film h4 .suffix,
+.markdown-body.typography-wemd-sunset-film h5 .suffix,
+.markdown-body.typography-wemd-sunset-film h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-sunset-film ul,
+.markdown-body.typography-wemd-sunset-film ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-sunset-film ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-sunset-film ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-sunset-film ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-sunset-film li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-sunset-film blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-sunset-film .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-sunset-film a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-sunset-film strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-sunset-film em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-sunset-film em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-sunset-film del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-sunset-film u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-sunset-film hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-sunset-film pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-sunset-film pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-sunset-film p code,
+.markdown-body.typography-wemd-sunset-film li code,
+.markdown-body.typography-wemd-sunset-film td code,
+.markdown-body.typography-wemd-sunset-film th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-sunset-film img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-sunset-film figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-sunset-film figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-sunset-film .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-sunset-film table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-sunset-film tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-sunset-film table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-sunset-film table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-sunset-film table tr th,
+.markdown-body.typography-wemd-sunset-film table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-sunset-film table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-sunset-film table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-sunset-film table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-sunset-film sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-sunset-film .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-sunset-film .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-sunset-film .inline-equation {
+}
+
+.markdown-body.typography-wemd-sunset-film .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-sunset-film .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-sunset-film figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-sunset-film figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-sunset-film figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-sunset-film figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-sunset-film figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-sunset-film .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-sunset-film .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-sunset-film .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-sunset-film .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-sunset-film .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-sunset-film .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-sunset-film .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-sunset-film .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-sunset-film .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-sunset-film .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 落日胶片风格 */
+.markdown-body.typography-wemd-sunset-film {
+    padding: 5px 22px;
+    max-width: 677px;
+    margin: 0 auto;
+    /* 强制使用衬线体，营造电影字幕感 */
+    font-family: "Songti SC", "SimSun", "STSong", "Georgia", serif;
+    color: #4A3B32;
+    /* 深咖啡色文字，比黑色更柔和 */
+    background-color: transparent;
+    /* 透明背景，兼容微信深色模式 */
+    word-break: break-word;
+}
+
+/* 段落 - 像是在读一封旧信 */
+.markdown-body.typography-wemd-sunset-film p {
+    margin-top: 26px;
+    margin-bottom: 26px;
+    line-height: 1.9;
+    letter-spacing: 0.8px;
+    /* 字间距稍大 */
+    text-align: justify;
+    color: #5D4037;
+    font-size: 16px;
+}
+
+/* 
+ * 一级标题 - 电影片名风格
+ * 上下双线装饰
+ */
+.markdown-body.typography-wemd-sunset-film h1 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-top: 4px double #B33D25;
+    /* 双实线 */
+    border-bottom: 1px solid #B33D25;
+    padding: 20px 0;
+}
+
+.markdown-body.typography-wemd-sunset-film h1 .content {
+    font-size: 26px;
+    font-weight: 900;
+    color: #B33D25;
+    display: inline-block;
+    line-height: 1.2;
+    letter-spacing: 3px;
+}
+
+.markdown-body.typography-wemd-sunset-film h1 .prefix,
+.markdown-body.typography-wemd-sunset-film h1 .suffix {
+    display: none;
+}
+
+/* 
+ * 二级标题 - 邮票/标签风格
+ * 实心背景 + 白字
+ */
+.markdown-body.typography-wemd-sunset-film h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.markdown-body.typography-wemd-sunset-film h2 .content {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFBF0;
+    /* 米白字 */
+    background-color: #B33D25;
+    /* 陶土红底 */
+    padding: 8px 16px;
+    border-radius: 2px;
+    box-shadow: 4px 4px 0px rgba(179, 61, 37, 0.2);
+    /* 淡淡的复古阴影 */
+    line-height: 1.2;
+}
+
+.markdown-body.typography-wemd-sunset-film h2 .prefix,
+.markdown-body.typography-wemd-sunset-film h2 .suffix {
+    display: none;
+}
+
+/* 
+ * 三级标题 - 像书本的小节
+ * 咖啡色文字 + 左侧装饰
+ */
+.markdown-body.typography-wemd-sunset-film h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.markdown-body.typography-wemd-sunset-film h3 .content {
+    font-size: 18px;
+    font-weight: bold;
+    color: #8D5B4C;
+    display: inline-block;
+    padding-left: 10px;
+    border-left: 4px solid #D98C45;
+    /* 琥珀黄 */
+}
+
+.markdown-body.typography-wemd-sunset-film h3 .prefix,
+.markdown-body.typography-wemd-sunset-film h3 .suffix {
+    display: none;
+}
+
+/* 
+ * 四级标题 - 极简下划线
+ */
+.markdown-body.typography-wemd-sunset-film h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.markdown-body.typography-wemd-sunset-film h4 .content {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #B33D25;
+    border-bottom: 2px solid #F2C94C;
+    /* 亮黄线条 */
+    padding-bottom: 2px;
+}
+
+.markdown-body.typography-wemd-sunset-film h4 .prefix,
+.markdown-body.typography-wemd-sunset-film h4 .suffix {
+    display: none;
+}
+
+/* 列表 - 经典的实心方点 */
+.markdown-body.typography-wemd-sunset-film ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #D98C45;
+}
+
+.markdown-body.typography-wemd-sunset-film ul li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.markdown-body.typography-wemd-sunset-film li section {
+    color: #5D4037;
+    font-size: 16px;
+}
+
+/* 有序列表 */
+.markdown-body.typography-wemd-sunset-film ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #B33D25;
+    font-weight: bold;
+    font-family: serif;
+    /* 数字也用衬线体，很有味道 */
+}
+
+.markdown-body.typography-wemd-sunset-film ol li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.markdown-body.typography-wemd-sunset-film ol li section {
+    color: #5D4037;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.markdown-body.typography-wemd-sunset-film ul ul {
+    list-style-type: circle;
+    color: #8D5B4C;
+    margin-top: 8px;
+}
+
+.markdown-body.typography-wemd-sunset-film ol ol {
+    list-style-type: lower-roman;
+    color: #B33D25;
+}
+
+/* 
+ * 引用 - 泛黄的旧报纸
+ * 深米色背景 + 棕色边框
+ */
+.markdown-body.typography-wemd-sunset-film .multiquote-1,
+.markdown-body.typography-wemd-sunset-film .multiquote-2,
+.markdown-body.typography-wemd-sunset-film .multiquote-3 {
+    margin: 36px 0;
+    padding: 24px;
+    background-color: #F7EED6;
+    /* 泛黄背景 */
+    border-left: 3px solid #8D5B4C;
+    /* 咖啡色边框 */
+    border-radius: 2px;
+    overflow: visible !important;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-1 p,
+.markdown-body.typography-wemd-sunset-film .multiquote-2 p,
+.markdown-body.typography-wemd-sunset-film .multiquote-3 p {
+    margin: 0;
+    color: #6D4C41;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-2 {
+    margin: 34px 0;
+    padding: 22px;
+    background: #FFF8E7;
+    border-left: 3px solid #D98C45;
+    border-radius: 2px;
+}
+
+.markdown-body.typography-wemd-sunset-film .multiquote-3 {
+    margin: 32px 0;
+    padding: 20px;
+    background: #FFFBF0;
+    border-left: 2px solid #D98C45;
+    border-radius: 2px;
+}
+
+/* 链接 - 像是手写的下划线 */
+.markdown-body.typography-wemd-sunset-film a {
+    color: #B33D25;
+    text-decoration: none;
+    border-bottom: 1px solid #B33D25;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+/* 
+ * 加粗 - 重点标记
+ * 像是用深色马克笔划过
+ */
+.markdown-body.typography-wemd-sunset-film strong {
+    color: #B33D25;
+    font-weight: 900;
+    margin: 0 2px;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-sunset-film em {
+    color: #D98C45;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film em strong {
+    color: #B33D25;
+}
+
+/* 高亮 - 暖黄背景 */
+.markdown-body.typography-wemd-sunset-film mark {
+    background: rgba(242, 201, 76, 0.3);
+    color: #B33D25;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-sunset-film del {
+    text-decoration: line-through;
+    color: #8D5B4C;
+}
+
+/* 分隔线 - 虚线剪裁线 */
+.markdown-body.typography-wemd-sunset-film hr {
+    margin: 60px auto;
+    border: 0;
+    height: 1px;
+    border-top: 2px dashed #D98C45;
+    /* 剪裁线风格 */
+    width: 100%;
+}
+
+/* 
+ * 图片 - 老照片风格
+ * 加上白色边框和阴影
+ */
+.markdown-body.typography-wemd-sunset-film img {
+    display: block;
+    margin: 40px auto;
+    width: 95%;
+    /* 稍微留点白边 */
+    border: 8px solid #fff;
+    /* 模拟照片白边 */
+    box-shadow: 0 10px 25px rgba(93, 64, 55, 0.15);
+    background: #fff;
+}
+
+.markdown-body.typography-wemd-sunset-film figcaption {
+    font-size: 13px;
+    color: #8D5B4C;
+    margin-top: 15px;
+    font-style: italic;
+    font-family: serif;
+}
+
+/* 行内代码 - 咖啡色块 */
+.markdown-body.typography-wemd-sunset-film p code,
+.markdown-body.typography-wemd-sunset-film li code,
+.markdown-body.typography-wemd-sunset-film td code,
+.markdown-body.typography-wemd-sunset-film th code {
+    color: #5D4037;
+    background: #EFE6D5;
+    border: none;
+    padding: 2px 6px;
+    margin: 0 4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: serif;
+    /* 代码也用衬线体，保持复古感 */
+}
+
+/* 代码块 - 复古打字机配色 */
+/* 代码块 - 注意：不要设置 color，让语法高亮主题控制文字颜色 */
+.markdown-body.typography-wemd-sunset-film pre code.hljs {
+    display: block;
+    padding: 20px;
+    background: #4A3B32;
+    /* 深咖啡背景 */
+    color: #E6CBB5;
+    /* 默认奶茶色文字 */
+    font-size: 13px;
+    line-height: 1.6;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    /* 打字机字体 */
+    overflow-x: auto;
+    white-space: pre;
+  min-width: max-content;
+    border: 4px solid #F7EED6;
+}
+
+/* 优化深色背景下的语法高亮颜色 - 使用暖色调高对比度颜色 */
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-comment,
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-quote {
+    color: #A68B7A;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-keyword,
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-selector-tag {
+    color: #FFB84D;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-string,
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-doctag {
+    color: #FFD4A3;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-number,
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-literal {
+    color: #C9A961;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-title,
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-section {
+    color: #F7EED6;
+    font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-built_in,
+.markdown-body.typography-wemd-sunset-film pre code.hljs .hljs-builtin-name {
+    color: #E6CBB5;
+    font-weight: bold;
+}
+
+/* 如果没有语法高亮，设置默认奶茶色 */
+.markdown-body.typography-wemd-sunset-film pre code:not(.hljs) {
+    color: #E6CBB5;
+    background: #4A3B32;
+    border: 4px solid #F7EED6;
+}
+
+/* 表格 - 复古账单 */
+.markdown-body.typography-wemd-sunset-film table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 14px;
+    border: 2px solid #8D5B4C;
+}
+
+.markdown-body.typography-wemd-sunset-film table tr th {
+    background: #EFE6D5;
+    color: #4A3B32;
+    font-weight: bold;
+    border: 1px solid #8D5B4C;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+.markdown-body.typography-wemd-sunset-film table tr td {
+    border: 1px solid #8D5B4C;
+    padding: 12px 10px;
+    color: #5D4037;
+    background: #FFFBF0;
+}
+
+/* 脚注 */
+.markdown-body.typography-wemd-sunset-film .footnote-word,
+.markdown-body.typography-wemd-sunset-film .footnote-ref {
+    color: #B33D25;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnotes-sep {
+    border-top: 1px solid #D98C45;
+    padding-top: 20px;
+    margin-top: 60px;
+    font-size: 12px;
+    color: #8D5B4C;
+    text-align: center;
+    font-family: serif;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-num {
+    font-weight: bold;
+    color: #FFFBF0;
+    background-color: #D98C45;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    font-size: 11px;
+    margin-right: 4px;
+}
+
+.markdown-body.typography-wemd-sunset-film .footnote-item p {
+    color: #8D5B4C;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* 公式 */
+.markdown-body.typography-wemd-sunset-film .block-equation > svg {
+    max-width: 100% !important;
+}
+
+.markdown-body.typography-wemd-sunset-film .inline-equation > svg {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 提示块 - 落日胶片风格 */
+.markdown-body.typography-wemd-sunset-film .callout {
+    margin: 36px 0;
+    padding: 24px;
+    background: #F7EED6;
+    border-left: 3px solid #8D5B4C;
+    border-radius: 2px;
+}
+
+.markdown-body.typography-wemd-sunset-film .callout-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #B33D25;
+    font-family: serif;
+    font-size: 15px;
+}
+
+.markdown-body.typography-wemd-sunset-film .callout-icon { margin-right: 8px;
+    margin-right: 6px;
+}
+
+.markdown-body.typography-wemd-sunset-film .callout-note { border-left-color: #8D5B4C; }
+.markdown-body.typography-wemd-sunset-film .callout-tip { border-left-color: #D98C45; }
+.markdown-body.typography-wemd-sunset-film .callout-important { border-left-color: #8D5B4C; }
+.markdown-body.typography-wemd-sunset-film .callout-warning { border-left-color: #D98C45; }
+.markdown-body.typography-wemd-sunset-film .callout-caution { border-left-color: #B33D25; }
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-sunset-film .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+/* 代码块样式 - 需要添加 .markdown-body.typography-wemd-sunset-film 前缀以匹配包装后的 HTML */
+.markdown-body.typography-wemd-sunset-film .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-comment,
+.markdown-body.typography-wemd-sunset-film .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-keyword,
+.markdown-body.typography-wemd-sunset-film .hljs-selector-tag,
+.markdown-body.typography-wemd-sunset-film .hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-number,
+.markdown-body.typography-wemd-sunset-film .hljs-literal,
+.markdown-body.typography-wemd-sunset-film .hljs-variable,
+.markdown-body.typography-wemd-sunset-film .hljs-template-variable,
+.markdown-body.typography-wemd-sunset-film .hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-string,
+.markdown-body.typography-wemd-sunset-film .hljs-doctag {
+  color: #d14;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-title,
+.markdown-body.typography-wemd-sunset-film .hljs-section,
+.markdown-body.typography-wemd-sunset-film .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-subst {
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-type,
+.markdown-body.typography-wemd-sunset-film .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-tag,
+.markdown-body.typography-wemd-sunset-film .hljs-name,
+.markdown-body.typography-wemd-sunset-film .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-regexp,
+.markdown-body.typography-wemd-sunset-film .hljs-link {
+  color: #009926;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-symbol,
+.markdown-body.typography-wemd-sunset-film .hljs-bullet {
+  color: #990073;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-built_in,
+.markdown-body.typography-wemd-sunset-film .hljs-builtin-name {
+  color: #0086b3;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-deletion {
+  background: #fdd;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-addition {
+  background: #dfd;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-sunset-film .hljs-strong {
+  font-weight: bold;
+}
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-sunset-film .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-sunset-film .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-sunset-film { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-sunset-film pre, .markdown-body.typography-wemd-sunset-film pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-sunset-film table { max-width: 100%; table-layout: fixed; }

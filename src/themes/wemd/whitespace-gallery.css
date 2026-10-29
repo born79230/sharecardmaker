@@ -1,0 +1,995 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-whitespace-gallery {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-whitespace-gallery p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-whitespace-gallery h1,
+.markdown-body.typography-wemd-whitespace-gallery h2,
+.markdown-body.typography-wemd-whitespace-gallery h3,
+.markdown-body.typography-wemd-whitespace-gallery h4,
+.markdown-body.typography-wemd-whitespace-gallery h5,
+.markdown-body.typography-wemd-whitespace-gallery h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-whitespace-gallery h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-whitespace-gallery h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-whitespace-gallery h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-whitespace-gallery h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-whitespace-gallery h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-whitespace-gallery h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h1 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h2 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h3 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h4 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h5 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h1 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h2 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h3 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h4 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h5 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-whitespace-gallery ul,
+.markdown-body.typography-wemd-whitespace-gallery ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-whitespace-gallery ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-whitespace-gallery ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-whitespace-gallery blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-whitespace-gallery a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-whitespace-gallery strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-whitespace-gallery em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-whitespace-gallery em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-whitespace-gallery del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-whitespace-gallery u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-whitespace-gallery hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-whitespace-gallery pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-whitespace-gallery p code,
+.markdown-body.typography-wemd-whitespace-gallery li code,
+.markdown-body.typography-wemd-whitespace-gallery td code,
+.markdown-body.typography-wemd-whitespace-gallery th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-whitespace-gallery img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-whitespace-gallery figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-whitespace-gallery figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-whitespace-gallery .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-whitespace-gallery table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-whitespace-gallery tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr th,
+.markdown-body.typography-wemd-whitespace-gallery table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-whitespace-gallery table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-whitespace-gallery table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-whitespace-gallery sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-whitespace-gallery .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .inline-equation {
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-whitespace-gallery figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-whitespace-gallery figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-whitespace-gallery .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-whitespace-gallery .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-whitespace-gallery .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-whitespace-gallery .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-whitespace-gallery .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 留白画册：图片与人物故事 */
+.markdown-body.typography-wemd-whitespace-gallery {
+  max-width: 677px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  color: #3a3734;
+  background-color: transparent;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 17px;
+  line-height: 2;
+  letter-spacing: 0.035em;
+  word-break: break-word;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery p {
+  max-width: 34em;
+  margin: 0 auto 31px;
+  color: #3a3734;
+  font-size: 17px;
+  line-height: 2;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h1 {
+  max-width: 12em;
+  margin: 58px auto 96px;
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h1 .content {
+  color: #2b2927;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: 0.08em;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h2 {
+  max-width: 22em;
+  margin: 78px auto 34px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h2 .content {
+  display: block;
+  padding: 0;
+  border: none;
+  color: #2b2927;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h3 {
+  max-width: 34em;
+  margin: 44px auto 20px;
+  padding: 0;
+  border: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h3 .content {
+  color: #80503f;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-wrap: balance;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h4,
+.markdown-body.typography-wemd-whitespace-gallery h5,
+.markdown-body.typography-wemd-whitespace-gallery h6 {
+  max-width: 40em;
+  margin: 30px auto 15px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h4 .content,
+.markdown-body.typography-wemd-whitespace-gallery h5 .content,
+.markdown-body.typography-wemd-whitespace-gallery h6 .content {
+  color: #625b55;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery h1 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h1 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h2 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h2 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h3 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h3 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h4 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h4 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h5 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h5 .suffix,
+.markdown-body.typography-wemd-whitespace-gallery h6 .prefix,
+.markdown-body.typography-wemd-whitespace-gallery h6 .suffix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-1,
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-2,
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-3 {
+  margin: 62px 0;
+  padding: 38px 28px;
+  border: none;
+  background: #2b2927;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-1 p,
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-2 p,
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-3 p {
+  margin: 0 auto;
+  color: #f7f6f4;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 21px;
+  line-height: 1.85;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-2,
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-3,
+.markdown-body.typography-wemd-whitespace-gallery .multiquote-1 .multiquote-1 {
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  border: none;
+  border-top: 1px solid #77716c;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery ul,
+.markdown-body.typography-wemd-whitespace-gallery ol {
+  max-width: 38em;
+  margin: 24px auto 31px;
+  padding-left: 25px;
+  color: #8b4c3b;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery li section {
+  margin: 7px 0;
+  color: #3a3734;
+  line-height: 1.85;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery ol > li > section {
+  padding-bottom: 4px;
+  border: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery a {
+  color: #80503f;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.23em;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery strong {
+  color: #2b2927;
+  font-weight: 750;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery mark {
+  padding: 1px 4px;
+  color: #4c382f;
+  background: #eadbd5;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery hr {
+  width: 1px;
+  height: 64px;
+  margin: 72px auto;
+  border: none;
+  background: #2b2927;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery figure {
+  margin: 72px 0 80px;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery img,
+.markdown-body.typography-wemd-whitespace-gallery figure a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery figcaption {
+  max-width: 34em;
+  margin: 16px auto 0;
+  padding-top: 9px;
+  border-top: 1px solid #bbb6b1;
+  color: #77706a;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.055em;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery p code,
+.markdown-body.typography-wemd-whitespace-gallery li code,
+.markdown-body.typography-wemd-whitespace-gallery td code,
+.markdown-body.typography-wemd-whitespace-gallery th code {
+  padding: 2px 5px;
+  border-bottom: 1px solid #a7a29d;
+  color: #5c4740;
+  background: #f3f2f1;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre {
+  margin: 38px 0;
+  border: 1px solid #2b2927;
+  background: #2b2927;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre code,
+.markdown-body.typography-wemd-whitespace-gallery pre code.hljs {
+  display: block;
+  min-width: max-content;
+  padding: 21px;
+  color: #f0efed;
+  background: #2b2927;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.72;
+  white-space: pre;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre.custom > .mac-sign {
+  display: block;
+  border-bottom: 1px solid #57524e;
+  background: #2b2927;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .table-container {
+  margin: 39px 0;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #3a3734;
+  background: transparent;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr th,
+.markdown-body.typography-wemd-whitespace-gallery table tr td {
+  min-width: 88px;
+  padding: 11px 9px;
+  border: none;
+  border-bottom: 1px solid #bbb6b1;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr th {
+  border-top: 3px solid #2b2927;
+  border-bottom: 2px solid #2b2927;
+  color: #2b2927;
+  background: transparent;
+  font-weight: 750;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery table tr:nth-child(2n) {
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout {
+  max-width: 34em;
+  margin: 52px auto;
+  padding: 24px 0;
+  border: none;
+  border-top: 1px solid #aaa49f;
+  border-bottom: 1px solid #aaa49f;
+  border-radius: 0;
+  color: #49433f;
+  background: transparent;
+  break-inside: avoid;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout-warning,
+.markdown-body.typography-wemd-whitespace-gallery .callout-caution {
+  border-color: #8b4c3b;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout-title {
+  margin-bottom: 8px;
+  color: #2b2927;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .callout p {
+  margin: 0;
+  color: #5e5751;
+  font-size: 15px;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-word,
+.markdown-body.typography-wemd-whitespace-gallery .footnote-ref {
+  color: #80503f;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnotes-sep {
+  margin-top: 57px;
+  padding-top: 18px;
+  border-top: 1px solid #2b2927;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-item {
+  display: flex;
+  max-width: 40em;
+  margin: 10px auto 0;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-num {
+  width: 30px;
+  flex-shrink: 0;
+  color: #80503f;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .footnote-item p {
+  margin: 0;
+  color: #77706a;
+  font-size: 13px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .block-equation {
+  display: block;
+  margin: 38px 0;
+  padding: 20px 10px;
+  border-top: 1px solid #bbb6b1;
+  border-bottom: 1px solid #bbb6b1;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .block-equation > svg {
+  max-width: 300% !important;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .inline-equation > svg {
+  vertical-align: middle;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery pre.mermaid {
+  padding: 22px 10px;
+  border: 1px solid #aaa49f;
+  border-top: 4px solid #2b2927;
+  background: #ffffff;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .task-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -1.2em;
+  list-style: none;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .task-list-item input[type='checkbox'] {
+  margin-top: 8px;
+  margin-right: 8px;
+  accent-color: #2b2927;
+  pointer-events: none;
+}
+
+/* GitHub Dark 代码高亮 */
+.markdown-body.typography-wemd-whitespace-gallery .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-doctag,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-keyword,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-meta .hljs-keyword,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-template-tag,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-template-variable,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-type,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-variable.language_ {
+  color: #ff7b72;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-title,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-title.class_,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-title.class_.inherited__,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-title.function_ {
+  color: #d2a8ff;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-attr,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-attribute,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-literal,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-meta,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-number,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-operator,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-variable,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-selector-attr,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-selector-class,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-selector-id {
+  color: #79c0ff;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-regexp,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-string,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-built_in,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-symbol {
+  color: #ffa657;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-comment,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-code,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-formula {
+  color: #9198a1;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-name,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-quote,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-selector-tag,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-selector-pseudo {
+  color: #7ee787;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-subst,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-emphasis,
+.markdown-body.typography-wemd-whitespace-gallery .hljs-strong {
+  color: #c9d1d9;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-section {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-bullet {
+  color: #f2cc60;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-strong {
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.markdown-body.typography-wemd-whitespace-gallery { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-whitespace-gallery pre, .markdown-body.typography-wemd-whitespace-gallery pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-whitespace-gallery table { max-width: 100%; table-layout: fixed; }

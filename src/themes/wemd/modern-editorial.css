@@ -1,0 +1,1171 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-modern-editorial {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-modern-editorial p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-modern-editorial h1,
+.markdown-body.typography-wemd-modern-editorial h2,
+.markdown-body.typography-wemd-modern-editorial h3,
+.markdown-body.typography-wemd-modern-editorial h4,
+.markdown-body.typography-wemd-modern-editorial h5,
+.markdown-body.typography-wemd-modern-editorial h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-modern-editorial h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-modern-editorial h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-modern-editorial h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-modern-editorial h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-modern-editorial h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-modern-editorial h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-modern-editorial h1 .prefix,
+.markdown-body.typography-wemd-modern-editorial h2 .prefix,
+.markdown-body.typography-wemd-modern-editorial h3 .prefix,
+.markdown-body.typography-wemd-modern-editorial h4 .prefix,
+.markdown-body.typography-wemd-modern-editorial h5 .prefix,
+.markdown-body.typography-wemd-modern-editorial h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial h1 .suffix,
+.markdown-body.typography-wemd-modern-editorial h2 .suffix,
+.markdown-body.typography-wemd-modern-editorial h3 .suffix,
+.markdown-body.typography-wemd-modern-editorial h4 .suffix,
+.markdown-body.typography-wemd-modern-editorial h5 .suffix,
+.markdown-body.typography-wemd-modern-editorial h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-modern-editorial ul,
+.markdown-body.typography-wemd-modern-editorial ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-modern-editorial ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-modern-editorial ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-modern-editorial ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-modern-editorial li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-modern-editorial blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-modern-editorial .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-modern-editorial a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-modern-editorial strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-modern-editorial em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-modern-editorial em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-modern-editorial del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-modern-editorial u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-modern-editorial hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-modern-editorial pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-modern-editorial p code,
+.markdown-body.typography-wemd-modern-editorial li code,
+.markdown-body.typography-wemd-modern-editorial td code,
+.markdown-body.typography-wemd-modern-editorial th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-modern-editorial img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-modern-editorial figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-modern-editorial figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-modern-editorial .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-modern-editorial table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-modern-editorial tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr th,
+.markdown-body.typography-wemd-modern-editorial table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-modern-editorial table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-modern-editorial table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-modern-editorial sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-modern-editorial .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial .inline-equation {
+}
+
+.markdown-body.typography-wemd-modern-editorial .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-modern-editorial .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-modern-editorial .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-modern-editorial .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-modern-editorial .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-modern-editorial .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-modern-editorial figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-modern-editorial figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-modern-editorial figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-modern-editorial figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-modern-editorial .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-modern-editorial .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-modern-editorial .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-modern-editorial .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-modern-editorial .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-modern-editorial .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 编辑部手记：高信息密度的中文内刊风格 */
+.markdown-body.typography-wemd-modern-editorial {
+  max-width: 677px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  color: #34362f;
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.018em;
+  word-break: break-word;
+  counter-reset: editorial-section;
+}
+
+/* 正文 */
+.markdown-body.typography-wemd-modern-editorial p {
+  margin: 0 0 23px;
+  color: #34362f;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.018em;
+  text-align: justify;
+}
+
+/* 刊头和章节 */
+.markdown-body.typography-wemd-modern-editorial h1,
+.markdown-body.typography-wemd-modern-editorial h2,
+.markdown-body.typography-wemd-modern-editorial h3,
+.markdown-body.typography-wemd-modern-editorial h4,
+.markdown-body.typography-wemd-modern-editorial h5,
+.markdown-body.typography-wemd-modern-editorial h6 {
+  padding: 0;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-modern-editorial h1 {
+  margin: 26px 0 50px;
+  padding: 24px 0 20px;
+  border-top: 5px solid #20221e;
+  border-bottom: 3px solid #c76237;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-modern-editorial h1 .content {
+  color: #20221e;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+.markdown-body.typography-wemd-modern-editorial h2 {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin: 56px 0 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #afb1a6;
+}
+
+.markdown-body.typography-wemd-modern-editorial h2::before {
+  content: counter(editorial-section, decimal-leading-zero);
+  counter-increment: editorial-section;
+  display: inline-block;
+  min-width: 42px;
+  margin-right: 4px;
+  color: #c76237;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  vertical-align: bottom;
+}
+
+.markdown-body.typography-wemd-modern-editorial h2 .content {
+  color: #242720;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.48;
+  letter-spacing: 0.035em;
+}
+
+.markdown-body.typography-wemd-modern-editorial h3 {
+  margin: 38px 0 19px;
+}
+
+.markdown-body.typography-wemd-modern-editorial h3 .content {
+  display: inline-block;
+  padding: 7px 13px;
+  color: #f4f2e9;
+  background: #34372f;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.055em;
+}
+
+.markdown-body.typography-wemd-modern-editorial h4 {
+  margin: 31px 0 16px;
+  padding-left: 12px;
+  border-left: 4px solid #c76237;
+}
+
+.markdown-body.typography-wemd-modern-editorial h4 .content {
+  color: #34372f;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+}
+
+.markdown-body.typography-wemd-modern-editorial h5,
+.markdown-body.typography-wemd-modern-editorial h6 {
+  margin: 27px 0 14px;
+}
+
+.markdown-body.typography-wemd-modern-editorial h5 .content,
+.markdown-body.typography-wemd-modern-editorial h6 .content {
+  color: #626657;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.markdown-body.typography-wemd-modern-editorial h1 .prefix,
+.markdown-body.typography-wemd-modern-editorial h1 .suffix,
+.markdown-body.typography-wemd-modern-editorial h2 .prefix,
+.markdown-body.typography-wemd-modern-editorial h2 .suffix,
+.markdown-body.typography-wemd-modern-editorial h3 .prefix,
+.markdown-body.typography-wemd-modern-editorial h3 .suffix,
+.markdown-body.typography-wemd-modern-editorial h4 .prefix,
+.markdown-body.typography-wemd-modern-editorial h4 .suffix,
+.markdown-body.typography-wemd-modern-editorial h5 .prefix,
+.markdown-body.typography-wemd-modern-editorial h5 .suffix,
+.markdown-body.typography-wemd-modern-editorial h6 .prefix,
+.markdown-body.typography-wemd-modern-editorial h6 .suffix {
+  display: none;
+}
+
+/* 摘要引用 */
+.markdown-body.typography-wemd-modern-editorial blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-1 {
+  margin: 35px 0;
+  padding: 24px 24px 21px;
+  border-top: 3px solid #5f6453;
+  border-bottom: 1px solid #c8c9bf;
+  background: #f1f0e9;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-2,
+.markdown-body.typography-wemd-modern-editorial .multiquote-3 {
+  margin: 28px 0 28px 18px;
+  padding: 7px 0 7px 18px;
+  border-left: 3px solid #c76237;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-modern-editorial .multiquote-1 p,
+.markdown-body.typography-wemd-modern-editorial .multiquote-2 p,
+.markdown-body.typography-wemd-modern-editorial .multiquote-3 p {
+  margin: 0;
+  color: #4f5347;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.035em;
+}
+
+/* 清单和步骤 */
+.markdown-body.typography-wemd-modern-editorial ul,
+.markdown-body.typography-wemd-modern-editorial ol {
+  margin: 22px 0 28px;
+  padding-left: 24px;
+  color: #c76237;
+}
+
+.markdown-body.typography-wemd-modern-editorial ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-modern-editorial ul ul {
+  margin-top: 8px;
+  list-style-type: circle;
+}
+
+.markdown-body.typography-wemd-modern-editorial ol {
+  list-style-type: decimal-leading-zero;
+}
+
+.markdown-body.typography-wemd-modern-editorial ol ol {
+  margin-top: 8px;
+  list-style-type: lower-alpha;
+}
+
+.markdown-body.typography-wemd-modern-editorial li section {
+  margin: 7px 0;
+  color: #34362f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-modern-editorial ol > li {
+  margin: 11px 0;
+  color: #c76237;
+  font-weight: 700;
+}
+
+.markdown-body.typography-wemd-modern-editorial ol > li > section {
+  padding: 10px 14px;
+  border-left: 1px solid #b8baae;
+  color: #34362f;
+  background: #f5f4ee;
+  font-weight: 400;
+}
+
+/* 行内强调 */
+.markdown-body.typography-wemd-modern-editorial a {
+  color: #9f4828;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #d59a7f;
+}
+
+.markdown-body.typography-wemd-modern-editorial strong {
+  color: #242720;
+  font-weight: 700;
+  border-bottom: 2px solid #dfa187;
+}
+
+.markdown-body.typography-wemd-modern-editorial em {
+  color: #646858;
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-modern-editorial em strong {
+  color: #242720;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-modern-editorial mark {
+  padding: 1px 4px;
+  color: #392e27;
+  background: #f1d8c9;
+}
+
+.markdown-body.typography-wemd-modern-editorial del {
+  color: #8b8d84;
+  text-decoration: line-through;
+}
+
+.markdown-body.typography-wemd-modern-editorial u {
+  text-decoration-color: #c76237;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.markdown-body.typography-wemd-modern-editorial hr {
+  width: 84px;
+  height: 5px;
+  margin: 54px auto;
+  border: none;
+  background: #c76237;
+}
+
+/* 图片版式 */
+.markdown-body.typography-wemd-modern-editorial figure {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 40px 4px 44px 0;
+}
+
+.markdown-body.typography-wemd-modern-editorial figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial img,
+.markdown-body.typography-wemd-modern-editorial figure a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 7px;
+  border: 1px solid #ccccc2;
+  border-radius: 1px;
+  background: #f7f6f0;
+  box-shadow: 8px 8px 0 #deddd4;
+}
+
+.markdown-body.typography-wemd-modern-editorial figcaption {
+  margin-top: 16px;
+  padding-left: 13px;
+  border-left: 3px solid #c76237;
+  color: #73766b;
+  font-size: 12px;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-modern-editorial p code,
+.markdown-body.typography-wemd-modern-editorial li code,
+.markdown-body.typography-wemd-modern-editorial td code,
+.markdown-body.typography-wemd-modern-editorial th code {
+  margin: 0 2px;
+  padding: 2px 6px;
+  border: 1px solid #d2d1c7;
+  border-radius: 2px;
+  color: #9f4828;
+  background: #f1f0e9;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+/* 代码块 */
+.markdown-body.typography-wemd-modern-editorial pre {
+  margin: 32px 0;
+  border-top: 5px solid #c76237;
+  border-radius: 1px;
+  background: #23251f;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre.custom {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs {
+  display: block;
+  min-width: max-content;
+  padding: 20px 21px;
+  border-radius: 0;
+  color: #e8e6dd;
+  background: #23251f;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.72;
+  white-space: pre;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre.custom > .mac-sign {
+  display: block;
+  border-bottom: 1px solid #3d4037;
+  background: #23251f;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-comment,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-quote {
+  color: #999c90;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-keyword,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-selector-tag,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-meta {
+  color: #f09a6d;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-string,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-doctag,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-regexp {
+  color: #afc89f;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-number,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-literal,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-symbol {
+  color: #dfbe76;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-title,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-section,
+.markdown-body.typography-wemd-modern-editorial pre code.hljs .hljs-type {
+  color: #91bec8;
+}
+
+/* 数据表 */
+.markdown-body.typography-wemd-modern-editorial .table-container {
+  margin: 34px 0;
+  border-top: 5px solid #c76237;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #34362f;
+  background: #f7f6f0;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr {
+  border: none;
+  background: transparent;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr th,
+.markdown-body.typography-wemd-modern-editorial table tr td {
+  min-width: 88px;
+  padding: 12px 11px;
+  border: none;
+  border-bottom: 1px solid #d3d3c8;
+  color: #41443a;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.62;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr th {
+  color: #f2f0e7;
+  background: #34372f;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+
+.markdown-body.typography-wemd-modern-editorial table tr:nth-child(2n) {
+  background: #ecebe3;
+}
+
+/* 编辑部提示 */
+.markdown-body.typography-wemd-modern-editorial .callout {
+  margin: 32px 0;
+  padding: 19px 21px;
+  border: 1px solid #cecec3;
+  border-left: 5px solid #626754;
+  border-radius: 1px;
+  color: #41443a;
+  background: #f1f0e9;
+  box-shadow: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+  color: #34372f;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout-icon {
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout p {
+  margin: 0;
+  color: #505348;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.markdown-body.typography-wemd-modern-editorial .callout-warning,
+.markdown-body.typography-wemd-modern-editorial .callout-caution {
+  border-left-color: #c76237;
+  background: #f5ebe4;
+}
+
+/* 参考资料 */
+.markdown-body.typography-wemd-modern-editorial .footnote-word,
+.markdown-body.typography-wemd-modern-editorial .footnote-ref {
+  color: #9f4828;
+  font-weight: 600;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnotes-sep {
+  margin-top: 52px;
+  padding-top: 20px;
+  border-top: 5px solid #34372f;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnotes-sep:before {
+  display: block;
+  content: "参考资料";
+  color: #34372f;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-item {
+  display: flex;
+  margin-top: 10px;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-num {
+  width: 31px;
+  flex-shrink: 0;
+  color: #c76237;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.markdown-body.typography-wemd-modern-editorial .footnote-item p {
+  width: auto;
+  margin: 0;
+  color: #74776d;
+  font-size: 13px;
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* 公式、图表和任务列表 */
+.markdown-body.typography-wemd-modern-editorial .block-equation {
+  display: block;
+  margin: 34px 0;
+  padding: 20px 10px;
+  border-top: 1px solid #cecec3;
+  border-bottom: 1px solid #cecec3;
+  text-align: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-modern-editorial .block-equation > svg {
+  max-width: 300% !important;
+}
+
+.markdown-body.typography-wemd-modern-editorial .inline-equation {
+  display: inline;
+}
+
+.markdown-body.typography-wemd-modern-editorial .inline-equation > svg {
+  vertical-align: middle;
+}
+
+.markdown-body.typography-wemd-modern-editorial pre.mermaid {
+  padding: 22px 12px;
+  border: 1px solid #cecec3;
+  border-top: 5px solid #626754;
+  background: #f7f6f0;
+}
+
+.markdown-body.typography-wemd-modern-editorial .task-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-left: -1.2em;
+  list-style: none;
+}
+
+.markdown-body.typography-wemd-modern-editorial .task-list-item input[type='checkbox'] {
+  margin-top: 7px;
+  margin-right: 8px;
+  pointer-events: none;
+}
+
+/* GitHub Dark 代码高亮 */
+.markdown-body.typography-wemd-modern-editorial .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-doctag,
+.markdown-body.typography-wemd-modern-editorial .hljs-keyword,
+.markdown-body.typography-wemd-modern-editorial .hljs-meta .hljs-keyword,
+.markdown-body.typography-wemd-modern-editorial .hljs-template-tag,
+.markdown-body.typography-wemd-modern-editorial .hljs-template-variable,
+.markdown-body.typography-wemd-modern-editorial .hljs-type,
+.markdown-body.typography-wemd-modern-editorial .hljs-variable.language_ {
+  color: #ff7b72;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-title,
+.markdown-body.typography-wemd-modern-editorial .hljs-title.class_,
+.markdown-body.typography-wemd-modern-editorial .hljs-title.class_.inherited__,
+.markdown-body.typography-wemd-modern-editorial .hljs-title.function_ {
+  color: #d2a8ff;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-attr,
+.markdown-body.typography-wemd-modern-editorial .hljs-attribute,
+.markdown-body.typography-wemd-modern-editorial .hljs-literal,
+.markdown-body.typography-wemd-modern-editorial .hljs-meta,
+.markdown-body.typography-wemd-modern-editorial .hljs-number,
+.markdown-body.typography-wemd-modern-editorial .hljs-operator,
+.markdown-body.typography-wemd-modern-editorial .hljs-variable,
+.markdown-body.typography-wemd-modern-editorial .hljs-selector-attr,
+.markdown-body.typography-wemd-modern-editorial .hljs-selector-class,
+.markdown-body.typography-wemd-modern-editorial .hljs-selector-id {
+  color: #79c0ff;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-regexp,
+.markdown-body.typography-wemd-modern-editorial .hljs-string,
+.markdown-body.typography-wemd-modern-editorial .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-built_in,
+.markdown-body.typography-wemd-modern-editorial .hljs-symbol {
+  color: #ffa657;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-comment,
+.markdown-body.typography-wemd-modern-editorial .hljs-code,
+.markdown-body.typography-wemd-modern-editorial .hljs-formula {
+  color: #9198a1;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-name,
+.markdown-body.typography-wemd-modern-editorial .hljs-quote,
+.markdown-body.typography-wemd-modern-editorial .hljs-selector-tag,
+.markdown-body.typography-wemd-modern-editorial .hljs-selector-pseudo {
+  color: #7ee787;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-subst,
+.markdown-body.typography-wemd-modern-editorial .hljs-emphasis,
+.markdown-body.typography-wemd-modern-editorial .hljs-strong {
+  color: #c9d1d9;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-section {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-bullet {
+  color: #f2cc60;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-strong {
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.markdown-body.typography-wemd-modern-editorial .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.markdown-body.typography-wemd-modern-editorial { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-modern-editorial pre, .markdown-body.typography-wemd-modern-editorial pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-modern-editorial table { max-width: 100%; table-layout: fixed; }

@@ -2,7 +2,9 @@
 
 ## WeMD
 
-The editorial and knowledge-base typography in `src/typography.css` is adapted from
+The full set of 17 built-in themes in `src/themes/wemd/` is adapted from WeMD,
+including its base styles and GitHub code palettes. The editorial and knowledge-base
+typography in `src/typography.css` is also adapted from
 https://github.com/tenngoxars/WeMD (revision a87ea3f80998fb1b1d2cbc89c9331468f41cc3e7).
 Selectors, sizing and dark-mode colors were adapted for ShareCardMaker.
 
@@ -27,3 +29,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+The original CSS is scoped per theme; heading spans and list sections are provided
+by `src/lib/markdown.js`. Invalid upstream calc syntax was corrected, and export
+width, wrapping and box-sizing rules were added for cards. The five themes hidden
+by upstream are intentionally selectable here. These styles do not add WeMD-only
+Markdown syntax such as math or image carousels.

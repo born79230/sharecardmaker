@@ -1,0 +1,1115 @@
+/* WeMD Team, MIT; see THIRD_PARTY_NOTICES.md. */
+/* 默认样式，最佳实践 */
+
+/* 全局属性 */
+.markdown-body.typography-wemd-default {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 8px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-default p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* 标题 */
+.markdown-body.typography-wemd-default h1,
+.markdown-body.typography-wemd-default h2,
+.markdown-body.typography-wemd-default h3,
+.markdown-body.typography-wemd-default h4,
+.markdown-body.typography-wemd-default h5,
+.markdown-body.typography-wemd-default h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-body.typography-wemd-default h1 {
+  font-size: 24px;
+}
+.markdown-body.typography-wemd-default h2 {
+  font-size: 22px;
+}
+.markdown-body.typography-wemd-default h3 {
+  font-size: 20px;
+}
+.markdown-body.typography-wemd-default h4 {
+  font-size: 18px;
+}
+.markdown-body.typography-wemd-default h5 {
+  font-size: 16px;
+}
+.markdown-body.typography-wemd-default h6 {
+  font-size: 16px;
+}
+
+.markdown-body.typography-wemd-default h1 .prefix,
+.markdown-body.typography-wemd-default h2 .prefix,
+.markdown-body.typography-wemd-default h3 .prefix,
+.markdown-body.typography-wemd-default h4 .prefix,
+.markdown-body.typography-wemd-default h5 .prefix,
+.markdown-body.typography-wemd-default h6 .prefix {
+  display: none;
+}
+
+.markdown-body.typography-wemd-default h1 .suffix,
+.markdown-body.typography-wemd-default h2 .suffix,
+.markdown-body.typography-wemd-default h3 .suffix,
+.markdown-body.typography-wemd-default h4 .suffix,
+.markdown-body.typography-wemd-default h5 .suffix,
+.markdown-body.typography-wemd-default h6 .suffix {
+  display: none;
+}
+
+/* 列表 */
+.markdown-body.typography-wemd-default ul,
+.markdown-body.typography-wemd-default ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: #000000;
+}
+.markdown-body.typography-wemd-default ul {
+  list-style-type: disc;
+}
+.markdown-body.typography-wemd-default ul ul {
+  list-style-type: square;
+}
+
+.markdown-body.typography-wemd-default ol {
+  list-style-type: decimal;
+}
+
+.markdown-body.typography-wemd-default li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101; /* 使用接近黑色的 HEX，避免微信吞掉纯黑色 */
+  font-weight: 500;
+}
+
+/* 引用 */
+.markdown-body.typography-wemd-default blockquote {
+  border: none;
+}
+
+.markdown-body.typography-wemd-default .multiquote-1 {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.05);
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-default .multiquote-1 p {
+  margin: 0px;
+  color: #000000;
+  line-height: 26px;
+}
+
+.markdown-body.typography-wemd-default .multiquote-2 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-default .multiquote-3 {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-body.typography-wemd-default .multiquote-3 p {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-default .multiquote-3 h3 {
+  text-align: center;
+}
+
+.markdown-body.typography-wemd-default .table-of-contents a {
+  border: none;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* 链接 */
+.markdown-body.typography-wemd-default a {
+  text-decoration: none;
+  color: #1e6bb8;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+}
+
+/* 加粗 */
+.markdown-body.typography-wemd-default strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 斜体 */
+.markdown-body.typography-wemd-default em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-default em strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-default del {
+  font-style: italic;
+  color: #000000;
+}
+
+/* 下划线 */
+.markdown-body.typography-wemd-default u {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+/* 分隔线 */
+.markdown-body.typography-wemd-default hr {
+  height: 1px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+/* 代码块容器 */
+.markdown-body.typography-wemd-default pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-default pre.custom {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.markdown-body.typography-wemd-default pre code {
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  border-radius: 0px;
+  font-size: 12px;
+  white-space: pre;
+  min-width: max-content;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-default pre code span {
+  line-height: 26px;
+}
+
+/* 行内代码 */
+.markdown-body.typography-wemd-default p code,
+.markdown-body.typography-wemd-default li code,
+.markdown-body.typography-wemd-default td code,
+.markdown-body.typography-wemd-default th code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #1e6bb8;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-default img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-default figure {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片描述文字 */
+.markdown-body.typography-wemd-default figcaption {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* 表格容器 */
+.markdown-body.typography-wemd-default .table-container{
+  overflow-x: auto;
+}
+
+/* 表格 */
+.markdown-body.typography-wemd-default table {
+  display: table;
+  text-align: left;
+}
+.markdown-body.typography-wemd-default tbody {
+  border: 0;
+}
+
+.markdown-body.typography-wemd-default table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.markdown-body.typography-wemd-default table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+.markdown-body.typography-wemd-default table tr th,
+.markdown-body.typography-wemd-default table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-default table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 表格最小列宽4个汉字 */
+.markdown-body.typography-wemd-default table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-default table tr td:nth-of-type(n){
+  min-width:85px;
+}
+
+.markdown-body.typography-wemd-default .footnote-word {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-default .footnote-ref {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-default .footnote-item {
+  display: flex;
+}
+
+.markdown-body.typography-wemd-default .footnote-num {
+  display: inline;
+  width: 10%; /*神奇，50px就不可以*/
+  background: none;
+  font-size: 80%;
+  opacity: 0.6;
+  line-height: 26px;
+  font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markdown-body.typography-wemd-default .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  width: 90%;
+  padding: 0px;
+  margin: 0;
+  line-height: 26px;
+  color: #000000;
+  word-break:break-all;
+  width: calc(100% - 50px)
+}
+
+.markdown-body.typography-wemd-default sub, sup {
+  line-height: 0;
+}
+
+.markdown-body.typography-wemd-default .footnotes-sep:before {
+  content: "参考资料";
+  display: block;
+}
+
+/* 解决公式问题 */
+.markdown-body.typography-wemd-default .block-equation {
+  display:block;
+  text-align: center;
+  overflow: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-default .block-equation > svg {
+  max-width: 300% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body.typography-wemd-default .inline-equation {
+}
+
+.markdown-body.typography-wemd-default .inline-equation > svg {
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  white-space: normal;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-default .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-default .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-default .nice-suffix-juejin-container {
+  margin-top: 20px !important;
+}
+
+.markdown-body.typography-wemd-default figure a {
+  border: none;
+}
+
+.markdown-body.typography-wemd-default figure a img {
+  margin: 0px;
+}
+
+.markdown-body.typography-wemd-default figure {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套 */
+.markdown-body.typography-wemd-default figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片链接嵌套，图片解释 */
+.markdown-body.typography-wemd-default figure a + figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -35px;
+  background: rgba(0,0,0,0.7);
+  color: #ffffff;
+  line-height: 35px;
+  z-index: 20;
+}
+
+.markdown-body.typography-wemd-default .callout {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.markdown-body.typography-wemd-default .callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body.typography-wemd-default .callout-icon { margin-right: 8px;
+  font-size: 18px;
+}
+
+.markdown-body.typography-wemd-default .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+.markdown-body.typography-wemd-default .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+.markdown-body.typography-wemd-default .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+.markdown-body.typography-wemd-default .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.markdown-body.typography-wemd-default .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+
+
+.markdown-body.typography-wemd-default .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.markdown-body.typography-wemd-default .task-list-item input[type='checkbox'] {
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+/* 默认主题 · 翡翠刊读
+ * 设计语言：深松墨承担标题层级（近黑而有绿魂），翡翠 #047857 作单一锚点强调，
+ * 每级标题使用不同版式（刊头压线 / 章节底线 / 翡翠左锚 / 字距标签）建立编辑节奏；
+ * 全程不用投影、外发光、渐变或伪元素装饰，保证复制到微信公众号后视觉稳定。
+ * 所有颜色为字面值。
+ */
+
+/* 全局 */
+.markdown-body.typography-wemd-default {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #242a26;
+  line-height: 1.8;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+}
+
+/* 段落 */
+.markdown-body.typography-wemd-default p {
+  margin: 16px 0;
+  font-size: 16px;
+  color: #242a26;
+  line-height: 1.8;
+  letter-spacing: 0.4px;
+}
+
+/* 一级标题 · 刊头：翡翠压顶线 + 左对齐大字墨题 */
+.markdown-body.typography-wemd-default h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #12241c;
+  text-align: left;
+  margin: 10px 0 28px;
+  padding-top: 18px;
+  border-top: 3px solid #047857;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+}
+
+/* 二级标题 · 章节：深松墨 + 翡翠底线，形成栏目分节 */
+.markdown-body.typography-wemd-default h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #134034;
+  margin: 42px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #cfe4d9;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+}
+
+/* 三级标题 · 翡翠左锚 */
+.markdown-body.typography-wemd-default h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #134034;
+  margin: 30px 0 12px;
+  padding-left: 12px;
+  border-left: 3px solid #047857;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+/* 四级标题 · 翡翠字距标签 */
+.markdown-body.typography-wemd-default h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #047857;
+  margin: 26px 0 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 五级标题 */
+.markdown-body.typography-wemd-default h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #55605a;
+  margin: 20px 0 8px;
+  letter-spacing: 0.3px;
+}
+
+/* 六级标题:最次级墨灰,压深至对白底 ≥ AA 4.5:1 */
+.markdown-body.typography-wemd-default h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #606b64;
+  margin: 18px 0 8px;
+  letter-spacing: 0.5px;
+}
+
+/* 无序列表：翡翠符号 + 墨色内容 */
+.markdown-body.typography-wemd-default ul {
+  padding-left: 24px;
+  list-style-type: disc;
+  color: #242a26;
+}
+
+.markdown-body.typography-wemd-default ul li {
+  padding-left: 6px;
+  color: #047857;
+}
+
+.markdown-body.typography-wemd-default ul li section {
+  color: #242a26;
+}
+
+.markdown-body.typography-wemd-default ul ul {
+  list-style-type: circle;
+}
+
+.markdown-body.typography-wemd-default ul ul ul {
+  list-style-type: square;
+}
+
+/* 有序列表 */
+.markdown-body.typography-wemd-default ol {
+  padding-left: 24px;
+  list-style-type: decimal;
+  color: #242a26;
+}
+
+.markdown-body.typography-wemd-default ol li {
+  padding-left: 6px;
+  color: #047857;
+}
+
+.markdown-body.typography-wemd-default li section {
+  margin: 7px 0;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #242a26;
+}
+
+/* 一级引用：翡翠左锚 + 极浅翡翠底，右侧圆角 */
+.markdown-body.typography-wemd-default .multiquote-1 {
+  border-left: 3px solid #047857;
+  background: #f0f6f3;
+  padding: 16px 20px;
+  margin: 24px 0;
+  color: #3f4a44;
+  border-radius: 0 8px 8px 0;
+  box-shadow: none;
+}
+
+.markdown-body.typography-wemd-default .multiquote-1 p {
+  margin: 0;
+  font-size: 15.5px;
+  color: #3f4a44;
+  line-height: 1.8;
+}
+
+/* 二级引用（覆盖 basic 的投影） */
+.markdown-body.typography-wemd-default .multiquote-2 {
+  border-left: 3px solid #065f46;
+  background: #f6f8f7;
+  padding: 14px 18px;
+  margin: 18px 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: none;
+}
+
+.markdown-body.typography-wemd-default .multiquote-2 p {
+  margin: 0;
+  font-size: 15px;
+  color: #55605a;
+  line-height: 1.75;
+}
+
+/* 三级引用（覆盖 basic 的投影） */
+.markdown-body.typography-wemd-default .multiquote-3 {
+  border-left: 2px solid #86c9ae;
+  background: #f6f8f7;
+  padding: 12px 16px;
+  margin: 14px 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: none;
+}
+
+.markdown-body.typography-wemd-default .multiquote-3 p {
+  margin: 0;
+  font-size: 14px;
+  color: #55605a;
+}
+
+/* 链接：翡翠 + 细下划线 */
+.markdown-body.typography-wemd-default a {
+  color: #047857;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(4, 120, 87, 0.4);
+  font-weight: 500;
+}
+
+/* 加粗：墨色强调，不染色 */
+.markdown-body.typography-wemd-default strong {
+  font-weight: 700;
+  color: #12241c;
+  letter-spacing: 0.2px;
+}
+
+/* 斜体：墨色 */
+.markdown-body.typography-wemd-default em {
+  font-style: italic;
+  color: #242a26;
+}
+
+/* 加粗斜体 */
+.markdown-body.typography-wemd-default em strong {
+  font-weight: 700;
+  font-style: italic;
+  color: #12241c;
+}
+
+/* 删除线 */
+.markdown-body.typography-wemd-default del {
+  text-decoration: line-through;
+  color: #606b64;
+}
+
+/* 分隔线 · 居中短翡翠条 */
+.markdown-body.typography-wemd-default hr {
+  border: none;
+  height: 2px;
+  width: 48px;
+  background: #047857;
+  margin: 34px auto;
+}
+
+/* 图片 */
+.markdown-body.typography-wemd-default img {
+  display: block;
+  margin: 24px auto;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* 图片描述 */
+.markdown-body.typography-wemd-default figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: #606b64;
+  margin-top: 10px;
+  letter-spacing: 0.2px;
+}
+
+/* 链接图片说明：覆盖基础主题的黑底悬浮样式 */
+.markdown-body.typography-wemd-default figure a + figcaption {
+  margin-top: 10px;
+  background: transparent;
+  color: #606b64;
+  line-height: 1.6;
+}
+
+/* 行内代码：浅翡翠底 + 翡翠墨字 */
+.markdown-body.typography-wemd-default p code, .markdown-body.typography-wemd-default li code, .markdown-body.typography-wemd-default td code, .markdown-body.typography-wemd-default th code {
+  background: #eef6f1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #0f5c43;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+  font-size: 0.88em;
+  margin: 0 2px;
+  border: 1px solid #d4e8de;
+}
+
+/* 代码块容器：中性发丝边 */
+.markdown-body.typography-wemd-default pre code,
+.markdown-body.typography-wemd-default pre code.hljs {
+  display: block;
+  background: #f7f9f8;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #334155;
+  border: 1px solid #e4e9e6;
+}
+
+/* 表格 · 编辑式：去竖线，仅横向分隔，表头翡翠底线 */
+.markdown-body.typography-wemd-default table tr {
+  border: none;
+  background-color: transparent;
+}
+
+.markdown-body.typography-wemd-default table tr th,
+.markdown-body.typography-wemd-default table tr td {
+  border: none;
+  border-bottom: 1px solid #e4e9e6;
+  padding: 11px 14px;
+  font-size: 15px;
+  color: #242a26;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown-body.typography-wemd-default table tr th {
+  border-bottom: 2px solid #047857;
+  background: transparent;
+  color: #134034;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.markdown-body.typography-wemd-default table tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+.markdown-body.typography-wemd-default table tr th:nth-of-type(n),
+.markdown-body.typography-wemd-default table tr td:nth-of-type(n){
+  min-width: 100px;
+}
+
+/* 脚注 */
+.markdown-body.typography-wemd-default .footnote-word {
+  color: #047857;
+  font-weight: 500;
+  border-bottom: 1px dashed rgba(4, 120, 87, 0.5);
+}
+
+.markdown-body.typography-wemd-default .footnote-ref {
+  color: #047857;
+  font-weight: 600;
+}
+
+.markdown-body.typography-wemd-default .footnotes-sep:before {
+  content: "参考资料";
+  font-weight: 700;
+  margin-top: 38px;
+  margin-bottom: 16px;
+  display: block;
+  font-size: 18px;
+  color: #12241c;
+  letter-spacing: 0.5px;
+}
+
+.markdown-body.typography-wemd-default .footnote-num {
+  display: inline-block;
+  width: 24px;
+  text-align: right;
+  margin-right: 8px;
+  color: #606b64;
+  font-weight: 500;
+}
+
+.markdown-body.typography-wemd-default .footnote-item p {
+  display: inline;
+  font-size: 14px;
+  color: #55605a;
+  line-height: 1.8;
+}
+
+.markdown-body.typography-wemd-default .footnote-item p em {
+  font-style: normal;
+  color: #606b64;
+  margin-left: 6px;
+}
+
+/* 行间公式 */
+.markdown-body.typography-wemd-default .block-equation > svg {
+  display: block;
+  margin: 20px auto;
+  max-width: 300% !important;
+}
+
+/* 行内公式 */
+.markdown-body.typography-wemd-default .inline-equation > svg {
+  vertical-align: middle;
+}
+
+/* Callout 提示块：扁平化，去投影渐变；语义色左边线由 basic 提供 */
+.markdown-body.typography-wemd-default .callout {
+  margin: 26px 0;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.markdown-body.typography-wemd-default .callout-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #12241c;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+
+.markdown-body.typography-wemd-default .callout-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* 提示类 callout 与主题强调色对齐，其余保持语义色 */
+.markdown-body.typography-wemd-default .callout-tip {
+  border-left-color: #047857;
+  background: #ecf6f1;
+}
+
+/* 高亮文本：柔和扁平 */
+.markdown-body.typography-wemd-default mark {
+  background: #f6eec6;
+  color: #1a1a1a;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* 上标 */
+.markdown-body.typography-wemd-default sup {
+  font-size: 0.75em;
+  vertical-align: super;
+  color: #047857;
+}
+
+/* 下标 */
+.markdown-body.typography-wemd-default sub {
+  font-size: 0.75em;
+  vertical-align: sub;
+  color: #047857;
+}
+
+/* Imageflow */
+.markdown-body.typography-wemd-default .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-default .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-default .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+/* 代码块样式 - 需要添加 .markdown-body.typography-wemd-default 前缀以匹配包装后的 HTML */
+.markdown-body.typography-wemd-default .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.markdown-body.typography-wemd-default .hljs-comment,
+.markdown-body.typography-wemd-default .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-default .hljs-keyword,
+.markdown-body.typography-wemd-default .hljs-selector-tag,
+.markdown-body.typography-wemd-default .hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-default .hljs-number,
+.markdown-body.typography-wemd-default .hljs-literal,
+.markdown-body.typography-wemd-default .hljs-variable,
+.markdown-body.typography-wemd-default .hljs-template-variable,
+.markdown-body.typography-wemd-default .hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.markdown-body.typography-wemd-default .hljs-string,
+.markdown-body.typography-wemd-default .hljs-doctag {
+  color: #d14;
+}
+
+.markdown-body.typography-wemd-default .hljs-title,
+.markdown-body.typography-wemd-default .hljs-section,
+.markdown-body.typography-wemd-default .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-default .hljs-subst {
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-default .hljs-type,
+.markdown-body.typography-wemd-default .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-default .hljs-tag,
+.markdown-body.typography-wemd-default .hljs-name,
+.markdown-body.typography-wemd-default .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.markdown-body.typography-wemd-default .hljs-regexp,
+.markdown-body.typography-wemd-default .hljs-link {
+  color: #009926;
+}
+
+.markdown-body.typography-wemd-default .hljs-symbol,
+.markdown-body.typography-wemd-default .hljs-bullet {
+  color: #990073;
+}
+
+.markdown-body.typography-wemd-default .hljs-built_in,
+.markdown-body.typography-wemd-default .hljs-builtin-name {
+  color: #0086b3;
+}
+
+.markdown-body.typography-wemd-default .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body.typography-wemd-default .hljs-deletion {
+  background: #fdd;
+}
+
+.markdown-body.typography-wemd-default .hljs-addition {
+  background: #dfd;
+}
+
+.markdown-body.typography-wemd-default .hljs-emphasis {
+  font-style: italic;
+}
+
+.markdown-body.typography-wemd-default .hljs-strong {
+  font-weight: bold;
+}
+
+/* Imageflow CSS */
+.markdown-body.typography-wemd-default .imageflow-layer1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  /* white-space: normal; */
+  border: 0px none;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer2 {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.markdown-body.typography-wemd-default .imageflow-layer3 {
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  width: 80%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.markdown-body.typography-wemd-default .imageflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.markdown-body.typography-wemd-default .imageflow-caption {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #888;
+}
+
+.markdown-body.typography-wemd-default { width: 100%; max-width: 100%; box-sizing: border-box; }
+.markdown-body.typography-wemd-default pre, .markdown-body.typography-wemd-default pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.markdown-body.typography-wemd-default table { max-width: 100%; table-layout: fixed; }
