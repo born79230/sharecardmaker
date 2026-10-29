@@ -1,0 +1,77 @@
+/* Adapted from WeMD's modern-editorial and knowledge-base themes (MIT).
+   See THIRD_PARTY_NOTICES.md. Scoped to Markdown; card appearance stays independent. */
+.markdown-body {
+  --ink: #263445;
+  --muted: #627184;
+  --accent: #1674bc;
+  --tint: #edf6fd;
+  --rule: #c8dbea;
+  color: var(--ink);
+  line-height: 1.8;
+  letter-spacing: .015em;
+}
+.dark .markdown-body {
+  --ink: #e6edf5;
+  --muted: #a9b8c9;
+  --accent: #83caff;
+  --tint: #20354a;
+  --rule: #466078;
+}
+.markdown-body h1 { font-size: 2.1em; line-height: 1.35; margin: 0 0 .8em; }
+.markdown-body h2 { font-size: 1.35em; line-height: 1.45; margin: 1.6em 0 .8em; }
+.markdown-body h3 { font-size: 1.1em; line-height: 1.5; margin: 1.3em 0 .65em; }
+.markdown-body h4, .markdown-body h5, .markdown-body h6 { line-height: 1.5; margin: 1.2em 0 .6em; }
+.markdown-body p { margin: 0 0 1em; }
+.markdown-body li { margin: .35em 0; }
+.markdown-body li > p { margin-bottom: .4em; }
+.markdown-body li::marker { color: var(--accent); font-weight: 700; }
+.markdown-body ul, .markdown-body ol { padding-left: 1.5em; }
+.markdown-body a, .dark .markdown-body a { color: var(--accent); font-weight: 600; }
+.markdown-body blockquote { color: var(--ink); opacity: 1; margin: 1.3em 0; }
+.markdown-body blockquote > :last-child { margin-bottom: 0; }
+.markdown-body hr { border: 0; border-top: 1px solid var(--rule); margin: 1.8em 0; }
+.markdown-body th { background: var(--tint); }
+.markdown-body th, .markdown-body td { border-color: var(--rule); font-size: .85em; }
+.markdown-body tbody tr:nth-child(even) { background: var(--tint); }
+.markdown-body img { height: auto; margin: 1.3em auto; }
+.markdown-body :not(pre) > code, .dark .markdown-body :not(pre) > code {
+  color: var(--accent); background: var(--tint); padding: .12em .35em; font-size: .82em;
+}
+.markdown-body pre { margin: 1.3em 0; line-height: 1.65; }
+.markdown-body pre code { color: inherit; font-size: .78em; }
+
+/* Blue notes: centered title, solid section tabs, cool callouts. */
+.typography-classic h1 { text-align: center; color: var(--accent); padding-bottom: .55em; border-bottom: 3px solid var(--accent); }
+.typography-classic h2 { width: fit-content; padding: .3em .75em; color: #fff; background: #1674bc; border-radius: 5px; }
+.typography-classic h3 { border-left: 4px solid var(--accent); padding-left: .6em; }
+.typography-classic strong { color: var(--accent); }
+.typography-classic blockquote { padding: .9em 1.1em; border-left: 4px solid var(--accent); background: var(--tint); border-radius: 0 10px 10px 0; }
+.typography-classic pre { background: #172b40; border-radius: 10px; }
+.typography-classic hr { width: 25%; border-top: 3px solid var(--accent); margin-inline: auto; }
+
+/* Editorial: masthead, numbered chapters, rust accents and print-like rules. */
+.typography-editorial { --ink: #34362f; --muted: #73766b; --accent: #ad512e; --tint: #f1f0e9; --rule: #ccccc2; counter-reset: editorial-section; line-height: 1.86; }
+.dark .typography-editorial { --ink: #eeeadd; --muted: #c0bdae; --accent: #efa47f; --tint: #35362f; --rule: #656657; }
+.typography-editorial h1 { font-family: "Songti SC", "STSong", Georgia, serif; font-weight: 900; letter-spacing: .04em; border-top: 5px solid var(--ink); border-bottom: 3px solid var(--accent); padding: .45em 0; margin-bottom: 1em; }
+.typography-editorial h2 { display: flex; align-items: baseline; gap: .6em; border-bottom: 1px solid var(--rule); padding-bottom: .45em; font-family: "Songti SC", Georgia, serif; }
+.typography-editorial h2::before { counter-increment: editorial-section; content: counter(editorial-section, decimal-leading-zero); color: var(--accent); font: 800 1.3em/1 monospace; }
+.typography-editorial h3 { background: var(--ink); color: var(--tint); padding: .35em .7em; width: fit-content; }
+.typography-editorial strong { border-bottom: 2px solid var(--accent); padding-bottom: .08em; }
+.typography-editorial a { border-bottom: 1px solid var(--accent); }
+.typography-editorial blockquote { padding: 1em 1.1em; border: 0; border-top: 3px solid var(--muted); border-bottom: 1px solid var(--rule); background: var(--tint); font-family: "Songti SC", Georgia, serif; }
+.typography-editorial pre { color: var(--ink); background: var(--tint); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 0; }
+.typography-editorial hr { width: 84px; height: 5px; border: 0; background: var(--accent); margin-inline: auto; }
+.typography-editorial img { border: 1px solid var(--rule); border-radius: 1px; padding: 6px; box-shadow: 6px 6px 0 var(--rule); }
+
+/* Knowledge base: page heading, gray section bars, yellow highlighter. */
+.typography-notes { --ink: #37352f; --muted: #787774; --accent: #a34b21; --tint: #f1f1ef; --rule: #deddd8; line-height: 1.75; }
+.dark .typography-notes { --ink: #eeede9; --muted: #b5b3ac; --accent: #f3bf8a; --tint: #343431; --rule: #575751; }
+.typography-notes h1 { font-size: 2em; font-weight: 800; letter-spacing: -.035em; padding-bottom: .6em; border-bottom: 1px solid var(--rule); }
+.typography-notes h2 { padding: .35em .55em; background: var(--tint); border-radius: 4px; }
+.typography-notes h3 { width: fit-content; border-bottom: 4px solid #fde2a4; padding-bottom: .1em; }
+.typography-notes strong { color: #493a20; background: #fdecc8; padding: .08em .2em; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.typography-notes blockquote { padding: .9em 1em; background: var(--tint); border-left: 4px solid var(--muted); border-radius: 4px; }
+.typography-notes blockquote blockquote { background: #e7f3f8; color: #263445; border-left-color: #2d9cdb; }
+.typography-notes pre { color: var(--ink); background: var(--tint); border: 1px solid var(--rule); border-radius: 5px; }
+.typography-notes :not(pre) > code { color: #bd483d; }
+.typography-notes a { color: var(--ink); border-bottom: 1px solid var(--muted); }

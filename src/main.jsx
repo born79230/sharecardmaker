@@ -44,6 +44,7 @@ import {
   THEME_OPTIONS
 } from './presets.js';
 import './styles.css';
+import './typography.css';
 
 const MODES = [
   { id: 'text', label: 'Text', icon: Type },
@@ -567,9 +568,9 @@ function EditorBody(props) {
     <div className="form-stack">
       <Label text="正文排版">
         <select value={typography} onChange={(event) => setTypography(event.target.value)}>
-          <option value="classic">经典</option>
-          <option value="editorial">杂志</option>
-          <option value="notes">笔记</option>
+          <option value="classic">清新 · 蓝色手记</option>
+          <option value="editorial">杂志 · 编辑部手记</option>
+          <option value="notes">笔记 · 知识库</option>
         </select>
       </Label>
       <Label text="Markdown text">
