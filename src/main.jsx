@@ -295,6 +295,7 @@ export function App({ platform = browserPlatform }) {
                   style={{ padding: `${padding}px ${paddingX}px` }}
                 >
                   <SceneLayer scene={scene} />
+                  <div className="card-layout">
                   <ShotCard
                     mode={mode}
                     cleanHtml={cleanHtml}
@@ -312,6 +313,7 @@ export function App({ platform = browserPlatform }) {
                     quoteMarks={quoteMarks}
                   />
                   <Watermark items={watermarkItems} />
+                  </div>
                 </div>
               </div>
             </div>

@@ -735,11 +735,9 @@ button {
 }
 
 .watermark {
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
+  position: relative;
   z-index: 2;
-  transform: translateX(-50%);
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1272,3 +1270,16 @@ button {
 .markdown-body pre code { white-space: inherit; }
 
 .dock-action.wechat-action { width: 108px; flex-shrink: 0; }
+
+/* Keep the signature in normal flow, separated from the article at every padding. */
+.card-layout {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.card-layout > .shot-card { width: 100%; }
+.surface-inner.no-horizontal-pad .card-layout { width: 100%; }

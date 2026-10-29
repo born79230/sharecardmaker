@@ -84,3 +84,15 @@ test('typography survives persistence and old projects receive the classic style
   assert.equal(normalizeProject({ typography: 'unknown' }).typography, 'classic');
   assert.equal(parseProject(serializeProject({ ...createDefaultProject(), typography: 'editorial' })).typography, 'editorial');
 });
+
+test('updates the old sample and default watermark while preserving user drafts', async () => {
+  const { INITIAL_TEXT, LEGACY_INITIAL_TEXT, TOOL_NAME } = await import('../src/presets.js');
+  assert.match(INITIAL_TEXT, /功能说明书/);
+  assert.equal(createDefaultProject().watermarkText, TOOL_NAME);
+  const old = normalizeProject({ markdown: LEGACY_INITIAL_TEXT, watermarkText: 'Share Card' });
+  assert.equal(old.markdown, INITIAL_TEXT);
+  assert.equal(old.watermarkText, TOOL_NAME);
+  const custom = normalizeProject({ markdown: '# 我的文章', watermarkText: '我的署名' });
+  assert.equal(custom.markdown, '# 我的文章');
+  assert.equal(custom.watermarkText, '我的署名');
+});
