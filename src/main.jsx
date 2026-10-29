@@ -189,6 +189,24 @@ export function App({ platform = browserPlatform }) {
     }
   }
 
+  async function copyToWechat() {
+    const article = captureRef.current?.querySelector('.markdown-body');
+    if (!article || busy) return;
+    setBusy(true);
+    try {
+      if (!platform.copyWechatArticle) throw new Error('当前平台暂不支持公众号复制');
+      const result = await platform.copyWechatArticle(article);
+      setToast(result.hasLocalImages
+        ? '排版已复制；本地图片请在公众号编辑器中重新上传'
+        : '排版已复制，可直接粘贴到公众号正文');
+    } catch (error) {
+      setToast(error instanceof Error ? error.message : '复制失败，请检查剪贴板权限');
+    } finally {
+      setBusy(false);
+      window.setTimeout(() => setToast(''), 5000);
+    }
+  }
+
   async function handleImageUpload(event) {
     const file = event.target.files?.[0];
     if (!file) return;
@@ -332,6 +350,7 @@ export function App({ platform = browserPlatform }) {
         applyNoPad={applyNoPad}
         quoteMarks={quoteMarks}
         setQuoteMarks={setQuoteMarks}
+        onCopyWechat={copyToWechat}
         onCopy={() => exportPng('copy')}
         onDownload={() => exportPng('download')}
         busy={busy}
@@ -815,6 +834,7 @@ function BottomDock({
   quoteMarks,
   setQuoteMarks,
   onCopy,
+  onCopyWechat,
   onDownload,
   busy
 }) {
@@ -934,6 +954,13 @@ function BottomDock({
         </div>
       </DockPopover>
 
+      {mode === 'text' && <button className="dock-action wechat-action" title="复制带排版的富文本，直接粘贴到公众号正文" onClick={() => {
+        setActiveDock(null);
+        onCopyWechat();
+      }} disabled={busy}>
+        <Clipboard size={23} />
+        <span>复制到公众号</span>
+      </button>}
       <button className="dock-action" onClick={() => {
         setActiveDock(null);
         onCopy();

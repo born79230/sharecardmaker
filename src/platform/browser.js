@@ -1,6 +1,7 @@
 import { toBlob } from 'html-to-image';
 import { computeExportPixelRatio, waitForCaptureAssets } from '../lib/export.js';
 import { parseProject, serializeProject } from '../model/project.js';
+import { copyWechatArticle } from '../lib/wechat.js';
 import { definePlatform } from './contract.js';
 
 const PROJECT_STORAGE_KEY = 'share-card-maker.project.v1';
@@ -78,6 +79,7 @@ export function saveProject(project) {
 }
 
 export const browserPlatform = definePlatform({
+  copyWechatArticle,
   exportCaptureImage,
   getCurrentCoordinates,
   loadProject,
